@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- Spline 3D Viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script>
     <script>
@@ -51,13 +51,6 @@
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
-        }
-        body{
-            background-image: url('assets/hero-bg-mobile.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
         }
         .animate-marquee {
             display: flex;
@@ -205,6 +198,156 @@
         }
 
         /* About Us Redesign Styles */
+        /* ... existing about us styles if any ... */
+
+        /* ========================= */
+        /* New Gallery Styles (grid2) */
+        /* ========================= */
+        .gallery-container-new {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-tabs-new {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-tab-new {
+            padding: 8px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .gallery-tab-new.active {
+            background: black;
+            color: white;
+        }
+
+        .gallery-wrapper-new {
+            overflow: hidden;
+            border-radius: 32px;
+            background: #ff8a8a;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .gallery-slider-new {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            gap: 25px;
+        }
+        .gallery-slide-new {
+            min-width: 100%;
+            flex-shrink: 0;
+            padding: 10px; /* add spacing inside slide */
+        }
+
+        .photos-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1.5fr;
+            gap: 40px;
+            height: 450px;
+        }
+
+        .left-card,
+        .middle-top,
+        .middle-bottom,
+        .right-card {
+            background: #f07272;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+            transition: 0.4s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .left-card img,
+        .middle-top img,
+        .middle-bottom img,
+        .right-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.6s ease;
+        }
+
+        .left-card:hover img,
+        .middle-top:hover img,
+        .middle-bottom:hover img,
+        .right-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .left-card { height: 100%; }
+        .middle-column {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 32px;
+        }
+        .middle-top, .middle-bottom { height: 100%; }
+        .right-card { height: 100%; }
+
+        .left-card:hover, .middle-top:hover, .middle-bottom:hover, .right-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .photos-layout {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .photos-layout {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                height: auto;
+                gap: 24px;
+            }
+
+            .middle-column {
+                display: contents;
+            }
+
+            .left-card, .middle-top, .middle-bottom, .right-card {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+             .photos-layout {
+                grid-template-columns: 1fr;
+            }
+            .gallery-tab-new {
+                padding: 6px 16px;
+                font-size: 12px;
+            }
+        }
         .dashed-arc {
             position: absolute;
             width: 520px;
@@ -438,9 +581,9 @@
                         <div class="order-2 lg:order-1 space-y-6 lg:space-y-8 mt-8 sm:mt-10 lg:mt-0">
                             <div class="space-y-4 sm:space-y-6">
                                 <h1
-                                    class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 tracking-tight reveal">
-                                    Helping you become outstanding by Making Tech <span
-                                        class="animate-gradient-text">Simple</span>
+                                    class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 tracking-tight reveal">
+                                    Helping you become outstanding by<br>
+                                    <span id="typewriter-text" class="animate-gradient-text"></span>
                                 </h1>
                             </div>
 
@@ -618,7 +761,7 @@
                                 <div
                                     class="relative rounded-[32px] overflow-hidden h-[320px] sm:h-[380px] lg:h-[420px]">
                                     <!-- Rotating Text Overlay -->
-                                    <div class="absolute left-12 z-30 pointer-events-none">
+                                    <!-- <div class="absolute left-12 z-30 pointer-events-none">
                                         <div
                                             class="rotating-text-wrapper font-black text-xl sm:text-2xl uppercase tracking-tighter">
                                             <div class="rotating-text-list flex flex-col">
@@ -628,7 +771,7 @@
                                                 <span class="animate-gradient-text">UI/UX Designing</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <spline-viewer url="https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode"
                                         class="absolute inset-0 w-full h-[110%] -bottom-[10%]"></spline-viewer>
                                 </div>
@@ -794,7 +937,7 @@
 
                     <!-- Right: Stacked image cards (2 Cards) -->
                     <div
-                        class="w-full lg:w-1/2 relative  sm:h-[220px] flex justify-center items-center reveal reveal-right">
+                        class="w-full lg:w-1/2 relative h-[350px] sm:h-[400px] flex justify-center items-center reveal reveal-right mt-12 lg:mt-0">
                         <!-- Back card -->
                         <div class="card-back">
                             <img src="assets/director_1.jpg" alt="Training Session" loading="lazy">
@@ -823,25 +966,25 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     <div class="text-center reveal">
-                        <div class="text-5xl font-black text-slate-900">
+                        <div class="text-4xl font-black text-slate-900">
                             <span class="count" data-target="1000">0</span><span class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Students</div>
                     </div>
                     <div class="text-center reveal delay-100">
-                        <div class="text-5xl font-black text-slate-900">
+                        <div class="text-4xl font-black text-slate-900">
                             <span class="count" data-target="5000">0</span><span class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Interviews</div>
                     </div>
                     <div class="text-center reveal delay-200">
-                        <div class="text-5xl font-black text-slate-900">
+                        <div class="text-4xl font-black text-slate-900">
                             <span class="count" data-target="20">0</span><span class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Trainees</div>
                     </div>
                     <div class="text-center reveal delay-300">
-                        <div class="text-5xl font-black text-slate-900">
+                        <div class="text-4xl font-black text-slate-900">
                             <span class="count" data-target="98">0</span><span class="text-orange-500">%</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Job Result</div>
@@ -863,7 +1006,7 @@
                     data-aos="fade-up">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
                         <!-- Left Content -->
-                        <div class="lg:col-span-8">
+                        <div class="lg:col-span-8 pt-4 sm:pt-6 lg:pt-0">
                             <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
                                 Programming & Core Data
                             </h2>
@@ -976,7 +1119,7 @@
                         </div>
 
                         <!-- Right Content -->
-                        <div class="lg:col-span-8 text-right lg:order-2 order-1">
+                        <div class="lg:col-span-8 text-right lg:order-2 order-1 pt-4 sm:pt-6 lg:pt-0">
                             <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
                                 Full Stack Development
                             </h2>
@@ -1018,7 +1161,7 @@
                     data-aos="fade-up">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
                         <!-- Left Content -->
-                        <div class="lg:col-span-8">
+                        <div class="lg:col-span-8 pt-4 sm:pt-6 lg:pt-0">
                             <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
                                 Data Analytics and<br>Business Intelligence
                             </h2>
@@ -1131,7 +1274,7 @@
                         </div>
 
                         <!-- Right Content -->
-                        <div class="lg:col-span-8 text-right lg:order-2 order-1">
+                        <div class="lg:col-span-8 text-right lg:order-2 order-1 pt-4 sm:pt-6 lg:pt-0">
                             <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
                                 Digital Design and<br>Application development
                             </h2>
@@ -1262,133 +1405,147 @@
         </section>
 
         <!-- Relume Style Testimonials Section -->
-        <section id="testimonials" class="bg-white relative overflow-hidden">
+        <section id="testimonials" class="bg-white relative overflow-hidden mt-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <!-- Header -->
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-indigo-600 font-bold text-xs tracking-[0.2em] uppercase">Testimonials</span>
-                    <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mt-4">Hear from students like you</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black">Testimonials</h2>
                 </div>
 
                 <!-- Masonry Grid -->
                 <div id="testimonial-grid" class="columns-1 md:columns-2 lg:columns-3 gap-8">
 
                     <!-- Card 1 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "Wow, this is absolutely incredible – huge props to the @t4teq team for bringing these
-                            amazing skills to more developers!"
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=1" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Aditya Verma</h4>
-                                <span class="text-slate-400 text-xs">@FullStackDev</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "Wow, this is absolutely incredible – huge props to the @t4teq team for bringing these
+                                amazing skills to more developers!"
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=1" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Aditya Verma</h4>
+                                    <span class="text-slate-400 text-xs">@FullStackDev</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "Finally a training center that I will ACTUALLY include as part of my career journey. I love
-                            how seamless it is from start to finish."
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=2" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Priya Sharma</h4>
-                                <span class="text-slate-400 text-xs">@DataAnalyst</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "Finally a training center that I will ACTUALLY include as part of my career journey. I
+                                love
+                                how seamless it is from start to finish."
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=2" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Priya Sharma</h4>
+                                    <span class="text-slate-400 text-xs">@DataAnalyst</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "This is pure magic. ✨ Learning Java in months → Full project built with AI → Placement
-                            support. T4TEQ is saving the day for students!"
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=3" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Rahul Nair</h4>
-                                <span class="text-slate-400 text-xs">@JavaExpert</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "This is pure magic. ✨ Learning Java in months → Full project built with AI → Placement
+                                support. T4TEQ is saving the day for students!"
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=3" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Rahul Nair</h4>
+                                    <span class="text-slate-400 text-xs">@JavaExpert</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "Very excited for T4TEQ's new AI-powered learning platform. I love the messaging and
-                            positioning: 'to empower you, not replace you'."
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=4" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Sanjay Kumar</h4>
-                                <span class="text-slate-400 text-xs">@Designer</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "Very excited for T4TEQ's new AI-powered learning platform. I love the messaging and
+                                positioning: 'to empower you, not replace you'."
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=4" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Sanjay Kumar</h4>
+                                    <span class="text-slate-400 text-xs">@Designer</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 5 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="300">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "Yo, this is 🔥 @t4teq has been one of my favorite teams I've seen evolve. They're carving
-                            out a tremendous groove for developers."
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=5" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Meera Reddy</h4>
-                                <span class="text-slate-400 text-xs">@TechLead</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "Yo, this is 🔥 @t4teq has been one of my favorite teams I've seen evolve. They're
+                                carving
+                                out a tremendous groove for developers."
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=5" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Meera Reddy</h4>
+                                    <span class="text-slate-400 text-xs">@TechLead</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 6 -->
-                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
-                            "The new AI tools are game changers! This can absolutely speed up our development and will
-                            change how we approach technical problems."
-                        </p>
-                        <div class="flex items-center gap-4 mt-8">
-                            <div
-                                class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
-                                <img src="https://i.pravatar.cc/150?u=6" alt="Student"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-slate-900 font-bold text-sm">Arjun Das</h4>
-                                <span class="text-slate-400 text-xs">@QAEngineer</span>
+                        <div class="relative z-10">
+                            <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                                "The new AI tools are game changers! This can absolutely speed up our development and
+                                will
+                                change how we approach technical problems."
+                            </p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
+                                    <img src="https://i.pravatar.cc/150?u=6" alt="Student"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-900 font-bold text-sm">Arjun Das</h4>
+                                    <span class="text-slate-400 text-xs">@QAEngineer</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1398,173 +1555,89 @@
         </section>
 
         <!-- TEQ Gallery Section -->
-        <section id="gallery" data-nav-color="rgba(255, 255, 255, 0.95)" class="bg-white overflow-hidden scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-12">
+        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 py-16">
+            <div class="gallery-container-new">
                 <!-- Section Header -->
-                <div class="text-center mb-2" data-aos="fade-up">
-                    <h2 class="text-4xl sm:text-5xl font-bold text-black mb-4 mt-8">TEQ Gallery</h2>
+                <div class="text-center mb-10" data-aos="fade-up">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-black ">TEQ Gallery</h2>
 
                     <!-- Navigation Tabs -->
-                    <div
-                        class="inline-flex justify-center bg-white shadow-xl rounded-full p-1 gap-1 mb-12 border border-gray-100">
-                        <button onclick="goToGallerySlide(0)"
-                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm bg-black text-white transition-all">Photos</button>
-                        <button onclick="goToGallerySlide(1)"
-                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Internship</button>
-                        <button onclick="goToGallerySlide(2)"
-                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Workshops</button>
-                        <button onclick="goToGallerySlide(3)"
-                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Certificate</button>
-                        <button onclick="goToGallerySlide(4)"
-                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Awards</button>
+                    <div class="gallery-tabs-new">
+                        <div class="gallery-tab-new active" onclick="goToGallerySlideNew(0)">Photos</div>
+                        <div class="gallery-tab-new" onclick="goToGallerySlideNew(1)">Internship</div>
+                        <div class="gallery-tab-new" onclick="goToGallerySlideNew(2)">Workshops</div>
+                        <div class="gallery-tab-new" onclick="goToGallerySlideNew(3)">Certificate</div>
+                        <div class="gallery-tab-new" onclick="goToGallerySlideNew(4)">Awards</div>
                     </div>
                 </div>
 
-                <!-- Main Gallery Slider (Whole grid container slides) -->
-                <div class="relative group overflow-hidden rounded-[40px] shadow-2xl">
-                    <div id="galleryMainSlider" class="flex transition-transform duration-700 ease-in-out">
+                <!-- Main Gallery Slider -->
+                <div class="gallery-wrapper-new">
+                    <div id="galleryMainSliderNew" class="gallery-slider-new">
 
                         <!-- Slide 1: Photos -->
-                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[450px] sm:h-[300px]">
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="./assets/director.jpg"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 1">
+                        <div class="gallery-slide-new">
+                            <div class="photos-layout">
+                                <div class="left-card"><img src="assets/director.jpg" alt="Gallery Photo 1"></div>
+                                <div class="middle-column">
+                                    <div class="middle-top"><img src="assets/man.jpg" alt="Gallery Photo 2"></div>
+                                    <div class="middle-bottom"><img src="assets/immersive-visualization.jpg"
+                                            alt="Gallery Photo 3"></div>
                                 </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 2">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 3">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 4">
-                                </div>
+                                <div class="right-card"><img src="assets/success.jpg" alt="Gallery Photo 4"></div>
                             </div>
                         </div>
 
                         <!-- Slide 2: Internship -->
-                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="./assets/director.jpg"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 1">
+                        <div class="gallery-slide-new">
+                            <div class="photos-layout">
+                                <div class="left-card"><img src="assets/python.jpg" alt="Internship Photo 1"></div>
+                                <div class="middle-column">
+                                    <div class="middle-top"><img src="assets/man1.jpg" alt="Internship Photo 2"></div>
+                                    <div class="middle-bottom"><img src="assets/art-1.png" alt="Internship Photo 3">
+                                    </div>
                                 </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 2">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 3">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 4">
-                                </div>
+                                <div class="right-card"><img src="assets/man2.jpg" alt="Internship Photo 4"></div>
                             </div>
                         </div>
 
                         <!-- Slide 3: Workshops -->
-                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="./assets/director.jpg"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 1">
+                        <div class="gallery-slide-new">
+                            <div class="photos-layout">
+                                <div class="left-card"><img src="assets/bmw.jpg" alt="Workshop Photo 1"></div>
+                                <div class="middle-column">
+                                    <div class="middle-top"><img src="assets/zoho.jpg" alt="Workshop Photo 2"></div>
+                                    <div class="middle-bottom"><img src="assets/tcs.jpg" alt="Workshop Photo 3"></div>
                                 </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 2">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 3">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 4">
-                                </div>
+                                <div class="right-card"><img src="assets/director_1.jpg" alt="Workshop Photo 4"></div>
                             </div>
                         </div>
 
                         <!-- Slide 4: Certificate -->
-                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="./assets/director.jpg"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 1">
+                        <div class="gallery-slide-new">
+                            <div class="photos-layout">
+                                <div class="left-card"><img src="assets/success.jpg" alt="Certificate 1"></div>
+                                <div class="middle-column">
+                                    <div class="middle-top"><img src="assets/director.jpg" alt="Certificate 2"></div>
+                                    <div class="middle-bottom"><img src="assets/man.jpg" alt="Certificate 3"></div>
                                 </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 2">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 3">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 4">
-                                </div>
+                                <div class="right-card"><img src="assets/immersive-visualization.jpg"
+                                        alt="Certificate 4"></div>
                             </div>
                         </div>
 
                         <!-- Slide 5: Awards -->
-                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="./assets/director.jpg"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 1">
+                        <div class="gallery-slide-new">
+                            <div class="photos-layout">
+                                <div class="left-card"><img src="assets/man1.jpg" alt="Award 1"></div>
+                                <div class="middle-column">
+                                    <div class="middle-top"><img src="assets/man2.jpg" alt="Award 2"></div>
+                                    <div class="middle-bottom"><img src="assets/python.jpg" alt="Award 3"></div>
                                 </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 2">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 3">
-                                </div>
-                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
-                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
-                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
-                                        alt="Photos 4">
-                                </div>
+                                <div class="right-card"><img src="assets/art-1.png" alt="Award 4"></div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Navigation Controls -->
-                    <div class="absolute bottom-10 right-10 flex gap-4 z-20">
-                        <button onclick="prevGallerySlide()"
-                            class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
-                            <i class="fas fa-chevron-left group-hover/btn:-translate-x-1 transition-transform"></i>
-                        </button>
-                        <button onclick="nextGallerySlide()"
-                            class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
-                            <i class="fas fa-chevron-right group-hover/btn:translate-x-1 transition-transform"></i>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -1789,7 +1862,7 @@
            tracking-tight
            mb-10 sm:mb-16
            border-b border-white/10 pb-4 sm:pb-6
-           uppercase leading-[1.1]">
+           uppercase leading-[1.1] whitespace-nowrap">
                     <span class="hover-letter">T</span><span class="hover-letter">4</span><span
                         class="hover-letter">T</span><span class="hover-letter">E</span><span
                         class="hover-letter">Q</span>
@@ -1805,7 +1878,7 @@
                 </h1>
 
                 <!-- Four Column Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-20">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-20">
 
                     <!-- Column 1: Our Free Courses -->
                     <div>
@@ -1905,155 +1978,131 @@
 
                             <!-- Recognition Badges -->
                             <div>
-                                <h4 class="text-base sm:text-lg font-bold mb-4 text-white">Recognized By</h4>
-                                <div class="flex flex-col gap-3">
-                                    <!-- Featured Badge -->
-                                    <!-- <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3">
-                                    <div class="flex gap-1">
-                                        <span class="text-amber-400 text-xl">🌿</span>
-                                        <span class="text-amber-400 text-xl">🌿</span>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="text-white text-sm font-semibold">Featured</div>
-                                        <div class="text-slate-400 text-xs">by Social Eagle</div>
-                                    </div>
-                                    <div class="flex gap-1">
-                                        <span class="text-amber-400 text-xl">🌿</span>
-                                        <span class="text-amber-400 text-xl">🌿</span>
-                                    </div>
-                                </div> -->
+                                <!-- Recognition Badges -->
+                                <div class="mt-4">
+                                    <div class="flex flex-row flex-wrap gap-4 items-center">
+                                        <!-- Featured Badge (Social Eagle) -->
+                                        <div
+                                            class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3 backdrop-blur-md hover:scale-[1.02] transition duration-300">
+                                            <div class="flex gap-1">
+                                                <span class="text-amber-400 text-xl">🌿</span>
+                                            </div>
+                                            <div class="text-center">
+                                                <div class="text-white text-sm font-semibold">Featured</div>
+                                                <div class="text-slate-400 text-[10px] font-bold uppercase">Social Eagle
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-1">
+                                                <span class="text-amber-400 text-xl">🌿</span>
+                                            </div>
+                                        </div>
 
-                                    <!-- Google Rating Badge -->
-                                    <!-- <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                                    </svg>
-                                    <div class="flex gap-0.5">
-                                        <span class="text-red-500 text-lg">★</span>
-                                        <span class="text-red-500 text-lg">★</span>
-                                        <span class="text-red-500 text-lg">★</span>
-                                        <span class="text-red-500 text-lg">★</span>
-                                        <span class="text-red-500 text-lg">★</span>
-                                    </div>
-                                    <div class="text-white text-sm font-semibold">Google (4.8)</div>
-                                </div> -->
-                                    <!-- Recognition Badges -->
-                                    <div>
-
-
-                                        <div class="flex flex-col gap-4">
-
-                                            <!-- Google Rating Badge -->
-                                            <div class="bg-white/5 border border-white/10 
+                                        <!-- Google Rating Badge -->
+                                        <div class="bg-white/5 border border-white/10 
                     rounded-2xl p-4 
                     flex items-center gap-4 
                     backdrop-blur-md 
                     hover:scale-[1.02] transition duration-300">
 
-                                                <!-- Google Icon -->
-                                                <svg class="w-10 h-10" viewBox="0 0 24 24">
-                                                    <path fill="#4285F4"
-                                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                                                    <path fill="#34A853"
-                                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                                                    <path fill="#FBBC05"
-                                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                                                    <path fill="#EA4335"
-                                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                                                </svg>
+                                            <!-- Google Icon -->
+                                            <svg class="w-8 h-8" viewBox="0 0 24 24">
+                                                <path fill="#4285F4"
+                                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                                <path fill="#34A853"
+                                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                                <path fill="#FBBC05"
+                                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                                <path fill="#EA4335"
+                                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                            </svg>
 
-                                                <div class="flex flex-col">
-                                                    <div class="flex gap-1 mb-1">
-                                                        <span class="text-orange-500 text-xl">★</span>
-                                                        <span class="text-orange-500 text-xl">★</span>
-                                                        <span class="text-orange-500 text-xl">★</span>
-                                                        <span class="text-orange-500 text-xl">★</span>
-                                                        <span class="text-orange-500 text-xl opacity-40">☆</span>
-                                                    </div>
-                                                    <div class="text-white text-sm font-semibold">
-                                                        Google (4.8)
-                                                    </div>
+                                            <div class="flex flex-col">
+                                                <div class="flex gap-0.5 mb-1">
+                                                    <span class="text-orange-500 text-lg">★</span>
+                                                    <span class="text-orange-500 text-lg">★</span>
+                                                    <span class="text-orange-500 text-lg">★</span>
+                                                    <span class="text-orange-500 text-lg">★</span>
+                                                    <span class="text-orange-500 text-lg opacity-40">☆</span>
+                                                </div>
+                                                <div class="text-white text-xs font-semibold">
+                                                    Google (4.8)
                                                 </div>
                                             </div>
+                                        </div>
 
-
-                                            <!-- ISO Certificate Badge -->
-                                            <div class="bg-white/5 border border-white/10 
+                                        <!-- ISO Certificate Badge -->
+                                        <div class="bg-white/5 border border-white/10 
                     rounded-2xl p-4 
                     flex items-center gap-4 
                     backdrop-blur-md 
                     hover:scale-[1.02] transition duration-300">
 
-                                                <!-- ISO Icon -->
-                                                <div>
-                                                    <div class="text-blue-400 text-xs font-medium">
-                                                        Certified Company
-                                                    </div>
-                                                    <div class="text-white text-sm font-semibold">
-                                                        ISO 9001:2015
-                                                    </div>
+                                            <!-- ISO Icon -->
+                                            <div>
+                                                <div
+                                                    class="text-blue-400 text-[10px] font-bold uppercase transition-all">
+                                                    Certified Company
                                                 </div>
-
+                                                <div class="text-white text-sm font-semibold">
+                                                    ISO 9001:2015
+                                                </div>
                                             </div>
-
                                         </div>
                                     </div>
-
-
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Bottom Copyright & Decorative Element -->
-                <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-slate-500 text-sm font-medium tracking-wide order-3 md:order-1">
-                        © 2026 @T4teq Software Solutions
-                    </p>
+            <!-- Bottom Copyright & Decorative Element -->
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-sm font-medium tracking-wide order-3 md:order-1">
+                    © 2026 @T4teq Software Solutions
+                </p>
 
-                    <p class="text-slate-400 text-sm font-bold tracking-wider 
+                <p class="text-slate-400 text-sm font-bold tracking-wider 
            order-1 md:order-2 text-center font-ndot">
-                        DESIGNED AND BUILT BY <br>THE AWESOME PEOPLE OF PUTHUR
-                    </p>
+                    DESIGNED AND BUILT BY <br>THE AWESOME PEOPLE OF PUTHUR
+                </p>
 
-                    <!-- Overlapping Employee Circles -->
-                    <div class="flex -space-x-4 order-2 md:order-3">
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 1">
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 2">
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 3">
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 4">
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 5">
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=100&h=100"
-                                class="w-full h-full object-cover" alt="Employee 6">
-                        </div>
+                <!-- Overlapping Employee Circles -->
+                <div class="flex -space-x-4 order-2 md:order-3">
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 1">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 2">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 3">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 4">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 5">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=100&h=100"
+                            class="w-full h-full object-cover" alt="Employee 6">
                     </div>
                 </div>
+            </div>
             </div>
         </footer>
 
@@ -2272,51 +2321,58 @@
                     link.addEventListener('click', () => toggleMobileMenu(false));
                 });
 
-                // Gallery Slider Logic
-                let currentGallerySlide = 0;
-                const galleryMainSlider = document.getElementById('galleryMainSlider');
-                const gallerySlides = document.querySelectorAll('#galleryMainSlider > div');
-                const galleryTabs = document.querySelectorAll('.gallery-tab');
-                const totalGallerySlides = gallerySlides.length;
+                // New Gallery Slider Logic
+                let currentGallerySlideNew = 0;
+                const galleryMainSliderNew = document.getElementById('galleryMainSliderNew');
+                const galleryTabsNew = document.querySelectorAll('.gallery-tab-new');
+                const totalGallerySlidesNew = 5; // Fixed number for this design
 
-                window.updateGalleryCarousel = () => {
-                    galleryMainSlider.style.transform = `translateX(-${currentGallerySlide * 100}%)`;
+                window.updateGalleryCarouselNew = () => {
+                    if (!galleryMainSliderNew) return;
+
+                    const firstSlide = galleryMainSliderNew.querySelector('.gallery-slide-new');
+                    if (!firstSlide) return;
+
+                    // Calculate offset based on slide width + gap (25px)
+                    const gap = 25;
+                    const slideWidth = firstSlide.offsetWidth + gap;
+                    galleryMainSliderNew.style.transform = `translateX(-${currentGallerySlideNew * slideWidth}px)`;
 
                     // Update Tabs Active State
-                    galleryTabs.forEach((tab, index) => {
-                        if (index === currentGallerySlide) {
-                            tab.classList.add('bg-black', 'text-white');
-                            tab.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                    galleryTabsNew.forEach((tab, index) => {
+                        if (index === currentGallerySlideNew) {
+                            tab.classList.add('active');
                         } else {
-                            tab.classList.remove('bg-black', 'text-white');
-                            tab.classList.add('text-gray-600', 'hover:bg-gray-100');
+                            tab.classList.remove('active');
                         }
                     });
                 };
 
-                window.nextGallerySlide = () => {
-                    currentGallerySlide = (currentGallerySlide + 1) % totalGallerySlides;
-                    updateGalleryCarousel();
+                window.goToGallerySlideNew = (index) => {
+                    currentGallerySlideNew = index;
+                    updateGalleryCarouselNew();
+
+                    // Reset interval when user interacts
+                    clearInterval(galleryIntervalNew);
+                    galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
                 };
 
-                window.prevGallerySlide = () => {
-                    currentGallerySlide = (currentGallerySlide - 1 + totalGallerySlides) % totalGallerySlides;
-                    updateGalleryCarousel();
-                };
-
-                window.goToGallerySlide = (index) => {
-                    currentGallerySlide = index;
-                    updateGalleryCarousel();
+                window.nextGallerySlideNew = () => {
+                    currentGallerySlideNew = (currentGallerySlideNew + 1) % totalGallerySlidesNew;
+                    updateGalleryCarouselNew();
                 };
 
                 // Gallery Interval
-                let galleryInterval = setInterval(nextGallerySlide, 6000);
+                let galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
 
                 // Pause on hover
-                const galleryContainer = document.getElementById('galleryMainSlider') ? document.getElementById('galleryMainSlider').parentElement : null;
-                if (galleryContainer) {
-                    galleryContainer.addEventListener('mouseenter', () => clearInterval(galleryInterval));
-                    galleryContainer.addEventListener('mouseleave', () => galleryInterval = setInterval(nextGallerySlide, 6000));
+                const galleryContainerNew = galleryMainSliderNew ? galleryMainSliderNew.parentElement : null;
+                if (galleryContainerNew) {
+                    galleryContainerNew.addEventListener('mouseenter', () => clearInterval(galleryIntervalNew));
+                    galleryContainerNew.addEventListener('mouseleave', () => {
+                        clearInterval(galleryIntervalNew);
+                        galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
+                    });
                 }
 
                 // FAQ Toggle Logic
@@ -2342,7 +2398,7 @@
 
                 // Typewriter Animation Logic
                 const typewriterElement = document.getElementById('typewriter-text');
-                const words = ["Simple", "Experience"];
+                const words = ["programming", "full stack", "data analytics", "ui/ux designing"];
                 let wordIndex = 0;
                 let charIndex = 0;
                 let isDeleting = false;
@@ -2376,6 +2432,8 @@
 
                 // Navbar Scroll State Fix
                 const mainHeader = document.getElementById('main-header');
+                const footer = document.querySelector('footer');
+
                 const handleNavScroll = () => {
                     if (window.scrollY > 50) {
                         mainHeader?.classList.add('scrolled');
@@ -2385,6 +2443,18 @@
                         mainHeader?.classList.remove('scrolled');
                         nav.classList.add('bg-slate-100/90');
                         nav.classList.remove('bg-white/95', 'shadow-lg');
+                    }
+
+                    // Navbar Visibility Toggle on Footer Scroll
+                    if (footer) {
+                        const footerTop = footer.getBoundingClientRect().top;
+                        if (footerTop < 100) { // If footer is near or in view
+                            nav.style.transform = 'translateY(-100%)';
+                            nav.style.opacity = '0';
+                        } else {
+                            nav.style.transform = 'translateY(0)';
+                            nav.style.opacity = '1';
+                        }
                     }
                 };
                 window.addEventListener('scroll', handleNavScroll);
