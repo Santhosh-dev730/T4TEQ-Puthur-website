@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="T4TEQ Software Solutions - Making Tech Simple. Leading software training institute in Trichy offering Full Stack, Data Analytics, Python, and more.">
+    <meta name="keywords"
+        content="T4TEQ, Software Solutions, Trichy, Software Training, Full Stack Development, Data Analytics, Python Training">
+    <title>T4TEQ Software Solution - Making Tech Simple</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Spline 3D Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e1b4b",
+                        "accent-purple": "#4f46e5",
+                        "charcoal": "#1e293b",
+                        "background-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                        ndot: ['Ndot', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        'pill': '100px',
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        body{
+            background-image: url('assets/hero-bg-mobile.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: marquee 30s linear infinite;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #ffffff;
+        }
+        
+        /* Icon Wave Styles */
+        .icon-list {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .grid-col {
+            transition: transform 0.3s ease;
+        }
+        .bouncer.symbol {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5rem;
+            height: 5rem;
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            border-radius: 50%;
+            font-family: 'Material Symbols Outlined';
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .bouncer.symbol:hover {
+            background: rgba(168, 85, 247, 0.05);
+            border-color: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1);
+        }
+        
+        .box-transition {
+            transition: background-color 0.8s ease;
+        }
+
+        /* Navbar link underline effect */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive grid background */
+        @media (max-width: 768px) {
+            .grid-background {
+                display: none !important;
+            }
+        }
+
+        /* Prevent carousel overflow */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Footer Letter Hover Effect */
+        .hover-letter {
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+        .hover-letter:hover {
+            color: #FFB347 !important; /* Soft Orange */
+        }
+
+        /* Gradient Text Animation */
+        @keyframes gradient-text {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-text {
+            background: linear-gradient(90deg, #f43f5e, #a855f7, #3b82f6, #f43f5e);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-text 8s linear infinite;
+        }
+
+        /* Rotating Text Animation Refined */
+        .rotating-text-wrapper {
+            height: 1.5em; /* Increased for scale */
+            overflow: hidden;
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .rotating-text-list {
+            animation: rotate-text 12s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+        }
+        .rotating-text-list span {
+            display: block;
+            height: 1.5em;
+            line-height: 1.5em;
+            transform-origin: left center;
+        }
+        @keyframes rotate-text {
+            0%, 20% { transform: translateY(0) scale(1); opacity: 1; }
+            22.5% { transform: translateY(-10%) scale(0.8); opacity: 0; }
+            25%, 45% { transform: translateY(-25%) scale(1); opacity: 1; }
+            47.5% { transform: translateY(-35%) scale(0.8); opacity: 0; }
+            50%, 70% { transform: translateY(-50%) scale(1); opacity: 1; }
+            72.5% { transform: translateY(-60%) scale(0.8); opacity: 0; }
+            75%, 95% { transform: translateY(-75%) scale(1); opacity: 1; }
+            97.5% { transform: translateY(-85%) scale(0.8); opacity: 0; }
+            100% { transform: translateY(0); }
+        }
+
+        /* About Us Redesign Styles */
+        .dashed-arc {
+            position: absolute;
+            width: 520px;
+            height: 260px;
+            border: 2px dashed #f97316;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border-bottom: none;
+            left: 50px;
+            top: 60px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        @media (max-width: 768px) {
+            .dashed-arc { width: 300px; height: 150px; left: 10px; top: 100px; }
+        }
+        .card-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            transform: rotate(-6deg) translate(40px, -20px);
+            top: 20px;
+            right: 0;
+            z-index: 10;
+        }
+        .card-front {
+            position: absolute;
+            width: 310px;
+            height: 210px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+            transform: rotate(6deg) translate(-20px, 40px);
+            top: 40px;
+            right: 20px;
+            z-index: 20;
+            border: 8px solid white;
+        }
+        @media (max-width: 1024px) {
+            .card-back {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%) rotate(-6deg) translateY(-10px);
+            }
+            .card-front {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%) rotate(6deg) translateY(20px);
+            }
+        }
+        @media (max-width: 640px) {
+            .card-back, .card-front { width: 260px; height: 180px; }
+        }
+        .btn-premium {
+            background: #f97316;
+            color: #fff;
+            border-radius: 9999px;
+            padding: 12px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-premium:hover {
+            background: #ea6c0a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+        }
+
+
+         /* Stacking Card Styles */
+        .skill-card {
+            position: sticky;
+            top: 100px;
+            transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.2s ease;
+            transform-origin: center top;
+            will-change: transform, opacity;
+        }
+
+        /* Initial spacing adjustment for stacking */
+        /* .skill-card-container {
+            padding-bottom: 200px;
+        } */
+
+        /* Hero floating card animations */
+        /* @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float-delayed {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float-delayed 4s ease-in-out infinite;
+            animation-delay: 1.5s;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <!-- Header with improved responsiveness -->
+    <header id="main-header"
+        class="fixed top-2 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 transition-transform duration-300">
+        <nav
+            class="max-w-[90%] lg:max-w-[80%] mx-auto bg-slate-100/90 backdrop-blur-md border border-slate-200 rounded-full px-4 sm:px-8 py-2 sm:py-2 flex items-center justify-between shadow-sm">
+            <div class="flex items-center gap-2">
+                <!-- <img src="assets/logo.svg" alt="T4TEQ Logo" class="h-8 sm:h-12 w-auto"> -->
+                <span class="font-bold text-lg sm:text-2xl">T4TEQ</span>
+            </div>
+            <div
+                class="hidden lg:flex items-center space-x-6 xl:space-x-8 font-semibold text-charcoal/80 ml-auto text-base">
+                <a class="nav-link hover:text-charcoal transition-colors" href="#">Home</a>
+                <a class="nav-link hover:text-charcoal transition-colors" href="#about">About</a>
+                <a class="nav-link hover:text-charcoal transition-colors" href="#skills">Courses</a>
+                <a class="nav-link hover:text-charcoal transition-colors" href="#stats">Testimonials</a>
+                <a class="nav-link hover:text-charcoal transition-colors" href="#contact">Contact</a>
+                <a class="nav-link hover:text-charcoal transition-colors" href="#">Verification</a>
+            </div>
+            <div class="flex items-center gap-4 ml-4 sm:ml-8">
+                <button id="mobile-menu-btn"
+                    class="lg:hidden flex items-center justify-center p-2 rounded-full hover:bg-slate-200/50 transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-slate-900/80 backdrop-blur-md z-[60] hidden lg:hidden opacity-0 transition-opacity duration-300">
+            <div
+                class="absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out">
+                <div class="flex flex-col h-full p-8">
+                    <div class="flex items-center justify-between mb-10">
+                        <span class="font-bold text-3xl text-indigo-900">T4TEQ</span>
+                        <button id="close-menu-btn"
+                            class="p-3 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors shadow-sm">
+                            <span class="material-symbols-outlined text-indigo-900 translate-y-[2px]">close</span>
+                        </button>
+                    </div>
+                    <div class="flex flex-col space-y-2 font-bold text-xl text-slate-800">
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#">
+                            <span class="material-symbols-outlined">home</span>
+                            Home
+                        </a>
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#about">
+                            <span class="material-symbols-outlined">info</span>
+                            About
+                        </a>
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#skills">
+                            <span class="material-symbols-outlined">school</span>
+                            Courses
+                        </a>
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#stats">
+                            <span class="material-symbols-outlined">assessment</span>
+                            Testimonials
+                        </a>
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#contact">
+                            <span class="material-symbols-outlined">contact_page</span>
+                            Contact
+                        </a>
+                    </div>
+
+                    <!-- Bottom Info in Mobile Menu -->
+                    <div class="mt-auto pt-8 border-t border-slate-100">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Connect With Us
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-8">
+        <!-- Hero Section -->
+        <section class="py-6 lg:py-12 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 pt-6 sm:pt-6">
+
+                <!-- Main Rounded Container -->
+                <div class="bg-[#f5f6f8] rounded-3xl relative overflow-hidden">
+
+                    <!-- Decor: Background Elements (Blobs + Continuous Curve) -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                        <!-- Blobs -->
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-64 h-64 bg-purple-100/50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3">
+                        </div>
+
+                        <!-- Continuous Orange Curve -->
+                        <svg class="absolute w-full h-full" viewBox="0 0 1000 800" preserveAspectRatio="none">
+                            <path d="M-50,800 C 200,750 350,600 550,600 C 750,600 850,200 1100,100" fill="none"
+                                stroke="#f97316" stroke-width="3" opacity="0.6" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-8 lg:gap-12 items-center px-6 py-8 lg:px-12 lg:py-12 relative z-10">
+
+
+                        <!-- Left Content (Refined Layout) -->
+                        <div class="order-2 lg:order-1 space-y-6 lg:space-y-8 mt-8 sm:mt-10 lg:mt-0">
+                            <div class="space-y-4 sm:space-y-6">
+                                <h1
+                                    class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 tracking-tight reveal">
+                                    Helping you become outstanding by Making Tech <span
+                                        class="animate-gradient-text">Simple</span>
+                                </h1>
+                            </div>
+
+                            <div class="reveal delay-300">
+                                <div class="carousel-container relative w-full overflow-hidden py-4">
+                                    <ul class="icon-list animate-marquee items-center">
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/python.jpg"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Python">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/java.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Java">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/react.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="React">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/springboot.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Spring Boot">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/mongodb.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="MongoDB">
+                                            </div>
+                                        </li>
+                                        <!-- Duplicate for seamless marquee -->
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/python.jpg"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Python">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/java.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Java">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons (Moved Up) -->
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-2xl reveal delay-200">
+                                <button
+                                    class="flex-1 bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 hover:shadow-lg hover:border-orange-500 transition-all group text-left relative overflow-hidden">
+                                    <div class="absolute right-2 bottom-2 h-1 w-1 bg-orange-500 rounded-full"></div>
+                                    <div
+                                        class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-orange-50 transition-colors flex-shrink-0">
+                                        <span
+                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-orange-500">quiz</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 font-bold text-base ">Daily MCQs</h3>
+                                        <p class="text-slate-400 text-xs font-medium">Join Now</p>
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="flex-1 bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 hover:shadow-lg hover:border-blue-600 transition-all group text-left">
+                                    <div
+                                        class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-blue-50 transition-colors flex-shrink-0">
+                                        <span
+                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-blue-600">code</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 font-bold text-base">Weekly Task</h3>
+                                        <p class="text-slate-400 text-xs font-medium">Let's Code</p>
+                                    </div>
+
+                                </button>
+                                <button
+                                    class="flex-1 bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 hover:shadow-lg hover:border-blue-600 transition-all group text-left">
+                                    <div
+                                        class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-blue-50 transition-colors flex-shrink-0">
+                                        <span
+                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-blue-600">code</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 font-bold text-base">Job Placement</h3>
+                                        <p class="text-slate-400 text-xs font-medium">Join now</p>
+                                    </div>
+
+                                </button>
+                            </div>
+
+                            <!-- Tech Carousel (Moved Down) -->
+                            <!-- <div class="reveal delay-300">
+                                <div class="carousel-container relative w-full overflow-hidden py-4">
+                                    <ul class="icon-list animate-marquee items-center">
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/python.jpg"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Python">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/java.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Java">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/react.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="React">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/springboot.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Spring Boot">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/mongodb.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="MongoDB">
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/python.jpg"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Python">
+                                            </div>
+                                        </li>
+                                        <li class="grid-col px-4 sm:px-8">
+                                            <div
+                                                class="h-20 w-20 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center shadow-sm">
+                                                <img src="assets/java.png"
+                                                    class="h-10 w-10 hover:scale-110 transition-all" alt="Java">
+                                            </div>
+     man.jpg                           </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+
+
+                        <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+
+
+
+                            <!-- 3D Tilt Card -->
+                            <div id="hero-tilt-card"
+                                class="relative w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[420px]"
+                                style="transform-style: preserve-3d; transition: transform 0.12s ease-out; will-change: transform;">
+
+                                <!-- 3D Spline Model -->
+                                <div
+                                    class="relative rounded-[32px] overflow-hidden h-[320px] sm:h-[380px] lg:h-[420px]">
+                                    <!-- Rotating Text Overlay -->
+                                    <div class="absolute left-12 z-30 pointer-events-none">
+                                        <div
+                                            class="rotating-text-wrapper font-black text-xl sm:text-2xl uppercase tracking-tighter">
+                                            <div class="rotating-text-list flex flex-col">
+                                                <span class="animate-gradient-text">Programming</span>
+                                                <span class="animate-gradient-text">Full Stack</span>
+                                                <span class="animate-gradient-text">Data Analytics</span>
+                                                <span class="animate-gradient-text">UI/UX Designing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <spline-viewer url="https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode"
+                                        class="absolute inset-0 w-full h-[110%] -bottom-[10%]"></spline-viewer>
+                                </div>
+
+                                <!-- Floating Card: Label (top-left, like "Creating Marketing Models...") -->
+                                <!-- <div class="absolute -top-4 left-4 z-20 animate-float"
+                                    style="transform: translateZ(30px);">
+                                    <div
+                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-2.5 flex items-center gap-3 min-w-[180px]">
+                                        <div
+                                            class="h-8 w-8 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-orange-500 text-base">school</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-slate-800 font-bold text-xs leading-tight">Learning Tech
+                                                Skills...</div>
+                                            <div class="text-slate-400 text-[10px]">T4TEQ Platform</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <!-- Floating Card: AI Integrated badge (bottom-right, orange pill) -->
+                                <div class="absolute bottom-10 -right-4 z-20 animate-float-delayed"
+                                    style="transform: translateZ(40px);">
+                                    <div
+                                        class="bg-orange-500 text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg text-sm font-bold">
+                                        <span class="material-symbols-outlined text-base">verified</span>
+                                        ISO Certified
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- Floating Card: Students count (top-right) -->
+                                <div class="absolute -top-2 -right-4 z-20 animate-float"
+                                    style="animation-delay: 0.5s; transform: translateZ(25px);">
+                                    <div
+                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[130px]">
+                                        <div
+                                            class="text-slate-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-emerald-500 text-sm">trending_up</span>
+                                            Students
+                                        </div>
+                                        <div class="text-slate-900 text-2xl font-black mt-0.5">1,000+</div>
+                                        <div class="text-emerald-500 text-[10px] font-bold">↑ +96.5% this year</div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Card: Placement rate (bottom-left) -->
+                                <div class="absolute -bottom-10 -left-4 z-20 animate-float-delayed"
+                                    style="animation-delay: 1s; transform: translateZ(35px);">
+                                    <div
+                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[140px]">
+                                        <div
+                                            class="text-slate-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-blue-500 text-sm">work</span>
+                                            Placement
+                                        </div>
+
+                                        <svg width="40" height="40" viewBox="0 0 40 40">
+                                            <circle cx="20" cy="20" r="15" fill="none" stroke="#e2e8f0"
+                                                stroke-width="5" />
+                                            <circle cx="20" cy="20" r="15" fill="none" stroke="#f97316" stroke-width="5"
+                                                stroke-dasharray="75.4 94.2" stroke-dashoffset="23.6"
+                                                stroke-linecap="round" transform="rotate(-90 20 20)" />
+                                        </svg>
+                                        <div>
+                                            <div class="text-slate-900 text-xl font-black leading-none">80%</div>
+                                            <div class="text-slate-400 text-[10px]">Success rate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vertical Icon Bar (left side) -->
+                            <!-- <div class="absolute left-[-52px] top-1/2 -translate-y-1/2 z-30"
+                                style="transform: translateZ(20px) translateY(-50%);">
+                                <div id="hero-icon-bar"
+                                    class="bg-white/90 backdrop-blur-xl rounded-2xl py-3 px-2 shadow-2xl border border-white/50 flex flex-col items-center gap-2">
+                                    <div class="group relative hero-cat-icon active" data-index="0">
+                                        <div class="icon-bg p-1.5 bg-orange-50 rounded-xl transition-all duration-500">
+                                            <span
+                                                class="material-symbols-outlined text-orange-600 text-xl">data_object</span>
+                                        </div>
+                                        <span
+                                            class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Programming</span>
+                                    </div>
+                                    <div class="group relative hero-cat-icon" data-index="1">
+                                        <div class="icon-bg p-1 transition-transform duration-500">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 text-xl">bar_chart_4_bars</span>
+                                        </div>
+                                        <span
+                                            class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Business
+                                            Intelligence</span>
+                                    </div>
+                                    <div class="group relative hero-cat-icon" data-index="2">
+                                        <div class="icon-bg p-1 transition-transform duration-500">
+                                            <span
+                                                class="material-symbols-outlined text-slate-400 text-xl">layers</span>
+                                        </div>
+                                        <span
+                                            class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Full
+                                            Stack</span>
+                                    </div>
+                                    <div class="group relative hero-cat-icon" data-index="3">
+                                        <div class="icon-bg p-1 transition-transform duration-500">
+                                            <span class="material-symbols-outlined text-slate-400 text-xl">bolt</span>
+                                        </div>
+                                        <span
+                                            class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">UI/UX
+                                            Design</span>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div><!-- end tilt card -->
+                    </div><!-- end hero-3d-scene -->
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+        <!-- About Section - Redesigned -->
+        <section id="about" class="bg-white relative overflow-hidden scroll-mt-20">
+            <!-- Dashed arc decoration -->
+            <div class="dashed-arc hidden lg:block"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black  inline-block pb-2">
+                        About Us</h2>
+                </div>
+
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+
+                    <!-- Left: Content -->
+                    <div class="w-full lg:w-1/2 space-y-8 reveal reveal-left text-left">
+                        <div
+                            class="inline-block bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase">
+                            Our Story
+                        </div>
+                        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 leading-[1.1]">
+                            Making Technology Simple & <span class="text-orange-500">Accessible</span>
+                        </h2>
+                        <div class="space-y-6">
+                            <p class="text-slate-600 text-lg leading-relaxed text-left">
+                                T4TEQ Software Solutions was founded in 2017 in Tiruchirappalli. We evolved from a local
+                                training provider to a global corporate training and development entity, ISO 9001:2015
+                                certified.
+                            </p>
+                            <p class="text-slate-500 text-base leading-relaxed text-left">
+                                Our mission is to bridge the gap between academic learning and industry requirements,
+                                empowering the next generation of tech leaders through expert mentorship.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stacked image cards (2 Cards) -->
+                    <div
+                        class="w-full lg:w-1/2 relative  sm:h-[220px] flex justify-center items-center reveal reveal-right">
+                        <!-- Back card -->
+                        <div class="card-back">
+                            <img src="assets/director_1.jpg" alt="Training Session" loading="lazy">
+                        </div>
+                        <!-- Front card -->
+                        <div class="card-front">
+                            <img src="assets/director.jpg" alt="Our Director" loading="lazy">
+                        </div>
+
+                        <!-- Paper plane SVG -->
+                        <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-20 hidden lg:block">
+                            <svg width="60" height="50" viewBox="0 0 44 36" fill="none">
+                                <path d="M2 18L42 2L28 34L22 22L2 18Z" stroke="#f97316" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                                <path d="M22 22L42 2" stroke="#f97316" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section - Reverted to Image Design -->
+        <section id="stats" data-nav-color="rgba(248, 250, 252, 0.9)"
+            class="py-16 bg-slate-50 scroll-mt-24 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                    <div class="text-center reveal">
+                        <div class="text-5xl font-black text-slate-900">
+                            <span class="count" data-target="1000">0</span><span class="text-orange-500">+</span>
+                        </div>
+                        <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Students</div>
+                    </div>
+                    <div class="text-center reveal delay-100">
+                        <div class="text-5xl font-black text-slate-900">
+                            <span class="count" data-target="5000">0</span><span class="text-orange-500">+</span>
+                        </div>
+                        <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Interviews</div>
+                    </div>
+                    <div class="text-center reveal delay-200">
+                        <div class="text-5xl font-black text-slate-900">
+                            <span class="count" data-target="20">0</span><span class="text-orange-500">+</span>
+                        </div>
+                        <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Trainees</div>
+                    </div>
+                    <div class="text-center reveal delay-300">
+                        <div class="text-5xl font-black text-slate-900">
+                            <span class="count" data-target="98">0</span><span class="text-orange-500">%</span>
+                        </div>
+                        <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Job Result</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Tech Skills Section -->
+        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="py-12 sm:py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 skill-card-container">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black">Tech Skills</h2>
+                </div>
+
+                <!-- Programming & Core Data Card -->
+                <div data-nav-color="rgba(168, 213, 186, 0.95)"
+                    class="skill-card bg-[#A8D5BA] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                        <!-- Left Content -->
+                        <div class="lg:col-span-8">
+                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
+                                Programming & Core Data
+                            </h2>
+                            <p class="text-black text-lg font-medium mb-8 max-w-xl">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+
+                            <!-- Divider -->
+                            <div class="h-[2px] bg-white w-full mb-8"></div>
+
+                            <!-- Skill Boxes -->
+                            <div
+                                class="flex overflow-x-auto md:flex-wrap gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
+                                <div
+                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-orange-100 text-orange-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Java</div>
+                                <div
+                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Python</div>
+                                <div
+                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-yellow-100 text-yellow-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    C & C++</div>
+                                <div
+                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-cyan-100 text-cyan-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    SQL</div>
+                            </div>
+
+                            <!-- Syllabus Container -->
+                            <!-- Syllabus Container REMOVED -->
+                        </div>
+
+                        <!-- Right Content (Logos & Buttons) -->
+                        <div
+                            class="lg:col-span-4 flex flex-col items-end justify-between lg:min-h-[350px] mt-8 lg:mt-0">
+                            <!-- Logos in 2x2 grid -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/java.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Java">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/python.jpg" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Python">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/react.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="React">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/mongodb.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="MongoDB">
+                                </div>
+                            </div>
+
+                            <!-- Buttons (Right Aligned) -->
+                            <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+
+                                <button
+                                    class="px-6 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enrol
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fullstack Card (Mirrored) -->
+                <div data-nav-color="rgba(191, 215, 255, 0.95)"
+                    class="skill-card bg-[#bfd7ff] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                        <!-- Left Content (Logos & Buttons) -->
+                        <div
+                            class="lg:col-span-4 flex flex-col items-start justify-between lg:min-h-[350px] lg:order-1 order-2 mt-8 lg:mt-0">
+                            <!-- Logos -->
+                            <div class="grid grid-cols-2 gap-4 mb-auto">
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/react.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="React">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/springboot.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Spring Boot">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/mongodb.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="MongoDB">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/java.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Java">
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+
+                                <button
+                                    class="px-6 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enrol
+                                    Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="lg:col-span-8 text-right lg:order-2 order-1">
+                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
+                                Full Stack Development
+                            </h2>
+                            <p class="text-black text-lg font-medium mb-8 ml-auto max-w-xl">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+
+                            <!-- Divider -->
+                            <div class="h-[2px] bg-white w-full mb-8"></div>
+
+
+                            <!-- Skill Boxes -->
+                            <div
+                                class="flex overflow-x-auto md:flex-wrap justify-start lg:justify-end gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
+                                <div
+                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-indigo-100 text-indigo-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    React</div>
+                                <div
+                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-green-100 text-green-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Spring Boot</div>
+                                <div
+                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-emerald-100 text-emerald-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    MongoDB</div>
+                                <div
+                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-orange-100 text-orange-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Java</div>
+                            </div>
+
+                            <!-- Syllabus Container -->
+                            <!-- Syllabus Container REMOVED -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics and Business Intelligence Card -->
+                <div data-nav-color="rgba(254, 240, 138, 0.95)"
+                    class="skill-card bg-[#fef08a] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                        <!-- Left Content -->
+                        <div class="lg:col-span-8">
+                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
+                                Data Analytics and<br>Business Intelligence
+                            </h2>
+                            <p class="text-black text-lg font-medium mb-8 max-w-xl">
+                                Master the art of data-driven decision making.
+                                Learn to transform raw data into actionable insights for modern businesses.
+                            </p>
+
+                            <!-- Divider -->
+                            <div class="h-[2px] bg-white w-full mb-8"></div>
+
+                            <!-- Skill Boxes -->
+                            <div
+                                class="flex overflow-x-auto md:flex-wrap gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
+                                <div
+                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Python</div>
+                                <div
+                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-cyan-100 text-cyan-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    SQL</div>
+                                <div
+                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-yellow-100 text-yellow-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Power BI</div>
+                                <div
+                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-purple-100 text-purple-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Tableau</div>
+                            </div>
+
+                            <!-- Syllabus Container -->
+                            <!-- Syllabus Container REMOVED -->
+                        </div>
+
+                        <!-- Right Content (Logos & Buttons) -->
+                        <div
+                            class="lg:col-span-4 flex flex-col items-end justify-between lg:min-h-[350px] mt-8 lg:mt-0">
+                            <!-- Logos -->
+                            <div class="grid grid-cols-2 gap-4 mb-auto">
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/python.jpg" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Python">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/mongodb.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="SQL">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/java.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="BI">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/react.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Data">
+                                </div>
+                            </div>
+
+                            <!-- Buttons (Right Aligned) -->
+                            <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+
+                                <button
+                                    class="px-6 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enrol
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Design and Application development Card (Mirrored) -->
+                <div data-nav-color="rgba(200, 191, 255, 0.95)"
+                    class="skill-card bg-[#c8bfff] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                        <!-- Left Content (Logos & Buttons) -->
+                        <div
+                            class="lg:col-span-4 flex flex-col items-start justify-between lg:min-h-[350px] lg:order-1 order-2 mt-8 lg:mt-0">
+                            <!-- Logos -->
+                            <div class="grid grid-cols-2 gap-4 mb-auto">
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/react.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Design">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/springboot.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="App">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/mongodb.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="UX">
+                                </div>
+                                <div
+                                    class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200/40 rounded-full flex items-center justify-center backdrop-blur-md shadow-inner">
+                                    <img src="assets/java.png" class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                                        alt="Dev">
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+
+                                <button
+                                    class="px-6 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enrol
+                                    Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="lg:col-span-8 text-right lg:order-2 order-1">
+                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
+                                Digital Design and<br>Application development
+                            </h2>
+                            <p class="text-black text-lg font-medium mb-8 ml-auto max-w-xl">
+                                Create stunning user experiences and high-performance applications.
+                                From UI/UX design to modern mobile and web development.
+                            </p>
+
+                            <!-- Divider -->
+                            <div class="h-[2px] bg-white w-full mb-8"></div>
+
+                            <!-- Skill Boxes -->
+                            <div
+                                class="flex overflow-x-auto md:flex-wrap justify-start lg:justify-end gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
+                                <div
+                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-pink-100 text-pink-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Figma</div>
+                                <div
+                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-purple-100 text-purple-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    UI/UX</div>
+                                <div
+                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    Flutter</div>
+                                <div
+                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-indigo-100 text-indigo-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
+                                    React Native</div>
+                            </div>
+
+                            <!-- Syllabus Container -->
+                            <!-- Syllabus Container REMOVED -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teqies Land in Companies Section -->
+        <section class="py-16 bg-black overflow-hidden mt-10">
+            <div class="max-w-screen-2xl mx-auto px-4 sm:px-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Teqies Land in Companies</h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-10 w-full mx-auto">
+                    <!-- Column 1 -->
+                    <div
+                        class="logo-box relative overflow-hidden h-24 sm:h-32 bg-white/5 rounded-2xl border border-white/10">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/zoho.jpg" onerror="this.src='https://placehold.co/120x120?text=Zoho'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/g.png" onerror="this.src='https://placehold.co/120x120?text=Google'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div
+                        class="logo-box relative overflow-hidden h-24 sm:h-32 bg-white/5 rounded-2xl border border-white/10">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/ibm.png" onerror="this.src='https://placehold.co/120x120?text=IBM'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/acce.png"
+                                    onerror="this.src='https://placehold.co/120x120?text=Accenture'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div
+                        class="logo-box relative overflow-hidden h-24 sm:h-32 bg-white/5 rounded-2xl border border-white/10">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/bmw.jpg" onerror="this.src='https://placehold.co/120x120?text=BMW'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/tcs.jpg" onerror="this.src='https://placehold.co/120x120?text=TCS'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div
+                        class="logo-box relative overflow-hidden h-24 sm:h-32 bg-white/5 rounded-2xl border border-white/10">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/benz.png" onerror="this.src='https://placehold.co/120x120?text=Benz'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/vd.png" onerror="this.src='https://placehold.co/120x120?text=Vodafone'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 5 -->
+                    <div
+                        class="logo-box relative overflow-hidden h-24 sm:h-32 bg-white/5 rounded-2xl border border-white/10">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/mice.png"
+                                    onerror="this.src='https://placehold.co/120x120?text=Microland'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="assets/g.png" onerror="this.src='https://placehold.co/120x120?text=Google'"
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relume Style Testimonials Section -->
+        <section id="testimonials" class="bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-indigo-600 font-bold text-xs tracking-[0.2em] uppercase">Testimonials</span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mt-4">Hear from students like you</h2>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div id="testimonial-grid" class="columns-1 md:columns-2 lg:columns-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "Wow, this is absolutely incredible – huge props to the @t4teq team for bringing these
+                            amazing skills to more developers!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=1" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Aditya Verma</h4>
+                                <span class="text-slate-400 text-xs">@FullStackDev</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "Finally a training center that I will ACTUALLY include as part of my career journey. I love
+                            how seamless it is from start to finish."
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=2" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Priya Sharma</h4>
+                                <span class="text-slate-400 text-xs">@DataAnalyst</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "This is pure magic. ✨ Learning Java in months → Full project built with AI → Placement
+                            support. T4TEQ is saving the day for students!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=3" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Rahul Nair</h4>
+                                <span class="text-slate-400 text-xs">@JavaExpert</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "Very excited for T4TEQ's new AI-powered learning platform. I love the messaging and
+                            positioning: 'to empower you, not replace you'."
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=4" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Sanjay Kumar</h4>
+                                <span class="text-slate-400 text-xs">@Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "Yo, this is 🔥 @t4teq has been one of my favorite teams I've seen evolve. They're carving
+                            out a tremendous groove for developers."
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=5" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Meera Reddy</h4>
+                                <span class="text-slate-400 text-xs">@TechLead</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                            "The new AI tools are game changers! This can absolutely speed up our development and will
+                            change how we approach technical problems."
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div
+                                class="w-12 h-12 rounded-full bg-slate-400 overflow-hidden ring-4 ring-white shadow-sm">
+                                <img src="https://i.pravatar.cc/150?u=6" alt="Student"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-sm">Arjun Das</h4>
+                                <span class="text-slate-400 text-xs">@QAEngineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TEQ Gallery Section -->
+        <section id="gallery" data-nav-color="rgba(255, 255, 255, 0.95)" class="bg-white overflow-hidden scroll-mt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-12">
+                <!-- Section Header -->
+                <div class="text-center mb-2" data-aos="fade-up">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-black mb-4 mt-8">TEQ Gallery</h2>
+
+                    <!-- Navigation Tabs -->
+                    <div
+                        class="inline-flex justify-center bg-white shadow-xl rounded-full p-1 gap-1 mb-12 border border-gray-100">
+                        <button onclick="goToGallerySlide(0)"
+                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm bg-black text-white transition-all">Photos</button>
+                        <button onclick="goToGallerySlide(1)"
+                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Internship</button>
+                        <button onclick="goToGallerySlide(2)"
+                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Workshops</button>
+                        <button onclick="goToGallerySlide(3)"
+                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Certificate</button>
+                        <button onclick="goToGallerySlide(4)"
+                            class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Awards</button>
+                    </div>
+                </div>
+
+                <!-- Main Gallery Slider (Whole grid container slides) -->
+                <div class="relative group overflow-hidden rounded-[40px] shadow-2xl">
+                    <div id="galleryMainSlider" class="flex transition-transform duration-700 ease-in-out">
+
+                        <!-- Slide 1: Photos -->
+                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[450px] sm:h-[300px]">
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="./assets/director.jpg"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 1">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Internship -->
+                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="./assets/director.jpg"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 1">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Workshops -->
+                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="./assets/director.jpg"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 1">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Certificate -->
+                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="./assets/director.jpg"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 1">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Awards -->
+                        <div class="flex-shrink-0 bg-[#FF8A8A] p-4 sm:p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[20px] sm:h-[285px]">
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="./assets/director.jpg"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 1">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                                <div class="group/item overflow-hidden rounded-[20px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="absolute bottom-10 right-10 flex gap-4 z-20">
+                        <button onclick="prevGallerySlide()"
+                            class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
+                            <i class="fas fa-chevron-left group-hover/btn:-translate-x-1 transition-transform"></i>
+                        </button>
+                        <button onclick="nextGallerySlide()"
+                            class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
+                            <i class="fas fa-chevron-right group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" data-nav-color="rgba(241, 245, 249, 0.95)"
+            class="py-20 bg-slate-50 overflow-hidden scroll-mt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-12 relative">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl sm:text-5xl font-black text-black tracking-tight">Visit Us</h2>
+                    <p class="mt-4 text-slate-600 font-medium text-lg">Find us at any of our three convenient
+                        branches
+                        in Trichy.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 items-center">
+                    <!-- Left: Vertical Address Cards -->
+                    <div class="space-y-6 reveal reveal-left">
+                        <!-- Puthur Branch -->
+                        <div onclick="switchBranch('puthur')" id="card-puthur"
+                            class="address-card active bg-white border-2 border-orange-500 p-6 rounded-3xl cursor-pointer shadow-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-orange-50 p-3 rounded-2xl">
+                                    <span class="material-symbols-outlined text-orange-600">location_on</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-xl font-black text-slate-900">Puthur Branch (HO)</h4>
+                                    <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                                        #5, All Saints Complex, Puthur High Road, Trichy - 620017
+                                    </p>
+                                    <div class="flex items-center gap-2 text-orange-600 font-bold text-sm">
+                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        +91 91591 59139
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thillai Nagar Branch -->
+                        <div onclick="switchBranch('thillai')" id="card-thillai"
+                            class="address-card bg-white border-2 border-slate-100 p-6 rounded-3xl cursor-pointer hover:shadow-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-50 p-3 rounded-2xl">
+                                    <span class="material-symbols-outlined text-blue-600">location_on</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-xl font-black text-slate-900">Thillai Nagar Branch</h4>
+                                    <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                                        C35, 1st Floor, K.M Towers, Near Cibo Restaurant, 5th Cross, NEE Thillai
+                                        Nagar, Trichy - 620018
+                                    </p>
+                                    <div class="flex items-center gap-2 text-blue-600 font-bold text-sm">
+                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        +91 91591 59139
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kattur Branch -->
+                        <div onclick="switchBranch('kattur')" id="card-kattur"
+                            class="address-card bg-white border-2 border-slate-100 p-6 rounded-3xl cursor-pointer hover:shadow-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-emerald-50 p-3 rounded-2xl">
+                                    <span class="material-symbols-outlined text-emerald-600">location_on</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-xl font-black text-slate-900">Kattur Branch</h4>
+                                    <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                                        #12, Navaladiyan Arcade, Oil Mill Bus Stop, Kattur, Trichy - 620019
+                                    </p>
+                                    <div class="flex items-center gap-2 text-emerald-600 font-bold text-sm">
+                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        +91 91591 59139
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Map with Refined Design -->
+                    <div class="flex justify-center items-center reveal reveal-right">
+                        <div
+                            class="relative w-full max-w-[500px] aspect-[4/5] sm:aspect-video lg:aspect-[4/3] flex items-center justify-center">
+                            <!-- Background Glow (Replacing Sparkle) -->
+                            <div class="absolute inset-0 bg-blue-400/5 blur-[100px] rounded-full"></div>
+
+                            <!-- Main Graphic Container -->
+                            <div class="relative z-10 w-full h-full flex items-center justify-center">
+                                <!-- Sparkle Background Shape Commented Out -->
+                                <!-- <div class="absolute inset-0 animate-pulse-slow">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-full h-full drop-shadow-xl">
+                                        <path fill="#111"
+                                            d="M100 0 L115 70 L185 85 L115 100 L130 170 L100 130 L70 170 L85 100 L15 85 L85 70 Z"
+                                            class="animate-pulse"></path>
+                                        <path fill="#FFD700"
+                                            d="M100 20 L110 80 L170 100 L110 120 L120 180 L100 150 L80 180 L90 120 L30 100 L90 80 Z"
+                                            opacity="0.8"></path>
+                                    </svg>
+                                </div> -->
+
+                                <!-- Map Container - Increased Height -->
+                                <div
+                                    class="relative z-20 w-full h-full rounded-[40px] overflow-hidden border-8 border-white shadow-2xl group bg-white">
+                                    <iframe id="branch-map"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.841578!2d78.682393!3d10.823617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5099356391d%3A0x6a0f6a67f18b9cad!2sT4TEQ%20SOFTWARE%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1739328000000!5m2!1sen!2sin"
+                                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                                        style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+
+                                    <!-- Mini Info Overlay -->
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-slate-50 transition-all">
+                                        <h5 id="map-branch-name" class="font-black text-slate-900 text-xs mb-1">
+                                            Puthur Branch
+                                            (HO)</h5>
+                                        <p id="map-branch-addr"
+                                            class="text-slate-500 text-[10px] font-bold leading-tight uppercase">
+                                            All Saints Complex, Puthur Main Road, Trichy</p>
+                                    </div>
+                                </div>
+
+                                <!-- Decorative Sparkles Commented Out -->
+                                <!-- <div class="absolute -top-2 -right-2 text-yellow-400 animate-ping text-xl">✦
+                                </div>
+                                <div class="absolute -bottom-2 -left-2 text-white animate-bounce text-xl">✦
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section Redesigned -->
+        <section id="faq" data-nav-color="rgba(213, 242, 255, 0.9)"
+            class="py-20 bg-white relative overflow-hidden scroll-mt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
+                <div class="bg-[#D5F2FF] rounded-[40px] p-8 sm:p-16 flex flex-col lg:flex-row gap-12 items-start">
+                    <!-- Left Column: Title -->
+                    <div class="lg:w-1/3">
+                        <h2
+                            class="text-4xl sm:text-5xl font-extrabold text-[#111827] leading-tight line-height-10 line-spacing-10">
+                            CURIOUS ABOUT T4TEQ
+                        </h2>
+                    </div>
+
+                    <!-- Right Column: Accordion -->
+                    <div class="lg:w-2/3 w-full space-y-0">
+                        <!-- FAQ Item 1 -->
+                        <div class="border-b border-black/10 reveal">
+                            <button onclick="toggleFAQ(0)"
+                                class="w-full flex justify-between items-center py-6 text-left group">
+                                <span class="text-xl font-bold text-black transition-colors">What courses does
+                                    T4TEQ
+                                    offer?</span>
+                                <div class="faq-icon transition-transform duration-300">
+                                    <i class="fas fa-chevron-down text-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-6 text-gray-700 leading-relaxed text-lg">
+                                    T4TEQ offers a wide range of courses including Full Stack Development, Data
+                                    Analytics, Python Programming, Java, and Business Intelligence.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="border-b border-black/10 reveal">
+                            <button onclick="toggleFAQ(1)"
+                                class="w-full flex justify-between items-center py-6 text-left group">
+                                <span class="text-xl font-bold text-black transition-colors">Is T4TEQ suitable
+                                    for
+                                    beginners?</span>
+                                <div class="faq-icon transition-transform duration-300">
+                                    <i class="fas fa-chevron-down text-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-6 text-gray-700 leading-relaxed text-lg">
+                                    Yes, our courses are designed to take you from the basics to advanced
+                                    levels. We
+                                    emphasize "Making Tech Simple" for everyone.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="reveal">
+                            <button onclick="toggleFAQ(2)"
+                                class="w-full flex justify-between items-center py-6 text-left group">
+                                <span class="text-xl font-bold text-black transition-colors">Does T4TEQ provide
+                                    placement
+                                    assistance?</span>
+                                <div class="faq-icon transition-transform duration-300">
+                                    <i class="fas fa-chevron-down text-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-6 text-gray-700 leading-relaxed text-lg">
+                                    Yes, we provide comprehensive placement support, including resume building,
+                                    interview
+                                    preparation, and connections with our industry partners.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer - Responsive -->
+        <footer class="bg-black text-white pt-12 sm:pt-20 pb-8 sm:pb-12">
+            <div class="w-full px-4 sm:px-12">
+                <!-- Large Title Header -->
+                <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-7xl
+           font-black font-display
+           tracking-tight
+           mb-10 sm:mb-16
+           border-b border-white/10 pb-4 sm:pb-6
+           uppercase leading-[1.1]">
+                    <span class="hover-letter">T</span><span class="hover-letter">4</span><span
+                        class="hover-letter">T</span><span class="hover-letter">E</span><span
+                        class="hover-letter">Q</span>
+                    <span class="hover-letter">S</span><span class="hover-letter">O</span><span
+                        class="hover-letter">F</span><span class="hover-letter">T</span><span
+                        class="hover-letter">W</span><span class="hover-letter">A</span><span
+                        class="hover-letter">R</span><span class="hover-letter">E</span>
+                    <span class="hover-letter">S</span><span class="hover-letter">O</span><span
+                        class="hover-letter">L</span><span class="hover-letter">U</span><span
+                        class="hover-letter">T</span><span class="hover-letter">I</span><span
+                        class="hover-letter">O</span><span class="hover-letter">N</span><span
+                        class="hover-letter">S</span>
+                </h1>
+
+                <!-- Four Column Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-20">
+
+                    <!-- Column 1: Our Free Courses -->
+                    <div>
+                        <h4 class="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white">Our Courses</h4>
+                        <ul class="space-y-2 sm:space-y-3 text-slate-400 text-xs sm:text-sm">
+                            <li><a class="footer-link" href="#">Full Stack</a></li>
+                            <li><a class="footer-link" href="#">FrontEnd</a></li>
+                            <li><a class="footer-link" href="#">Backend</a></li>
+                            <li><a class="footer-link" href="#">Python</a></li>
+                            <li><a class="footer-link" href="#">Java</a></li>
+                            <li><a class="footer-link" href="#">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                        <h4 class="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white">Quick Links</h4>
+                        <ul class="space-y-2 sm:space-y-3 text-slate-400 text-xs sm:text-sm">
+                            <li><a class="footer-link" href="#">Home</a></li>
+                            <li><a class="footer-link" href="#">Full Stack</a></li>
+                            <li><a class="footer-link" href="#">Devops</a></li>
+                            <li><a class="footer-link" href="#">Crash Courses</a></li>
+                            <li><a class="footer-link" href="#">Master DSA</a></li>
+                            <li><a class="footer-link" href="#">Master AWS</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Error Makes Clever -->
+                    <div>
+                        <h4 class="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white">T4TEQ</h4>
+                        <ul class="space-y-2 sm:space-y-3 text-slate-400 text-xs sm:text-sm">
+                            <li><a class="footer-link" href="#">Contact</a></li>
+                            <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                            <li><a class="footer-link" href="#">Refund Policy</a></li>
+                            <li><a class="footer-link" href="#">Terms Of Use</a></li>
+                            <li><a class="footer-link" href="#">Student Reviews</a></li>
+                            <li><a class="footer-link" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Social Media & Recognition -->
+                    <div>
+                        <div class="flex flex-col gap-6">
+                            <!-- Social Media Icons -->
+                            <div>
+                                <h4 class="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white">Follow Us
+                                </h4>
+                                <div class="flex gap-4 flex-wrap">
+                                    <!-- Facebook -->
+                                    <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- Twitter/X -->
+                                    <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- YouTube -->
+                                    <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- WhatsApp -->
+                                    <!-- <a href="#" class="social-icon text-slate-400 hover:text-emerald-500">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                </a> -->
+                                </div>
+                            </div>
+
+                            <!-- Recognition Badges -->
+                            <div>
+                                <h4 class="text-base sm:text-lg font-bold mb-4 text-white">Recognized By</h4>
+                                <div class="flex flex-col gap-3">
+                                    <!-- Featured Badge -->
+                                    <!-- <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3">
+                                    <div class="flex gap-1">
+                                        <span class="text-amber-400 text-xl">🌿</span>
+                                        <span class="text-amber-400 text-xl">🌿</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-white text-sm font-semibold">Featured</div>
+                                        <div class="text-slate-400 text-xs">by Social Eagle</div>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <span class="text-amber-400 text-xl">🌿</span>
+                                        <span class="text-amber-400 text-xl">🌿</span>
+                                    </div>
+                                </div> -->
+
+                                    <!-- Google Rating Badge -->
+                                    <!-- <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                    </svg>
+                                    <div class="flex gap-0.5">
+                                        <span class="text-red-500 text-lg">★</span>
+                                        <span class="text-red-500 text-lg">★</span>
+                                        <span class="text-red-500 text-lg">★</span>
+                                        <span class="text-red-500 text-lg">★</span>
+                                        <span class="text-red-500 text-lg">★</span>
+                                    </div>
+                                    <div class="text-white text-sm font-semibold">Google (4.8)</div>
+                                </div> -->
+                                    <!-- Recognition Badges -->
+                                    <div>
+
+
+                                        <div class="flex flex-col gap-4">
+
+                                            <!-- Google Rating Badge -->
+                                            <div class="bg-white/5 border border-white/10 
+                    rounded-2xl p-4 
+                    flex items-center gap-4 
+                    backdrop-blur-md 
+                    hover:scale-[1.02] transition duration-300">
+
+                                                <!-- Google Icon -->
+                                                <svg class="w-10 h-10" viewBox="0 0 24 24">
+                                                    <path fill="#4285F4"
+                                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                                    <path fill="#34A853"
+                                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                                    <path fill="#FBBC05"
+                                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                                    <path fill="#EA4335"
+                                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                                </svg>
+
+                                                <div class="flex flex-col">
+                                                    <div class="flex gap-1 mb-1">
+                                                        <span class="text-orange-500 text-xl">★</span>
+                                                        <span class="text-orange-500 text-xl">★</span>
+                                                        <span class="text-orange-500 text-xl">★</span>
+                                                        <span class="text-orange-500 text-xl">★</span>
+                                                        <span class="text-orange-500 text-xl opacity-40">☆</span>
+                                                    </div>
+                                                    <div class="text-white text-sm font-semibold">
+                                                        Google (4.8)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ISO Certificate Badge -->
+                                            <div class="bg-white/5 border border-white/10 
+                    rounded-2xl p-4 
+                    flex items-center gap-4 
+                    backdrop-blur-md 
+                    hover:scale-[1.02] transition duration-300">
+
+                                                <!-- ISO Icon -->
+                                                <div>
+                                                    <div class="text-blue-400 text-xs font-medium">
+                                                        Certified Company
+                                                    </div>
+                                                    <div class="text-white text-sm font-semibold">
+                                                        ISO 9001:2015
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Copyright & Decorative Element -->
+                <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-slate-500 text-sm font-medium tracking-wide order-3 md:order-1">
+                        © 2026 @T4teq Software Solutions
+                    </p>
+
+                    <p class="text-slate-400 text-sm font-bold tracking-wider 
+           order-1 md:order-2 text-center font-ndot">
+                        DESIGNED AND BUILT BY <br>THE AWESOME PEOPLE OF PUTHUR
+                    </p>
+
+                    <!-- Overlapping Employee Circles -->
+                    <div class="flex -space-x-4 order-2 md:order-3">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 1">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 2">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 3">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 4">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 5">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=100&h=100"
+                                class="w-full h-full object-cover" alt="Employee 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- syllabus.js removed -->
+        <script>
+            // Logo Slider Animation
+            const slides = document.querySelectorAll(".logo-slide");
+            let showingSecond = false;
+
+            function animateLogos() {
+                let delay = 0;
+
+                slides.forEach((slide) => {
+                    setTimeout(() => {
+                        slide.style.transform = showingSecond ?
+                            "translateY(0)" :
+                            "translateY(-100%)"; // Translate by full 100% of the slide height
+                    }, delay);
+                    delay += 500;
+                });
+
+                showingSecond = !showingSecond;
+            }
+
+            setTimeout(() => {
+                animateLogos();
+                setInterval(animateLogos, 4000);
+            }, 3000);
+        </script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#a855f7"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                        "distance": 150,
+                        "color": "#a855f7",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
+        <script>
+            // Scroll Animation Observer
+            document.addEventListener('DOMContentLoaded', () => {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            // Optional: Stop observing once animated
+                            // observer.unobserve(entry.target); 
+                        }
+                    });
+                }, observerOptions);
+
+                const hiddenElements = document.querySelectorAll('.reveal');
+                hiddenElements.forEach(el => {
+                    // Ensure initial state is applied before observing
+                    el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                    observer.observe(el);
+                });
+
+
+                // Dynamic Navbar Blending Logic
+                const sections = document.querySelectorAll('[data-nav-color]');
+                const nav = document.querySelector('nav');
+
+                const navObserverOptions = {
+                    threshold: 0.2 // Trigger when 20% of section is visible
+                };
+
+                const navObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const color = entry.target.getAttribute('data-nav-color');
+                            nav.style.backgroundColor = color;
+                            nav.style.transition = 'background-color 0.8s ease';
+                        }
+                    });
+                }, navObserverOptions);
+
+                sections.forEach(section => navObserver.observe(section));
+
+                // Mobile Menu Toggle Logic
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const closeMenuBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileContent = mobileMenu.querySelector('div');
+                const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+                const toggleMobileMenu = (show) => {
+                    if (show) {
+                        mobileMenu.classList.remove('hidden');
+                        // Force reflow
+                        mobileMenu.offsetHeight;
+                        mobileMenu.classList.remove('opacity-0');
+                        mobileContent.classList.remove('translate-x-full');
+                        document.body.style.overflow = 'hidden'; // Prevent scroll
+                    } else {
+                        mobileMenu.classList.add('opacity-0');
+                        mobileContent.classList.add('translate-x-full');
+                        document.body.style.overflow = ''; // Restore scroll
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                        }, 300);
+                    }
+                };
+
+                mobileMenuBtn?.addEventListener('click', () => toggleMobileMenu(true));
+                closeMenuBtn?.addEventListener('click', () => toggleMobileMenu(false));
+                mobileMenu?.addEventListener('click', (e) => {
+                    if (e.target === mobileMenu) toggleMobileMenu(false);
+                });
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => toggleMobileMenu(false));
+                });
+
+                // Gallery Slider Logic
+                let currentGallerySlide = 0;
+                const galleryMainSlider = document.getElementById('galleryMainSlider');
+                const gallerySlides = document.querySelectorAll('#galleryMainSlider > div');
+                const galleryTabs = document.querySelectorAll('.gallery-tab');
+                const totalGallerySlides = gallerySlides.length;
+
+                window.updateGalleryCarousel = () => {
+                    galleryMainSlider.style.transform = `translateX(-${currentGallerySlide * 100}%)`;
+
+                    // Update Tabs Active State
+                    galleryTabs.forEach((tab, index) => {
+                        if (index === currentGallerySlide) {
+                            tab.classList.add('bg-black', 'text-white');
+                            tab.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                        } else {
+                            tab.classList.remove('bg-black', 'text-white');
+                            tab.classList.add('text-gray-600', 'hover:bg-gray-100');
+                        }
+                    });
+                };
+
+                window.nextGallerySlide = () => {
+                    currentGallerySlide = (currentGallerySlide + 1) % totalGallerySlides;
+                    updateGalleryCarousel();
+                };
+
+                window.prevGallerySlide = () => {
+                    currentGallerySlide = (currentGallerySlide - 1 + totalGallerySlides) % totalGallerySlides;
+                    updateGalleryCarousel();
+                };
+
+                window.goToGallerySlide = (index) => {
+                    currentGallerySlide = index;
+                    updateGalleryCarousel();
+                };
+
+                // Gallery Interval
+                let galleryInterval = setInterval(nextGallerySlide, 6000);
+
+                // Pause on hover
+                const galleryContainer = document.getElementById('galleryMainSlider') ? document.getElementById('galleryMainSlider').parentElement : null;
+                if (galleryContainer) {
+                    galleryContainer.addEventListener('mouseenter', () => clearInterval(galleryInterval));
+                    galleryContainer.addEventListener('mouseleave', () => galleryInterval = setInterval(nextGallerySlide, 6000));
+                }
+
+                // FAQ Toggle Logic
+                window.toggleFAQ = (index) => {
+                    const contents = document.querySelectorAll('.faq-content');
+                    const icons = document.querySelectorAll('.faq-icon');
+
+                    contents.forEach((content, i) => {
+                        if (i === index) {
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                                icons[i].style.transform = 'rotate(0deg)';
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                                icons[i].style.transform = 'rotate(180deg)';
+                            }
+                        } else {
+                            content.style.maxHeight = null;
+                            icons[i].style.transform = 'rotate(0deg)';
+                        }
+                    });
+                };
+
+                // Typewriter Animation Logic
+                const typewriterElement = document.getElementById('typewriter-text');
+                const words = ["Simple", "Experience"];
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                let typeSpeed = 150;
+
+                const type = () => {
+                    const currentWord = words[wordIndex];
+                    if (isDeleting) {
+                        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                        charIndex--;
+                        typeSpeed = 100;
+                    } else {
+                        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                        charIndex++;
+                        typeSpeed = 150;
+                    }
+
+                    if (!isDeleting && charIndex === currentWord.length) {
+                        isDeleting = true;
+                        typeSpeed = 2000; // Pause at end
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        typeSpeed = 500; // Pause before next word
+                    }
+
+                    setTimeout(type, typeSpeed);
+                };
+
+                if (typewriterElement) setTimeout(type, 1000);
+
+                // Navbar Scroll State Fix
+                const mainHeader = document.getElementById('main-header');
+                const handleNavScroll = () => {
+                    if (window.scrollY > 50) {
+                        mainHeader?.classList.add('scrolled');
+                        nav.classList.remove('bg-slate-100/90');
+                        nav.classList.add('bg-white/95', 'shadow-lg');
+                    } else {
+                        mainHeader?.classList.remove('scrolled');
+                        nav.classList.add('bg-slate-100/90');
+                        nav.classList.remove('bg-white/95', 'shadow-lg');
+                    }
+                };
+                window.addEventListener('scroll', handleNavScroll);
+                handleNavScroll(); // Initial check
+            });
+
+            // Premium Stacking Scroll Animation - Optimized with rAF and Metadata Caching
+            const skillCards = document.querySelectorAll('.skill-card');
+            const STICKY_TOP = 100; // Match CSS top
+
+            let isScrolling = false;
+            let cardMeta = [];
+
+            // Cache geometry to avoid getBoundingClientRect during scroll (Layout Thrashing)
+            const cacheCardMeta = () => {
+                const scrollY = window.pageYOffset;
+                cardMeta = Array.from(skillCards).map(card => {
+                    const rect = card.getBoundingClientRect();
+                    return {
+                        top: rect.top + scrollY,
+                        height: card.offsetHeight
+                    };
+                });
+            };
+
+            const updateAnimations = () => {
+                const scrollY = window.pageYOffset;
+
+                skillCards.forEach((card, index) => {
+                    const nextMeta = cardMeta[index + 1];
+
+                    if (nextMeta) {
+                        // Calculate distance using cached absolute positions
+                        const distance = nextMeta.top - scrollY - STICKY_TOP;
+                        const cardHeight = cardMeta[index].height;
+
+                        // Ratio of how much of the NEXT card has slid over the CURRENT card
+                        let progress = 0;
+                        if (distance < cardHeight) {
+                            progress = 1 - (distance / cardHeight);
+                        }
+                        if (distance <= 0) progress = 1;
+                        if (distance >= cardHeight) progress = 0;
+
+                        // Apply smooth transforms and opacity
+                        const scale = 1 - (progress * 0.05); // Scale down to 0.95
+                        const opacity = 1 - (progress * 0.5); // Fade to 0.5
+                        const translateY = -(progress * 20); // Subtle parallax lift
+
+                        card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+                        card.style.opacity = opacity.toString();
+                    }
+                });
+                isScrolling = false;
+            };
+
+            const handleScroll = () => {
+                if (!isScrolling) {
+                    requestAnimationFrame(updateAnimations);
+                    isScrolling = true;
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            window.addEventListener('resize', cacheCardMeta);
+
+            // Initial setup
+            cacheCardMeta();
+            updateAnimations();
+
+
+            // Map Switching Logic
+            const branchMaps = {
+                puthur: {
+                    name: "Puthur Branch (HO)",
+                    addr: "#5, All Saints Complex, Puthur Main Road, Trichy",
+                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.841578!2d78.682393!3d10.823617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5099356391d%3A0x6a0f6a67f18b9cad!2sT4TEQ%20SOFTWARE%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1739328000000!5m2!1sen!2sin"
+                },
+                thillai: {
+                    name: "Thillai Nagar Branch",
+                    addr: "C35, 1st Floor, K.M Towers, 5th Cross, Thillai Nagar, Trichy",
+                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8!2d78.68!3d10.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50000000000%3A0x0!2sT4TEQ%20Corporate%20Office!5e0!3m2!1sen!2sin!4v1739329000000!5m2!1sen!2sin"
+                },
+                kattur: {
+                    name: "Kattur Branch",
+                    addr: "#12, Navaladiyan Arcade, Oil Mill Bus Stop, Kattur, Trichy",
+                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0!2d78.75!3d10.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50000000001%3A0x0!2sT4TEQ%20Kattur%20Branch!5e0!3m2!1sen!2sin!4v1739330000000!5m2!1sen!2sin"
+                }
+            };
+
+            window.switchBranch = (branchId) => {
+                const data = branchMaps[branchId];
+                if (!data) return;
+
+                // Update Map
+                document.getElementById('branch-map').src = data.url;
+                document.getElementById('map-branch-name').innerText = data.name;
+                document.getElementById('map-branch-addr').innerText = data.addr;
+
+                // Update Active Card
+                document.querySelectorAll('.address-card').forEach(card => {
+                    card.classList.remove('active');
+                    card.classList.add('border-slate-100');
+                });
+                const activeCard = document.getElementById(`card-${branchId}`);
+                activeCard.classList.add('active');
+                activeCard.classList.remove('border-slate-100');
+            };
+
+            // Testimonial Scroll Fade Effect
+            function updateTestimonialFade() {
+                const cards = Array.from(document.querySelectorAll(".testimonial-card"));
+                if (!cards.length) return;
+
+                const scrollBottom = window.scrollY + window.innerHeight;
+                const section = document.getElementById('testimonials');
+                if (!section) return;
+
+                const rect = section.getBoundingClientRect();
+                const sectionBottom = window.scrollY + rect.bottom;
+                const distanceToBottom = sectionBottom - scrollBottom;
+
+                // Reset all first
+                cards.forEach(c => c.style.opacity = 1);
+
+                // Start fading when near section bottom
+                const fadeStartThreshold = 200;
+
+                if (distanceToBottom < fadeStartThreshold) {
+                    const fadeCount = 3;
+                    const lastCards = cards.slice(-fadeCount);
+                    const progress = Math.min(1, (fadeStartThreshold - distanceToBottom) / fadeStartThreshold);
+
+                    lastCards.forEach((card, index) => {
+                        const delay = index * 0.15;
+                        let local = (progress - delay) / (1 - delay);
+                        local = Math.max(0, Math.min(1, local));
+                        card.style.opacity = 1 - local * 0.85;
+                    });
+                }
+            }
+            window.addEventListener("scroll", updateTestimonialFade, { passive: true });
+            // ── Animated Counters ──────────────────────────────────────────
+            function animateCounters() {
+                document.querySelectorAll('.count').forEach(el => {
+                    const target = parseInt(el.dataset.target);
+                    const duration = 1600;
+                    const start = performance.now();
+                    function step(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const ease = 1 - Math.pow(1 - progress, 3);
+                        const value = Math.floor(ease * target);
+                        el.textContent = value >= 1000 ? (value / 1000).toFixed(0) + ',000' : value;
+                        if (progress < 1) requestAnimationFrame(step);
+                        else el.textContent = target >= 1000 ? target.toLocaleString() : target;
+                    }
+                    requestAnimationFrame(step);
+                });
+            }
+
+
+            // Trigger counters when stats section enters viewport
+            const statsSection = document.getElementById('stats');
+            if (statsSection) {
+                const counterObserver = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) {
+                        animateCounters();
+                        counterObserver.disconnect();
+                    }
+                }, { threshold: 0.3 });
+                counterObserver.observe(statsSection);
+            }
+        </script>
+
+        <!-- AOS Animation JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: false,
+                mirror: true,
+                anchorPlacement: 'top-bottom',
+            });
+        </script>
+
+
+</body>
+
+</html>

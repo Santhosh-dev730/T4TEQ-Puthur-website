@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flygo – About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Dashed arc */
+        .dashed-arc {
+            position: absolute;
+            width: 520px;
+            height: 260px;
+            border: 2px dashed #d1d5db;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border-bottom: none;
+            left: 50px;
+            top: 160px;
+            pointer-events: none;
+        }
+
+        /* Plane icon */
+        .plane-icon {
+            position: absolute;
+            bottom: 60px;
+            left: 52%;
+            transform: translateX(-50%);
+        }
+
+        /* Stacked cards */
+        .card-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+            transform: rotate(-6deg) translate(60px, -30px);
+            top: 0;
+            right: 0;
+        }
+
+        .card-front {
+            position: absolute;
+            width: 310px;
+            height: 210px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+            transform: rotate(6deg) translate(-10px, 60px);
+            top: 0;
+            right: 0;
+        }
+
+        .card-back img,
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Stats */
+        .stat-accent {
+            color: #f97316;
+        }
+
+        /* Button */
+        .btn-orange {
+            background: #f97316;
+            color: #fff;
+            border-radius: 9999px;
+            padding: 14px 36px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.15s;
+            display: inline-block;
+        }
+
+        .btn-orange:hover {
+            background: #ea6c0a;
+            transform: translateY(-1px);
+        }
+
+        /* Fade-in on load */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(28px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.30s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.45s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.60s;
+        }
+
+        /* Counter animation */
+        .count {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="relative overflow-hidden bg-white py-16 px-6 max-w-6xl mx-auto">
+
+        <!-- Dashed arc decoration -->
+        <div class="dashed-arc"></div>
+
+        <!-- Main two-column layout -->
+        <div class="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-0 min-h-[480px]">
+
+            <!-- Left: Text -->
+            <div class="lg:w-1/2 z-10 fade-up">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">About Us</h1>
+                <p class="text-gray-600 leading-relaxed mb-4 max-w-md">
+                    At Flygo, we believe travel is more than reaching a destination—it's about
+                    the moments you collect along the way. Whether you're seeking adventure,
+                    relaxation, or cultural immersion, we design journeys around what truly
+                    matters to you.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8 max-w-md">
+                    With expert planning, trusted global partners, and a passion for exploration,
+                    we make travel effortless, inspiring, and unforgettable.
+                </p>
+
+            </div>
+
+            <!-- Right: Stacked image cards -->
+            <div class="lg:w-1/2 flex justify-center items-center relative h-[360px] w-full fade-up delay-2">
+                <!-- Back card (mountain lake) -->
+                <div class="card-back">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                        alt="Mountain lake" />
+                </div>
+                <!-- Front card (desert traveler) -->
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80"
+                        alt="Desert traveler" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Paper plane SVG -->
+        <div class="plane-icon fade-up delay-3">
+            <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 18L42 2L28 34L22 22L2 18Z" stroke="#9ca3af" stroke-width="1.5" stroke-linejoin="round"
+                    fill="none" />
+                <path d="M22 22L42 2" stroke="#9ca3af" stroke-width="1.5" />
+            </svg>
+        </div>
+
+        <!-- Stats row -->
+        <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8 border-t pt-10 fade-up delay-4">
+            <div class="text-center">
+                <div class="text-5xl font-bold text-gray-900">
+                    <span class="count" data-target="10000">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="text-gray-500 mt-1 text-sm">Happy Travelers</div>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl font-bold text-gray-900">
+                    <span class="count" data-target="50">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="text-gray-500 mt-1 text-sm">Destinations</div>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl font-bold text-gray-900">
+                    <span class="count" data-target="98">0</span><span class="stat-accent">%</span>
+                </div>
+                <div class="text-gray-500 mt-1 text-sm">Satisfaction Rate</div>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl font-bold text-gray-900">
+                    <span class="count" data-target="15">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="text-gray-500 mt-1 text-sm">Years Experience</div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        // Animated counters
+        function animateCounters() {
+            document.querySelectorAll('.count').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                const duration = 1600;
+                const start = performance.now();
+                function step(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const ease = 1 - Math.pow(1 - progress, 3);
+                    const value = Math.floor(ease * target);
+                    el.textContent = value >= 1000 ? (value / 1000).toFixed(0) + ',000' : value;
+                    if (progress < 1) requestAnimationFrame(step);
+                    else el.textContent = target >= 1000 ? '10,000' : target;
+                }
+                requestAnimationFrame(step);
+            });
+        }
+
+        // Trigger counters when stats section enters viewport
+        const statsSection = document.querySelector('.grid');
+        const observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.disconnect();
+            }
+        }, { threshold: 0.3 });
+        observer.observe(statsSection);
+    </script>
+</body>
+
+</html>

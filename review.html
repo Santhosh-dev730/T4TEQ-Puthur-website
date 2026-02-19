@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Review – Fade last cards on scroll</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body{
+  background:#ffffff;
+  padding:40px 20px 140px;
+}
+
+/* section */
+.section{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+/* header */
+.section small{
+  letter-spacing:2px;
+  font-size:12px;
+  color:#777;
+}
+
+.section h2{
+  margin:10px 0 40px;
+  font-size:32px;
+  font-weight:700;
+}
+
+/* masonry */
+.grid{
+  column-count:3;
+  column-gap:26px;
+}
+
+@media(max-width:900px){
+  .grid{ column-count:2; }
+}
+@media(max-width:550px){
+  .grid{ column-count:1; }
+}
+
+/* card */
+.card{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  margin:0 0 26px;
+  padding:22px 22px 20px;
+  background:#e5e5e5;
+  border-radius:26px;
+  text-align:left;
+  box-shadow:1px 1px 10px rgba(0,0,0,.15);
+  break-inside:avoid;
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s,
+    background .45s,
+    opacity .2s ease;
+
+  transform-style:preserve-3d;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+/* hover */
+.card:hover{
+  background:#ffffff;
+  transform:
+    translateY(-14px)
+    rotateX(4deg)
+    rotateY(-4deg)
+    scale(1.02);
+  box-shadow:0 30px 60px rgba(0,0,0,.18);
+}
+
+/* text */
+.card p{
+  font-size:14px;
+  line-height:1.55;
+  color:#222;
+}
+
+/* user row */
+.user{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:18px;
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#b9b9b9;
+  flex-shrink:0;
+}
+
+.user h4{
+  font-size:13px;
+  font-weight:600;
+}
+
+.user span{
+  display:block;
+  font-size:12px;
+  color:#555;
+}
+</style>
+</head>
+<body>
+
+<section class="section">
+  <small>STUDENT REVIEW</small>
+  <h2>Hear from students like you</h2>
+
+
+  <div class="grid">
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+        <div class="google"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus assumenda rem deserunt ex impedit, asperiores suscipit error cupiditate vitae, voluptate sint recusandae maxime id iste enim sunt, expedita laudantium? Officiis.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+        <div class="google"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a rerum veniam dolore, perferendis nihil velit, repudiandae quibusdam quia iste modi maiores ratione quae ea molestias, officiis commodi dolorem at. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <div class="user">
+        <div class="avatar"></div>
+        <div><h4>Lorem Ipsum</h4><span>@Google</span></div>
+      </div>
+    </div>
+
+  </div>
+
+
+<script>
+const cards = Array.from(document.querySelectorAll(".card"));
+
+function updateFade() {
+
+  const scrollBottom = window.scrollY + window.innerHeight;
+  const pageBottom   = document.documentElement.scrollHeight;
+
+  const distance = pageBottom - scrollBottom;
+
+  // only start fading when user is very near bottom
+  const startFadeDistance = 300;
+
+  // reset
+  cards.forEach(c => c.style.opacity = 1);
+
+  if (distance > startFadeDistance) return;
+
+  // how many cards you want to fade at the end
+  const fadeCount = 4;
+
+  const lastCards = cards.slice(-fadeCount);
+
+  const progress = Math.min(
+    1,
+    (startFadeDistance - distance) / startFadeDistance
+  );
+
+  lastCards.forEach((card, index) => {
+
+    // each card starts fading a bit later
+    const delay = index * 0.18;
+
+    let local = (progress - delay) / (1 - delay);
+    local = Math.max(0, Math.min(1, local));
+
+    const opacity = 1 - local * 0.85;
+
+    card.style.opacity = opacity;
+  });
+
+}
+
+window.addEventListener("scroll", updateFade, { passive:true });
+window.addEventListener("load", updateFade);
+</script>
+
+</body>
+</html>

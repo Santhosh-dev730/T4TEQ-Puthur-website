@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<style>
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-scroll {
+        animation: scroll 25s linear infinite;
+    }
+
+    .animate-scroll:hover {
+        animation-play-state: paused;
+    }
+</style>
+
+<body>
+
+
+    <section class="pb-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-2 reveal">
+                <h2 class="text-4xl sm:text-5xl font-bold text-black mb-4">TEQ Gallery</h2>
+
+                <!-- Navigation Tabs -->
+                <div
+                    class="inline-flex flex-wrap justify-center bg-white shadow-xl rounded-full p-2 gap-2 mb-12 border border-gray-100">
+                    <button onclick="goToGallerySlide(0)"
+                        class="gallery-tab px-8 py-3 rounded-full font-bold text-sm bg-black text-white transition-all">Photos</button>
+                    <button onclick="goToGallerySlide(1)"
+                        class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Internship</button>
+                    <button onclick="goToGallerySlide(2)"
+                        class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Workshops</button>
+                    <button onclick="goToGallerySlide(3)"
+                        class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Certificate</button>
+                    <button onclick="goToGallerySlide(4)"
+                        class="gallery-tab px-8 py-3 rounded-full font-bold text-sm text-gray-600 hover:bg-gray-100 transition-all">Awards</button>
+                </div>
+            </div>
+
+            <!-- Main Gallery Slider (Whole grid container slides) -->
+            <div class="relative group overflow-hidden rounded-[40px] shadow-2xl reveal">
+                <div id="galleryMainSlider" class="flex transition-transform duration-700 ease-in-out">
+
+                    <!-- Slide 1: Photos -->
+                    <div class="min-w-full flex-shrink-0 bg-[#FF8A8A] p-6 sm:p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full lg:h-[300px]">
+                            <div
+                                class="lg:col-span-3 h-[400px] lg:h-full group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Photos 1">
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col gap-6">
+                                <div
+                                    class="h-[280px] group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 2">
+                                </div>
+                                <div
+                                    class="flex-grow group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Photos 3">
+                                </div>
+                            </div>
+                            <div
+                                class="lg:col-span-6 group/item overflow-hidden rounded-[40px] border-4 border-white/20 h-[400px] lg:h-full relative">
+                                <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&q=80&w=1200"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Photos 4">
+                                <div
+                                    class="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm">
+                                    Main Campus Highlights</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Internship -->
+                    <div class="min-w-full flex-shrink-0 bg-[#FF8A8A] p-6 sm:p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full lg:h-[300px]">
+                            <div
+                                class="lg:col-span-3 h-[400px] lg:h-full group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Internship 1">
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col gap-6">
+                                <div
+                                    class="h-[280px] group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Internship 2">
+                                </div>
+                                <div
+                                    class="flex-grow group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Internship 3">
+                                </div>
+                            </div>
+                            <div
+                                class="lg:col-span-6 group/item overflow-hidden rounded-[40px] border-4 border-white/20 h-[400px] lg:h-full relative">
+                                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce33?auto=format&fit=crop&q=80&w=1200"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Internship 4">
+                                <div
+                                    class="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm">
+                                    Industry Ready Interns</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Workshops -->
+                    <div class="min-w-full flex-shrink-0 bg-[#FF8A8A] p-6 sm:p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full lg:h-[300px]">
+                            <div
+                                class="lg:col-span-3 h-[400px] lg:h-full group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Workshop 1">
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col gap-6">
+                                <div
+                                    class="h-[280px] group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1475721027185-4048ad27a5d0?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Workshop 2">
+                                </div>
+                                <div
+                                    class="flex-grow group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Workshop 3">
+                                </div>
+                            </div>
+                            <div
+                                class="lg:col-span-6 group/item overflow-hidden rounded-[40px] border-4 border-white/20 h-[400px] lg:h-full relative">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb28f74b0cd?auto=format&fit=crop&q=80&w=1200"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Workshop 4">
+                                <div
+                                    class="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm">
+                                    Hands-on Technical Workshops</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Certificate -->
+                    <div class="min-w-full flex-shrink-0 bg-[#FF8A8A] p-6 sm:p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full lg:h-[300px]">
+                            <div
+                                class="lg:col-span-3 h-[400px] lg:h-full group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                <img src="https://images.unsplash.com/photo-1589330694653-73019c623be3?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Certificate 1">
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col gap-6">
+                                <div
+                                    class="h-[280px] group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1557426272-fc759fbb7a8d?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Certificate 2">
+                                </div>
+                                <div
+                                    class="flex-grow group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Certificate 3">
+                                </div>
+                            </div>
+                            <div
+                                class="lg:col-span-6 group/item overflow-hidden rounded-[40px] border-4 border-white/20 h-[400px] lg:h-full relative">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Certificate 4">
+                                <div
+                                    class="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm">
+                                    Professional Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Awards -->
+                    <div class="min-w-full flex-shrink-0 bg-[#FF8A8A] p-6 sm:p-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full lg:h-[300px]">
+                            <div
+                                class="lg:col-span-3 h-[400px] lg:h-full group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Awards 1">
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col gap-6">
+                                <div
+                                    class="h-[280px] group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Awards 2">
+                                </div>
+                                <div
+                                    class="flex-grow group/item overflow-hidden rounded-[30px] border-4 border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1522071823991-b9671f9d7f1f?auto=format&fit=crop&q=80&w=800"
+                                        class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                        alt="Awards 3">
+                                </div>
+                            </div>
+                            <div
+                                class="lg:col-span-6 group/item overflow-hidden rounded-[40px] border-4 border-white/20 h-[400px] lg:h-full relative">
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200"
+                                    class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700"
+                                    alt="Awards 4">
+                                <div
+                                    class="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm">
+                                    Recognizing Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="absolute bottom-10 right-10 flex gap-4 z-20">
+                    <button onclick="prevGallerySlide()"
+                        class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
+                        <i class="fas fa-chevron-left group-hover/btn:-translate-x-1 transition-transform"></i>
+                    </button>
+                    <button onclick="nextGallerySlide()"
+                        class="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-all border border-white/30 shadow-lg group/btn">
+                        <i class="fas fa-chevron-right group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+
+</html>
