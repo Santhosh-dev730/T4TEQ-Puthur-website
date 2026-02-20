@@ -1002,277 +1002,244 @@
 
                 <!-- Programming & Core Data Card -->
                 <div data-nav-color="rgba(168, 213, 186, 0.95)"
-                    class="skill-card bg-[#A8D5BA] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    class="skill-card relative p-4 rounded-lg border-2 border-green-100 shadow-md mb-12 hover:shadow-lg hover:border-green-200 transition-all duration-300 bg-[#A8D5BA]"
                     data-aos="fade-up">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                        <!-- Left Content (Main Info) -->
-                        <div class="lg:col-span-8 pt-4 sm:pt-6 lg:pt-0">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
-                                Programming & Core Data
-                            </h2>
-                            <p class="text-black text-lg font-medium mb-6 max-w-xl">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                            </p>
 
-                            <!-- Tech Logos Row (New placement) -->
-                            <div class="flex flex-wrap gap-4 mb-6">
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/java.png" class="max-w-full max-h-full object-contain" alt="Java">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/python.jpg" class="max-w-full max-h-full object-contain"
-                                        alt="Python">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/react.png" class="max-w-full max-h-full object-contain"
-                                        alt="C & C++">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/mongodb.png" class="max-w-full max-h-full object-contain"
-                                        alt="SQL">
-                                </div>
-                            </div>
+                    <!-- Header Section -->
+                    <div class="md:flex items-center gap-2 mb-4">
+                        <!-- Icon (Optional: You can keep the original icon or use one from tech.html style) -->
+                        <!-- <img src="..." alt="..." class="h-16 w-16 object-contain"> -->
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">
+                            Programming &
+                            Core Data</h2>
+                    </div>
 
-                            <!-- Divider -->
-                            <div class="h-[2px] bg-white w-full mb-8"></div>
+                    <!-- Description & Logos -->
+                    <div class="mt-2 lg:flex lg:items-start lg:justify-between gap-4">
+                        <p class="text-[#574F4A] lg:max-w-2xl text-lg font-medium">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
 
-                            <!-- Skill Boxes -->
-                            <div
-                                class="flex overflow-x-auto md:flex-wrap gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
-                                <div
-                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-orange-100 text-orange-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Java</div>
-                                <div
-                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Python</div>
-                                <div
-                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-yellow-100 text-yellow-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    C & C++</div>
-                                <div
-                                    class="badge-programming snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-cyan-100 text-cyan-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    SQL</div>
-                            </div>
+                        <!-- Logos -->
+                        <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
+                            <li><img src="assets/java.png" alt="Java" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/python.jpg" alt="Python" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/react.png" alt="C/C++" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/mongodb.png" alt="SQL" class="w-14 h-14 object-contain"></li>
+                        </ul>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+
+                    <!-- Interactive Syllabus Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div onclick="showTopics('prog','java')"
+                            class="lang-btn bg-[#FFECD6] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Java
                         </div>
-
-                        <!-- Right Content (Action) -->
-                        <div
-                            class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center lg:min-h-[350px]">
-                            <button
-                                class="px-8 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enrol
-                                Now</button>
+                        <div onclick="showTopics('prog','python')"
+                            class="lang-btn bg-[#CDE7FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Python
+                        </div>
+                        <div onclick="showTopics('prog','c')"
+                            class="lang-btn bg-[#FFFBD6] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            C & C++
+                        </div>
+                        <div onclick="showTopics('prog','sql')"
+                            class="lang-btn bg-[#CDF3FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            SQL
                         </div>
                     </div>
+
+                    <!-- Sidebar / Topics List -->
+                    <div id="sidebar-prog" class="hidden rounded-2xl p-2 w-full flex flex-wrap gap-4 mb-6 mt-2">
+                        <div id="list-prog" class="flex gap-4 flex-wrap"></div>
+                    </div>
+
+                    <!-- Bottom Action -->
+
                 </div>
 
                 <!-- Fullstack Card (Mirrored) -->
                 <div data-nav-color="rgba(191, 215, 255, 0.95)"
-                    class="skill-card bg-[#bfd7ff] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    class="skill-card relative p-4 rounded-lg border-2 border-blue-100 shadow-md mb-12 hover:shadow-lg hover:border-blue-200 transition-all duration-300 bg-[#BFD7FF]"
                     data-aos="fade-up">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                        <!-- Left Content (Main Info) -->
-                        <div class="lg:col-span-8 lg:order-2 order-1 text-right pt-4 sm:pt-6 lg:pt-0">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
-                                Full Stack Development
-                            </h2>
-                            <p class="text-black text-lg font-medium mb-6 ml-auto max-w-xl">
-                                Industry-led Full Stack Training designed to help you transition to the next phase of
-                                your career with a proven track record of success.
-                            </p>
 
-                            <!-- Tech Logos Row (Right aligned) -->
-                            <div class="flex flex-wrap lg:justify-end gap-4 mb-6">
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/react.png" class="max-w-full max-h-full object-contain"
-                                        alt="React">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/springboot.png" class="max-w-full max-h-full object-contain"
-                                        alt="Spring Boot">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/mongodb.png" class="max-w-full max-h-full object-contain"
-                                        alt="MongoDB">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/java.png" class="max-w-full max-h-full object-contain" alt="Java">
-                                </div>
-                            </div>
+                    <!-- Header Section -->
+                    <div class="md:flex items-center gap-2 mb-4">
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Full Stack
+                            Development</h2>
+                    </div>
 
-                            <!-- Divider -->
-                            <div class="h-[2px] bg-white w-full mb-8"></div>
+                    <!-- Description & Logos -->
+                    <div class="mt-2 lg:flex lg:items-start lg:justify-between gap-4">
+                        <p class="text-[#574F4A] lg:max-w-2xl text-lg font-medium">
+                            Industry-led Full Stack Training designed to help you transition to the next phase of
+                            your career with a proven track record of success.
+                        </p>
 
+                        <!-- Logos -->
+                        <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
+                            <li><img src="assets/react.png" alt="React" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/springboot.png" alt="Spring Boot" class="w-14 h-14 object-contain">
+                            </li>
+                            <li><img src="assets/mongodb.png" alt="MongoDB" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/java.png" alt="Java" class="w-14 h-14 object-contain"></li>
+                        </ul>
+                    </div>
 
-                            <!-- Skill Boxes -->
-                            <div
-                                class="flex overflow-x-auto md:flex-wrap justify-start lg:justify-end gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
-                                <div
-                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-indigo-100 text-indigo-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    React</div>
-                                <div
-                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-green-100 text-green-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Spring Boot</div>
-                                <div
-                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-emerald-100 text-emerald-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    MongoDB</div>
-                                <div
-                                    class="badge-fullstack snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-orange-100 text-orange-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Java</div>
-                            </div>
+                    <!-- Divider -->
+                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+
+                    <!-- Interactive Syllabus Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div onclick="showTopics('fs','react')"
+                            class="lang-btn bg-[#CDE7FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            React
                         </div>
-
-                        <!-- Right Content (Action) -->
-                        <div
-                            class="lg:col-span-4 lg:order-1 order-2 flex flex-col items-center lg:items-start justify-center lg:min-h-[350px]">
-                            <button
-                                class="px-8 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enroll
-                                Now</button>
+                        <div onclick="showTopics('fs','spring')"
+                            class="lang-btn bg-[#DcFCE7] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Spring Boot
+                        </div>
+                        <div onclick="showTopics('fs','mongo')"
+                            class="lang-btn bg-[#D1FAE5] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            MongoDB
+                        </div>
+                        <div onclick="showTopics('fs','java')"
+                            class="lang-btn bg-[#FFECD6] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Java
                         </div>
                     </div>
+
+                    <!-- Sidebar / Topics List -->
+                    <div id="sidebar-fs" class="hidden rounded-2xl p-2 w-full flex flex-wrap gap-4 mb-6 mt-2">
+                        <div id="list-fs" class="flex gap-4 flex-wrap"></div>
+                    </div>
+
+                    <!-- Bottom Action -->
+
                 </div>
 
                 <!-- Data Analytics and Business Intelligence Card -->
                 <div data-nav-color="rgba(254, 240, 138, 0.95)"
-                    class="skill-card bg-[#fef08a] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    class="skill-card relative p-4 rounded-lg border-2 border-yellow-100 shadow-md mb-12 hover:shadow-lg hover:border-yellow-200 transition-all duration-300 bg-[#FEDAAA]"
                     data-aos="fade-up">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                        <!-- Left Content (Main Info) -->
-                        <div class="lg:col-span-8 pt-4 sm:pt-6 lg:pt-0">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
-                                Data Analytics and<br>Business Intelligence
-                            </h2>
-                            <p class="text-black text-lg font-medium mb-6 max-w-xl">
-                                Master the art of data-driven decision making and transform raw data into actionable
-                                business insights.
-                            </p>
 
-                            <!-- Tech Logos Row -->
-                            <div class="flex flex-wrap gap-4 mb-6">
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/python.jpg" class="max-w-full max-h-full object-contain"
-                                        alt="Python">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/mongodb.png" class="max-w-full max-h-full object-contain"
-                                        alt="SQL">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/java.png" class="max-w-full max-h-full object-contain" alt="BI">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/react.png" class="max-w-full max-h-full object-contain" alt="Data">
-                                </div>
-                            </div>
+                    <!-- Header Section -->
+                    <div class="md:flex items-center gap-2 mb-4">
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Data
+                            Analytics
+                            and Business Intelligence</h2>
+                    </div>
 
-                            <!-- Divider -->
-                            <div class="h-[2px] bg-white w-full mb-8"></div>
+                    <!-- Description & Logos -->
+                    <div class="mt-2 lg:flex lg:items-start lg:justify-between gap-4">
+                        <p class="text-[#574F4A] lg:max-w-2xl text-lg font-medium">
+                            Master the art of data-driven decision making and transform raw data into actionable
+                            business insights.
+                        </p>
 
-                            <!-- Skill Boxes -->
-                            <div
-                                class="flex overflow-x-auto md:flex-wrap gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
-                                <div
-                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Python</div>
-                                <div
-                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-cyan-100 text-cyan-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    SQL</div>
-                                <div
-                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-yellow-100 text-yellow-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Power BI</div>
-                                <div
-                                    class="badge-data snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-purple-100 text-purple-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Tableau</div>
-                            </div>
+                        <!-- Logos -->
+                        <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
+                            <li><img src="assets/python.jpg" alt="Python" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/mongodb.png" alt="SQL" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/java.png" alt="BI" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/react.png" alt="Data" class="w-14 h-14 object-contain"></li>
+                        </ul>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+
+                    <!-- Interactive Syllabus Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div onclick="showTopics('da','python')"
+                            class="lang-btn bg-[#CDE7FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Python
                         </div>
-
-                        <!-- Right Content (Action) -->
-                        <div
-                            class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center lg:min-h-[350px]">
-                            <button
-                                class="px-8 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enroll
-                                Now</button>
+                        <div onclick="showTopics('da','sql')"
+                            class="lang-btn bg-[#CDF3FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            SQL
+                        </div>
+                        <div onclick="showTopics('da','powerbi')"
+                            class="lang-btn bg-[#FFFBD6] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Power BI
+                        </div>
+                        <div onclick="showTopics('da','tableau')"
+                            class="lang-btn bg-[#FEE2E2] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Tableau
                         </div>
                     </div>
+
+                    <!-- Sidebar / Topics List -->
+                    <div id="sidebar-da" class="hidden rounded-2xl p-2 w-full flex flex-wrap gap-4 mb-6 mt-2">
+                        <div id="list-da" class="flex gap-4 flex-wrap"></div>
+                    </div>
+
+                    <!-- Bottom Action -->
+
                 </div>
 
                 <!-- Digital Design and Application development Card (Mirrored) -->
                 <div data-nav-color="rgba(200, 191, 255, 0.95)"
-                    class="skill-card bg-[#c8bfff] rounded-[40px] p-3 sm:p-8 mb-12 shadow-2xl relative overflow-hidden"
+                    class="skill-card relative p-4 rounded-lg border-2 border-purple-100 shadow-md mb-12 hover:shadow-lg hover:border-purple-200 transition-all duration-300 bg-[#C8BFFF]"
                     data-aos="fade-up">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                        <!-- Left Content (Action) -->
-                        <div
-                            class="lg:col-span-4 lg:order-1 order-2 flex flex-col items-center lg:items-start justify-center lg:min-h-[350px]">
-                            <button
-                                class="px-8 py-4 bg-black text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-sm whitespace-nowrap">Enroll
-                                Now</button>
+
+                    <!-- Header Section -->
+                    <div class="md:flex items-center gap-2 mb-4">
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Digital
+                            Design
+                            and Application development</h2>
+                    </div>
+
+                    <!-- Description & Logos -->
+                    <div class="mt-2 lg:flex lg:items-start lg:justify-between gap-4">
+                        <p class="text-[#574F4A] lg:max-w-2xl text-lg font-medium">
+                            Create stunning user experiences and high-performance applications from UI/UX design to
+                            modern mobile development.
+                        </p>
+
+                        <!-- Logos -->
+                        <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
+                            <li><img src="assets/react.png" alt="Design" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/springboot.png" alt="App" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/mongodb.png" alt="UX" class="w-14 h-14 object-contain"></li>
+                            <li><img src="assets/java.png" alt="Dev" class="w-14 h-14 object-contain"></li>
+                        </ul>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+
+                    <!-- Interactive Syllabus Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div onclick="showTopics('design','figma')"
+                            class="lang-btn bg-[#E9D5FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Figma
                         </div>
-
-                        <!-- Right Content (Main Info) -->
-                        <div class="lg:col-span-8 lg:order-2 order-1 text-right pt-4 sm:pt-6 lg:pt-0">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-black leading-tight mb-4">
-                                Digital Design and<br>Application development
-                            </h2>
-                            <p class="text-black text-lg font-medium mb-6 ml-auto max-w-xl">
-                                Create stunning user experiences and high-performance applications from UI/UX design to
-                                modern mobile development.
-                            </p>
-
-                            <!-- Tech Logos Row (Right aligned) -->
-                            <div class="flex flex-wrap lg:justify-end gap-4 mb-6">
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/react.png" class="max-w-full max-h-full object-contain"
-                                        alt="Design">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/springboot.png" class="max-w-full max-h-full object-contain"
-                                        alt="App">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/mongodb.png" class="max-w-full max-h-full object-contain" alt="UX">
-                                </div>
-                                <div
-                                    class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-3xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:bg-white/30">
-                                    <img src="assets/java.png" class="max-w-full max-h-full object-contain" alt="Dev">
-                                </div>
-                            </div>
-
-                            <!-- Divider -->
-                            <div class="h-[2px] bg-white w-full mb-8"></div>
-
-                            <!-- Skill Boxes -->
-                            <div
-                                class="flex overflow-x-auto md:flex-wrap justify-start lg:justify-end gap-4 mb-8 pb-4 md:pb-0 no-scrollbar snap-x px-1">
-                                <div
-                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-pink-100 text-pink-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Figma</div>
-                                <div
-                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-purple-100 text-purple-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    UI/UX</div>
-                                <div
-                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-blue-100 text-blue-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    Flutter</div>
-                                <div
-                                    class="badge-design snap-start shrink-0 rounded-full px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 bg-indigo-100 text-indigo-900 hover:scale-105 hover:brightness-95 hover:shadow-md">
-                                    React Native</div>
-                            </div>
+                        <div onclick="showTopics('design','ui')"
+                            class="lang-btn bg-[#FEE2E2] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            UI/UX
+                        </div>
+                        <div onclick="showTopics('design','flutter')"
+                            class="lang-btn bg-[#CDE7FF] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            Flutter
+                        </div>
+                        <div onclick="showTopics('design','rn')"
+                            class="lang-btn bg-[#D1FAE5] p-2 px-6 font-semibold rounded hover:scale-105 transition-transform duration-200 cursor-pointer shadow-sm">
+                            React Native
                         </div>
                     </div>
+
+                    <!-- Sidebar / Topics List -->
+                    <div id="sidebar-design" class="hidden rounded-2xl p-2 w-full flex flex-wrap gap-4 mb-6 mt-2">
+                        <div id="list-design" class="flex gap-4 flex-wrap"></div>
+                    </div>
+
+                    <!-- Bottom Action -->
+
                 </div>
             </div>
         </section>
@@ -1284,7 +1251,7 @@
                     <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Teqies Land in Companies</h2>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-10 w-full mx-auto">
+                <div class="grid grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-10 w-full mx-auto">
                     <!-- Column 1 -->
                     <div
                         class="logo-box flex-shrink-0 w-[70vw] sm:w-auto snap-center relative overflow-hidden h-28 sm:h-32 rounded-2xl">
@@ -1366,8 +1333,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Column 6 (New) -->
+                    <div
+                        class="logo-box flex-shrink-0 w-[70vw] sm:w-auto snap-center relative overflow-hidden h-28 sm:h-32 rounded-2xl flex justify-center">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="https://placehold.co/120x120?text=Microsoft"
+                                    onerror="this.src='https://placehold.co/120x120?text=Microsoft'"
+                                    class="max-w-full max-h-full object-contain transition duration-300">
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <img src="https://placehold.co/120x120?text=Amazon"
+                                    onerror="this.src='https://placehold.co/120x120?text=Amazon'"
+                                    class="max-w-full max-h-full object-contain transition duration-300">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
 
         <!-- Relume Style Testimonials Section -->
@@ -2604,6 +2588,210 @@
         </script>
 
 
+
+        <script>
+
+            const topics = {
+                prog: {
+                    java: {
+                        color: "#fde68a",
+                        logo: "assets/java.png",
+                        desc: "Java remains a top-tier language in 2025, powering secure banking systems and scalable android applications globally.",
+                        syllabus: "Core Java • OOPs • Exception Handling • Collections • Multi-threading"
+                    },
+                    python: {
+                        color: "#bfdbfe",
+                        logo: "assets/python.jpg",
+                        desc: "Python dominates the AI and Data Science landscape with its simplicity and powerful ecosystem of libraries.",
+                        syllabus: "Python Basics • Data Structures • Pandas • NumPy • Matplotlib"
+                    },
+                    c: {
+                        color: "#e5e7eb",
+                        logo: "assets/react.png", // Placeholder
+                        desc: "C & C++ are the bedrock of system programming and high-performance gaming engines like Unreal.",
+                        syllabus: "Pointers • Memory Management • STL • File Handling • OOPs"
+                    },
+                    sql: {
+                        color: "#fed7aa",
+                        logo: "assets/mongodb.png", // Placeholder
+                        desc: "SQL is the universal standard for managing and manipulating databases, essential for every data role.",
+                        syllabus: "Normalization • Joins • Subqueries • Indexes • Stored Procedures"
+                    }
+                },
+
+                fs: {
+                    react: {
+                        color: "#bfdbfe",
+                        logo: "assets/react.png",
+                        desc: "React creates dynamic, responsive user interfaces with a component-based architecture liked by top tech companies.",
+                        syllabus: "Hooks • Context API • Redux • React Router • Custom Hooks"
+                    },
+                    spring: {
+                        color: "#bbf7d0",
+                        logo: "assets/springboot.png",
+                        desc: "Spring Boot streamlines Java development, making it easy to create stand-alone, production-grade applications.",
+                        syllabus: "Dependency Injection • Spring MVC • REST APIs • Security • Microservices"
+                    },
+                    mongo: {
+                        color: "#bbf7d0",
+                        logo: "assets/mongodb.png",
+                        desc: "MongoDB offers a flexible document model that fits perfectly with massive data sets and modern agile development.",
+                        syllabus: "CRUD Operations • Aggregation Framework • Indexing • Replication • Sharding"
+                    },
+                    java: {
+                        color: "#fde68a",
+                        logo: "assets/java.png",
+                        desc: "Java for Full Stack ensures your backend is robust, scalable, and secure, bridging the gap between database and UI.",
+                        syllabus: "Servlets • JSP • JDBC • Hibernate • RESTful Web Services"
+                    }
+                },
+
+                da: {
+                    python: {
+                        color: "#bfdbfe",
+                        logo: "assets/python.jpg",
+                        desc: "Leverage Python's powerful libraries to clean, analyze, and visualize complex datasets efficiently.",
+                        syllabus: "Data Cleaning • Exploratory Data Analysis • Statistical Methods • Visualization"
+                    },
+                    sql: {
+                        color: "#fed7aa",
+                        logo: "assets/mongodb.png",
+                        desc: "Write complex queries to extract meaningful insights directly from large-scale relational databases.",
+                        syllabus: "Advanced Filtering • Window Functions • CTEs • Performance Tuning"
+                    },
+                    powerbi: {
+                        color: "#fde68a",
+                        logo: "assets/java.png",
+                        desc: "Transform raw data into meaningful information and visual stories using Microsoft Power BI.",
+                        syllabus: "Data Modeling • DAX Formulas • Interactive Dashboards • Power Query"
+                    },
+                    tableau: {
+                        color: "#fecaca",
+                        logo: "assets/react.png",
+                        desc: "Tableau helps people see and understand data with its intuitive, drag-and-drop visual analytics platform.",
+                        syllabus: "Charts & Graphs • Dashboard Actions • Calculated Fields • Story Points"
+                    }
+                },
+
+                design: {
+                    figma: {
+                        color: "#ddd6fe",
+                        logo: "assets/react.png",
+                        desc: "Figma facilitates real-time collaboration for UI design, prototyping, and design system management.",
+                        syllabus: "Wireframing • Components • Auto Layout • Prototyping • Plugins"
+                    },
+                    ui: {
+                        color: "#fecaca",
+                        logo: "assets/mongodb.png",
+                        desc: "Master the fundamental principles of design to create interfaces that are both beautiful and easy to use.",
+                        syllabus: "Color Theory • Typography • Layout & Grids • User Research • Accessibility"
+                    },
+                    flutter: {
+                        color: "#bfdbfe",
+                        logo: "assets/java.png",
+                        desc: "Build beautiful, natively compiled applications for mobile and web from a single codebase with Flutter.",
+                        syllabus: "Dart Basics • Widgets • State Management • Navigation • Networking"
+                    },
+                    rn: {
+                        color: "#bbf7d0",
+                        logo: "assets/springboot.png",
+                        desc: "Use React Native to build world-class application experiences on native platforms using a consistent developer experience.",
+                        syllabus: "JSX • Components • Props & State • Flexbox • Native Modules"
+                    }
+                }
+
+            };
+
+
+            function showTopics(section, lang) {
+
+                /* reset buttons inside same section */
+                document.querySelectorAll(`[onclick*="${section}"]`).forEach(btn => {
+                    btn.style.transform = "scale(1)";
+                    btn.classList.remove('ring-4', 'ring-blue-200');
+                });
+
+                /* active button */
+                if (event && event.currentTarget) {
+                    event.currentTarget.style.transform = "scale(1.05)";
+                    event.currentTarget.classList.add('ring-4', 'ring-blue-200');
+                } else if (event && event.target) {
+                    event.target.closest('.lang-btn').style.transform = "scale(1.05)";
+                    event.target.closest('.lang-btn').classList.add('ring-4', 'ring-blue-200');
+                }
+
+                /* sidebar show */
+                const sidebar = document.getElementById("sidebar-" + section);
+                sidebar.classList.remove("hidden");
+                sidebar.classList.add("flex");
+
+                /* list container */
+                const list = document.getElementById("list-" + section);
+
+                // Transition styling
+                list.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                list.style.opacity = '0';
+                list.style.transform = 'translateY(10px)';
+
+                setTimeout(() => {
+                    const data = topics[section][lang];
+
+                    // Split syllabus string into array and create card HTML for each
+                    const syllabusItems = data.syllabus.split('•').map(s => s.trim());
+                    const syllabusCards = syllabusItems.map(item => `
+                        <div class="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-s font-semibold text-gray-700 shadow-sm hover:shadow-md transition-shadow cursor-default border-l-4 border-l-blue-400">
+                            ${item}
+                        </div>
+                    `).join('');
+
+                    const contentHtml = `
+                        <div class="flex flex-col w-full gap-4">
+                            <!-- Top Row: Desc + Logo -->
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="w-2/3">
+                                    <h4 class="text-xl font-bold mb-1 uppercase">${lang.replace('rn', 'React Native').replace('ui', 'UI/UX')}</h4>
+                                    <p class="text-[#4a4a4a] text-md leading-snug line-clamp-3">
+                                        ${data.desc}
+                                    </p>
+                                </div>
+                                <div class="w-1/3 flex justify-end">
+                                    <img src="${data.logo}" alt="${lang}" class="w-20 h-20 object-contain drop-shadow-sm">
+                                </div>
+                            </div>
+
+                            <!-- Bottom Row: Syllabus + Enroll -->
+                            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 pt-4 border-t border-white/40">
+                                <div class="w-full sm:w-2/3">
+                                    <span class="text-lg font-bold uppercase tracking-wide block mb-2">Syllabus Highlights</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        ${syllabusCards}
+                                    </div>
+                                </div>
+                                <div class="flex justify-end mt-4 sm:mt-0">
+                                    <button type="button"
+                                        class="p-2 px-6 text-white bg-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300">
+                                        Enroll Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    list.className = "w-full";
+                    list.innerHTML = contentHtml;
+
+                    // Transition In
+                    list.style.opacity = '1';
+                    list.style.transform = 'translateY(0)';
+
+                    /* Force recalculation of scroll headers/animations */
+                    window.dispatchEvent(new Event('resize'));
+
+                }, 200);
+
+            }
+
+        </script>
 </body>
 
 </html>
