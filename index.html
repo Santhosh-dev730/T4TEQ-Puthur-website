@@ -424,11 +424,19 @@
 
          /* Stacking Card Styles */
         .skill-card {
-            position: sticky;
-            top: 100px;
             transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.2s ease;
             transform-origin: center top;
             will-change: transform, opacity;
+            overflow: visible !important;
+            height: auto !important;
+        }
+
+        @media (min-width: 1024px) {
+            .skill-card-sticky {
+                position: sticky;
+                top: 100px;
+                margin-bottom: 5rem;
+            }
         }
 
         /* Initial spacing adjustment for stacking */
@@ -900,7 +908,7 @@
 
 
         <!-- About Section - Redesigned -->
-        <section id="about" class="bg-white relative overflow-hidden scroll-mt-20">
+        <section id="about" class="bg-white relative overflow-hidden scroll-mt-20 mt-16">
             <!-- Dashed arc decoration -->
             <div class="dashed-arc hidden lg:block"></div>
 
@@ -961,7 +969,7 @@
 
         <!-- Stats Section - Reverted to Image Design -->
         <section id="stats" data-nav-color="rgba(248, 250, 252, 0.9)"
-            class="py-16 bg-slate-50 scroll-mt-24 border-t border-slate-100">
+            class="py-16 bg-slate-50 scroll-mt-24 border-t border-slate-100 mt-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     <div class="text-center reveal">
@@ -993,24 +1001,23 @@
             </div>
         </section>
         <!-- Tech Skills Section -->
-        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="py-6 sm:py-12 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-4 skill-card-container">
+        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)"
+            class="pt-2 pb-12 sm:pt-4 sm:pb-16 bg-white mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-4">
                 <!-- Section Header -->
-                <div class="text-center mb-4" data-aos="fade-up">
+                <div class="text-center mb-2">
                     <h2 class="text-3xl sm:text-4xl font-bold text-black">Tech Skills</h2>
                 </div>
 
                 <!-- Programming & Core Data Card -->
-                <div data-nav-color="rgba(168, 213, 186, 0.95)"
-                    style="background-color: #A8D5BA; z-index: 10; position: sticky; top: 100px; margin-bottom: 50vh;"
-                    class="skill-card relative p-4 rounded-lg border-2 border-green-100 shadow-md mb-12 hover:shadow-lg hover:border-green-200 transition-all duration-300 bg-[#A8D5BA]"
-                    data-aos="fade-up">
+                <div data-nav-color="rgba(168, 213, 186, 0.95)" style="background-color: #A8D5BA; z-index: 10;"
+                    class="skill-card skill-card-sticky p-4 rounded-lg border-2 border-green-100 shadow-md hover:shadow-lg hover:border-green-200 transition-all duration-300 bg-[#A8D5BA]">
 
                     <!-- Header Section -->
                     <div class="md:flex items-center gap-2 mb-4">
                         <!-- Icon (Optional: You can keep the original icon or use one from tech.html style) -->
                         <!-- <img src="..." alt="..." class="h-16 w-16 object-contain"> -->
-                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-2">
                             Programming &
                             Core Data</h2>
                     </div>
@@ -1064,14 +1071,13 @@
                 </div>
 
                 <!-- Fullstack Card (Mirrored) -->
-                <div data-nav-color="rgba(191, 215, 255, 0.95)"
-                    style="background-color: #BFD7FF; z-index: 20; position: sticky; top: 100px; margin-bottom: 50vh;"
-                    class="skill-card relative p-4 rounded-lg border-2 border-blue-100 shadow-md mb-12 hover:shadow-lg hover:border-blue-200 transition-all duration-300 bg-[#BFD7FF]"
+                <div data-nav-color="rgba(191, 215, 255, 0.95)" style="background-color: #BFD7FF; z-index: 20;"
+                    class="skill-card skill-card-sticky p-4 rounded-lg border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition-all duration-300 bg-[#BFD7FF]"
                     data-aos="fade-up">
 
                     <!-- Header Section -->
                     <div class="md:flex items-center gap-2 mb-4">
-                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Full Stack
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-2">Full Stack
                             Development</h2>
                     </div>
 
@@ -1125,14 +1131,13 @@
                 </div>
 
                 <!-- Data Analytics and Business Intelligence Card -->
-                <div data-nav-color="rgba(254, 240, 138, 0.95)"
-                    style="background-color: #FEDAAA; z-index: 30; position: sticky; top: 100px; margin-bottom: 50vh;"
-                    class="skill-card relative p-4 rounded-lg border-2 border-yellow-100 shadow-md mb-12 hover:shadow-lg hover:border-yellow-200 transition-all duration-300 bg-[#FEDAAA]"
+                <div data-nav-color="rgba(254, 240, 138, 0.95)" style="background-color: #FEDAAA; z-index: 30;"
+                    class="skill-card skill-card-sticky p-4 rounded-lg border-2 border-yellow-100 shadow-md hover:shadow-lg hover:border-yellow-200 transition-all duration-300 bg-[#FEDAAA]"
                     data-aos="fade-up">
 
                     <!-- Header Section -->
                     <div class="md:flex items-center gap-2 mb-4">
-                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Data
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-2">Data
                             Analytics
                             and Business Intelligence</h2>
                     </div>
@@ -1186,14 +1191,13 @@
                 </div>
 
                 <!-- Digital Design and Application development Card (Mirrored) -->
-                <div data-nav-color="rgba(200, 191, 255, 0.95)"
-                    style="background-color: #C8BFFF; z-index: 40; position: sticky; top: 100px; margin-bottom: 10vh;"
-                    class="skill-card relative p-4 rounded-lg border-2 border-purple-100 shadow-md mb-12 hover:shadow-lg hover:border-purple-200 transition-all duration-300 bg-[#C8BFFF]"
+                <div data-nav-color="rgba(200, 191, 255, 0.95)" style="background-color: #C8BFFF; z-index: 40;"
+                    class="skill-card skill-card-sticky p-4 rounded-lg border-2 border-purple-100 shadow-md hover:shadow-lg hover:border-purple-200 transition-all duration-300 bg-[#C8BFFF]"
                     data-aos="fade-up">
 
                     <!-- Header Section -->
                     <div class="md:flex items-center gap-2 mb-4">
-                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-6">Digital
+                        <h2 class="text-xl lg:text-3xl font-bold cursor-pointer bg-clip-text text-black pt-2">Digital
                             Design
                             and Application development</h2>
                     </div>
@@ -1249,7 +1253,7 @@
         </section>
 
         <!-- Teqies Land in Companies Section -->
-        <section class="py-16 bg-black overflow-hidden mt-10">
+        <section class="bg-black overflow-hidden py-8">
             <div class="max-w-screen-2xl mx-auto sm:px-12">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Teqies Land in Companies</h2>
@@ -1359,7 +1363,7 @@
         </section>
 
         <!-- Relume Style Testimonials Section -->
-        <section id="testimonials" class="bg-white relative overflow-hidden mt-8">
+        <section id="testimonials" class="bg-white relative overflow-hidden mt-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <!-- Header -->
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -1509,7 +1513,7 @@
         </section>
 
         <!-- TEQ Gallery Section -->
-        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 py-16">
+        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 py-16 mt-16">
             <div class="gallery-container-new">
                 <!-- Section Header -->
                 <div class="text-center mb-10" data-aos="fade-up">
@@ -1599,7 +1603,7 @@
 
         <!-- Contact Us Section -->
         <section id="contact" data-nav-color="rgba(241, 245, 249, 0.95)"
-            class="py-20 bg-slate-50 overflow-hidden scroll-mt-20">
+            class="py-20 bg-slate-50 overflow-hidden scroll-mt-20 mt-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-12 relative">
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-4xl sm:text-5xl font-black text-black tracking-tight">Visit Us</h2>
@@ -1731,7 +1735,7 @@
 
         <!-- FAQ Section Redesigned -->
         <section id="faq" data-nav-color="rgba(213, 242, 255, 0.9)"
-            class="py-20 bg-white relative overflow-hidden scroll-mt-20">
+            class="py-20 bg-white relative overflow-hidden scroll-mt-20 mt-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
                 <div class="bg-[#D5F2FF] rounded-[40px] p-8 sm:p-16 flex flex-col lg:flex-row gap-12 items-start">
                     <!-- Left Column: Title -->
@@ -2430,10 +2434,25 @@
             };
 
             const updateAnimations = () => {
+                // Skip animations/transforms on mobile devices below 1024px
+                if (window.innerWidth < 1024) {
+                    skillCards.forEach(card => {
+                        card.style.transform = '';
+                        card.style.opacity = '';
+                        const content = card.querySelectorAll('p, ul, .lang-btn, [id^="sidebar-"]');
+                        content.forEach(el => el.style.opacity = '');
+                    });
+                    return;
+                }
+
                 const scrollY = window.pageYOffset;
 
                 skillCards.forEach((card, index) => {
                     const nextMeta = cardMeta[index + 1];
+                    const description = card.querySelector('p');
+                    const logos = card.querySelector('ul');
+                    const buttons = card.querySelectorAll('.lang-btn');
+                    const sidebar = card.querySelector('[id^="sidebar-"]');
 
                     if (nextMeta) {
                         // Calculate distance using cached absolute positions
@@ -2455,6 +2474,28 @@
 
                         card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
                         card.style.opacity = opacity.toString();
+
+                        // Hide internal content as it gets covered
+                        const contentOpacity = 1 - (progress * 2); // Fade out faster
+                        if (description) description.style.opacity = Math.max(0, contentOpacity).toString();
+                        if (logos) logos.style.opacity = Math.max(0, contentOpacity).toString();
+                        buttons.forEach(btn => btn.style.opacity = Math.max(0, contentOpacity).toString());
+
+                        // Explicitly hide sidebar to prevent height issues
+                        if (sidebar) {
+                            if (progress > 0.1) {
+                                sidebar.style.display = 'none';
+                            } else if (progress <= 0.1 && !sidebar.classList.contains('hidden')) {
+                                sidebar.style.display = 'flex';
+                            }
+                        }
+                    } else {
+                        // Reset last card content visibility
+                        card.style.transform = '';
+                        card.style.opacity = '1';
+                        if (description) description.style.opacity = '1';
+                        if (logos) logos.style.opacity = '1';
+                        buttons.forEach(btn => btn.style.opacity = '1');
                     }
                 });
                 isScrolling = false;
@@ -2764,7 +2805,7 @@
                             </div>
 
                             <!-- Bottom Row: Syllabus + Enroll -->
-                            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 pt-4 border-t border-white/40">
+                            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-1 pt-4 border-t border-white/60">
                                 <div class="w-full sm:w-2/3">
                                     <span class="text-lg font-bold uppercase tracking-wide block mb-2">Syllabus Highlights</span>
                                     <div class="flex flex-wrap gap-2">
