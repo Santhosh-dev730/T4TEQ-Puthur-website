@@ -2787,6 +2787,11 @@
                     /* Force recalculation of scroll headers/animations */
                     window.dispatchEvent(new Event('resize'));
 
+                    // Scroll to the new content on mobile/desktop if needed
+                    setTimeout(() => {
+                        list.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 50);
+
                 }, 200);
 
             }
