@@ -13,16 +13,13 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- AOS Animation CSS -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <!-- Spline 3D Viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script>
+    <!-- AOS Animation CSS -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -94,7 +91,8 @@
             background: rgba(0, 0, 0, 0.02);
             border: 1px solid rgba(0, 0, 0, 0.03);
             border-radius: 50%;
-            font-family: 'Material Symbols Outlined';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
             font-size: 2rem;
             color: rgba(0, 0, 0, 0.4);
             cursor: pointer;
@@ -461,6 +459,15 @@
             animation-delay: 1.5s;
         } */
     </style>
+    <style>
+        /* Spline Logo Positioning */
+        spline-viewer::part(logo) {
+            bottom: -50px !important;
+            /* Move it down out of view */
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -487,7 +494,7 @@
             <div class="flex items-center gap-4 ml-4 sm:ml-8">
                 <button id="mobile-menu-btn"
                     class="lg:hidden flex items-center justify-center p-2 rounded-full hover:bg-slate-200/50 transition-colors">
-                    <span class="material-symbols-outlined">menu</span>
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
@@ -502,33 +509,33 @@
                         <span class="font-bold text-3xl text-indigo-900">T4TEQ</span>
                         <button id="close-menu-btn"
                             class="p-3 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors shadow-sm">
-                            <span class="material-symbols-outlined text-indigo-900 translate-y-[2px]">close</span>
+                            <i class="fas fa-times text-indigo-900 translate-y-[2px]"></i>
                         </button>
                     </div>
                     <div class="flex flex-col space-y-2 font-bold text-xl text-slate-800">
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#">
-                            <span class="material-symbols-outlined">home</span>
+                            <i class="fas fa-home"></i>
                             Home
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#about">
-                            <span class="material-symbols-outlined">info</span>
+                            <i class="fas fa-info-circle"></i>
                             About
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#skills">
-                            <span class="material-symbols-outlined">school</span>
+                            <i class="fas fa-graduation-cap"></i>
                             Courses
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#stats">
-                            <span class="material-symbols-outlined">assessment</span>
+                            <i class="fas fa-chart-bar"></i>
                             Testimonials
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#contact">
-                            <span class="material-symbols-outlined">contact_page</span>
+                            <i class="fas fa-envelope"></i>
                             Contact
                         </a>
                     </div>
@@ -591,7 +598,7 @@
                             <div class="space-y-4 sm:space-y-6">
                                 <h1
                                     class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 tracking-tight reveal">
-                                    Helping you become outstanding by<br>
+                                    Helping you become outstanding<br> by
                                     <span id="typewriter-text" class="animate-gradient-text"></span>
                                 </h1>
                             </div>
@@ -660,8 +667,8 @@
                                     <div class="absolute right-2 bottom-2 h-1 w-1 bg-orange-500 rounded-full"></div>
                                     <div
                                         class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-orange-50 transition-colors flex-shrink-0">
-                                        <span
-                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-orange-500">quiz</span>
+                                        <i
+                                            class="fas fa-question-circle text-2xl text-slate-700 group-hover:text-orange-500"></i>
                                     </div>
                                     <div>
                                         <h3 class="text-slate-900 font-bold text-base ">Daily MCQs</h3>
@@ -673,8 +680,7 @@
                                     class="flex-1 bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 hover:shadow-lg hover:border-blue-600 transition-all group text-left">
                                     <div
                                         class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-blue-50 transition-colors flex-shrink-0">
-                                        <span
-                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-blue-600">code</span>
+                                        <i class="fas fa-code text-2xl text-slate-700 group-hover:text-blue-600"></i>
                                     </div>
                                     <div>
                                         <h3 class="text-slate-900 font-bold text-base">Weekly Task</h3>
@@ -686,8 +692,8 @@
                                     class="flex-1 bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 hover:shadow-lg hover:border-green-600 transition-all group text-left">
                                     <div
                                         class="h-10 w-10 bg-slate-50 rounded-lg flex items-center justify-center group-hover:bg-green-50 transition-colors flex-shrink-0">
-                                        <span
-                                            class="material-symbols-outlined text-2xl text-slate-700 group-hover:text-green-600">code</span>
+                                        <i
+                                            class="fas fa-briefcase text-2xl text-slate-700 group-hover:text-green-600"></i>
                                     </div>
                                     <div>
                                         <h3 class="text-slate-900 font-bold text-base">Job Placement</h3>
@@ -768,46 +774,21 @@
 
                                 <!-- 3D Spline Model -->
                                 <div class="relative rounded-[32px] overflow-hidden h-[420px]">
-                                    <!-- Rotating Text Overlay -->
-                                    <!-- <div class="absolute left-12 z-30 pointer-events-none">
-                                        <div
-                                            class="rotating-text-wrapper font-black text-xl sm:text-2xl uppercase tracking-tighter">
-                                            <div class="rotating-text-list flex flex-col">
-                                                <span class="animate-gradient-text">Programming</span>
-                                                <span class="animate-gradient-text">Full Stack</span>
-                                                <span class="animate-gradient-text">Data Analytics</span>
-                                                <span class="animate-gradient-text">UI/UX Designing</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <spline-viewer url="https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode"
-                                        class="absolute inset-0 w-full h-[120%] -bottom-[20%]"></spline-viewer>
+
+                                    <spline-viewer id="hero-spline"
+                                        url="https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode"
+                                        class="absolute inset-0 w-full h-full"></spline-viewer>
                                 </div>
 
                                 <!-- Floating Card: Label (top-left, like "Creating Marketing Models...") -->
-                                <!-- <div class="absolute -top-4 left-4 z-20 animate-float"
-                                    style="transform: translateZ(30px);">
-                                    <div
-                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-2.5 flex items-center gap-3 min-w-[180px]">
-                                        <div
-                                            class="h-8 w-8 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                            <span
-                                                class="material-symbols-outlined text-orange-500 text-base">school</span>
-                                        </div>
-                                        <div>
-                                            <div class="text-slate-800 font-bold text-xs leading-tight">Learning Tech
-                                                Skills...</div>
-                                            <div class="text-slate-400 text-[10px]">T4TEQ Platform</div>
-                                        </div>
-                                    </div>
-                                </div> -->
+
 
                                 <!-- Floating Card: AI Integrated badge (bottom-right, orange pill) -->
                                 <div class="absolute bottom-12 -right-2 z-30 animate-float-delayed"
                                     style="transform: translateZ(40px);">
                                     <div
                                         class="bg-orange-500 text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg text-sm font-bold">
-                                        <span class="material-symbols-outlined text-base"></span>
+                                        <i class="fas fa-certificate text-base"></i>
                                         ISO Certified
                                     </div>
                                 </div>
@@ -822,7 +803,7 @@
                                         class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[130px]">
                                         <div
                                             class="text-slate-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-emerald-500 text-sm"></span>
+                                            <i class="fas fa-user-graduate text-emerald-500 text-sm"></i>
                                             Students
                                         </div>
                                         <div class="text-slate-900 text-2xl font-black">1,000+</div>
@@ -830,27 +811,18 @@
                                     </div>
                                 </div>
 
-                                <!-- Floating Card: Placement rate (bottom-left) -->
+                                <!-- Floating Card: Job Icon (bottom-left) -->
                                 <div class="absolute -bottom-10 -left-4 z-20 animate-float-delayed"
                                     style="animation-delay: 1s; transform: translateZ(35px);">
                                     <div
-                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[140px]">
+                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[140px] flex items-center gap-3">
                                         <div
-                                            class="text-slate-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-blue-500 text-sm">work</span>
-                                            Placement
+                                            class="h-10 w-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-briefcase text-blue-500 text-sm"></i>
                                         </div>
-
-                                        <svg width="40" height="40" viewBox="0 0 40 40">
-                                            <circle cx="20" cy="20" r="15" fill="none" stroke="#e2e8f0"
-                                                stroke-width="5" />
-                                            <circle cx="20" cy="20" r="15" fill="none" stroke="#f97316" stroke-width="5"
-                                                stroke-dasharray="75.4 94.2" stroke-dashoffset="23.6"
-                                                stroke-linecap="round" transform="rotate(-90 20 20)" />
-                                        </svg>
                                         <div>
-                                            <div class="text-slate-900 text-xl font-black leading-none">80%</div>
-                                            <div class="text-slate-400 text-[10px]">Success rate</div>
+                                            <div class="text-slate-900 text-sm font-black leading-tight">Job Ready</div>
+                                            <div class="text-slate-400 text-[10px] font-medium">Career Support</div>
                                         </div>
                                     </div>
                                 </div>
@@ -863,16 +835,14 @@
                                     class="bg-white/90 backdrop-blur-xl rounded-2xl py-3 px-2 shadow-2xl border border-white/50 flex flex-col items-center gap-2">
                                     <div class="group relative hero-cat-icon active" data-index="0">
                                         <div class="icon-bg p-1.5 bg-orange-50 rounded-xl transition-all duration-500">
-                                            <span
-                                                class="material-symbols-outlined text-orange-600 text-xl">data_object</span>
+                                            <i class="fas fa-code text-orange-600 text-xl"></i>
                                         </div>
                                         <span
                                             class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Programming</span>
                                     </div>
                                     <div class="group relative hero-cat-icon" data-index="1">
                                         <div class="icon-bg p-1 transition-transform duration-500">
-                                            <span
-                                                class="material-symbols-outlined text-slate-400 text-xl">bar_chart_4_bars</span>
+                                            <i class="fas fa-chart-bar text-slate-400 text-xl"></i>
                                         </div>
                                         <span
                                             class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Business
@@ -880,8 +850,7 @@
                                     </div>
                                     <div class="group relative hero-cat-icon" data-index="2">
                                         <div class="icon-bg p-1 transition-transform duration-500">
-                                            <span
-                                                class="material-symbols-outlined text-slate-400 text-xl">layers</span>
+                                            <i class="fas fa-layer-group text-slate-400 text-xl"></i>
                                         </div>
                                         <span
                                             class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Full
@@ -889,7 +858,7 @@
                                     </div>
                                     <div class="group relative hero-cat-icon" data-index="3">
                                         <div class="icon-bg p-1 transition-transform duration-500">
-                                            <span class="material-symbols-outlined text-slate-400 text-xl">bolt</span>
+                                            <i class="fas fa-bolt text-slate-400 text-xl"></i>
                                         </div>
                                         <span
                                             class="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">UI/UX
@@ -1031,10 +1000,14 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li><img src="assets/java.png" alt="Java" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/python.jpg" alt="Python" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/react.png" alt="C/C++" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/mongodb.png" alt="SQL" class="w-14 h-14 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/java.png" alt="Java" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/python.jpg" alt="Python" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/react.png" alt="C/C++" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/mongodb.png" alt="SQL" class="w-10 h-10 object-contain"></li>
                         </ul>
                     </div>
 
@@ -1090,11 +1063,15 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li><img src="assets/react.png" alt="React" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/springboot.png" alt="Spring Boot" class="w-14 h-14 object-contain">
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/react.png" alt="React" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/springboot.png" alt="Spring Boot" class="w-10 h-10 object-contain">
                             </li>
-                            <li><img src="assets/mongodb.png" alt="MongoDB" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/django.png" alt="Java" class="w-14 h-14 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/mongodb.png" alt="MongoDB" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/django.png" alt="Java" class="w-10 h-10 object-contain"></li>
                         </ul>
                     </div>
 
@@ -1151,10 +1128,14 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li><img src="assets/python.jpg" alt="Python" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/powerbi (1).png" alt="SQL" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/java.png" alt="BI" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/react.png" alt="Data" class="w-14 h-14 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/python.jpg" alt="Python" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/powerbi (1).png" alt="SQL" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/java.png" alt="BI" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/react.png" alt="Data" class="w-10 h-10 object-contain"></li>
                         </ul>
                     </div>
 
@@ -1211,10 +1192,14 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li><img src="assets/react.png" alt="Design" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/springboot.png" alt="App" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/mongodb.png" alt="UX" class="w-14 h-14 object-contain"></li>
-                            <li><img src="assets/java.png" alt="Dev" class="w-14 h-14 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/react.png" alt="Design" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/springboot.png" alt="App" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/mongodb.png" alt="UX" class="w-10 h-10 object-contain"></li>
+                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
+                                    src="assets/java.png" alt="Dev" class="w-10 h-10 object-contain"></li>
                         </ul>
                     </div>
 
@@ -1365,15 +1350,15 @@
         <!-- Relume Style Testimonials Section -->
         <section id="testimonials" class="bg-white relative overflow-hidden mt-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <!-- Header -->
+
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl sm:text-4xl font-bold text-black">Testimonials</h2>
                 </div>
 
-                <!-- Masonry Grid -->
-                <div id="testimonial-grid" class="columns-1 md:columns-2 lg:columns-3 gap-8">
 
-                    <!-- Card 1 -->
+                <!-- <div id="testimonial-grid" class="columns-1 md:columns-2 lg:columns-3 gap-8">
+
+                   
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up">
                         <div class="relative z-10">
@@ -1395,7 +1380,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
+                    
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="relative z-10">
@@ -1418,7 +1403,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
+                   
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="relative z-10">
@@ -1440,7 +1425,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
+                    
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="relative z-10">
@@ -1462,7 +1447,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 5 -->
+                    
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="300">
                         <div class="relative z-10">
@@ -1485,7 +1470,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 6 -->
+                    
                     <div class="testimonial-card group relative bg-slate-50 p-8 rounded-[32px] mb-8 border border-slate-100 hover:bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-1 block overflow-visible"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="relative z-10">
@@ -1508,7 +1493,9 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
+
+                <script defer async src='https://cdn.trustindex.io/loader.js?9ead3ce65ea6485e4716104eed5'></script>
             </div>
         </section>
 
@@ -1620,7 +1607,7 @@
                             class="address-card active bg-white border-2 border-orange-500 p-6 rounded-3xl cursor-pointer shadow-lg">
                             <div class="flex items-start gap-4">
                                 <div class="bg-orange-50 p-3 rounded-2xl">
-                                    <span class="material-symbols-outlined text-orange-600">location_on</span>
+                                    <i class="fas fa-map-marker-alt text-orange-600"></i>
                                 </div>
                                 <div class="space-y-2">
                                     <h4 class="text-xl font-black text-slate-900">Puthur Branch (HO)</h4>
@@ -1628,7 +1615,7 @@
                                         #5, All Saints Complex, Puthur High Road, Trichy - 620017
                                     </p>
                                     <div class="flex items-center gap-2 text-orange-600 font-bold text-sm">
-                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        <i class="fas fa-phone-alt text-sm"></i>
                                         +91 91591 59139
                                     </div>
                                 </div>
@@ -1640,7 +1627,7 @@
                             class="address-card bg-white border-2 border-slate-100 p-6 rounded-3xl cursor-pointer hover:shadow-lg">
                             <div class="flex items-start gap-4">
                                 <div class="bg-blue-50 p-3 rounded-2xl">
-                                    <span class="material-symbols-outlined text-blue-600">location_on</span>
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
                                 </div>
                                 <div class="space-y-2">
                                     <h4 class="text-xl font-black text-slate-900">Thillai Nagar Branch</h4>
@@ -1649,7 +1636,7 @@
                                         Nagar, Trichy - 620018
                                     </p>
                                     <div class="flex items-center gap-2 text-blue-600 font-bold text-sm">
-                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        <i class="fas fa-phone-alt text-sm"></i>
                                         +91 91591 59139
                                     </div>
                                 </div>
@@ -1661,7 +1648,7 @@
                             class="address-card bg-white border-2 border-slate-100 p-6 rounded-3xl cursor-pointer hover:shadow-lg">
                             <div class="flex items-start gap-4">
                                 <div class="bg-emerald-50 p-3 rounded-2xl">
-                                    <span class="material-symbols-outlined text-emerald-600">location_on</span>
+                                    <i class="fas fa-map-marker-alt text-emerald-600"></i>
                                 </div>
                                 <div class="space-y-2">
                                     <h4 class="text-xl font-black text-slate-900">Kattur Branch</h4>
@@ -1669,7 +1656,7 @@
                                         #12, Navaladiyan Arcade, Oil Mill Bus Stop, Kattur, Trichy - 620019
                                     </p>
                                     <div class="flex items-center gap-2 text-emerald-600 font-bold text-sm">
-                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        <i class="fas fa-phone-alt text-sm"></i>
                                         +91 91591 59139
                                     </div>
                                 </div>
@@ -1678,7 +1665,7 @@
                     </div>
 
                     <!-- Right: Interactive Map with Refined Design -->
-                    <div class="flex justify-center items-center reveal reveal-right">
+                    <div class="flex justify-center items-center reveal reveal-right -mt-6 lg:-mt-24">
                         <div
                             class="relative w-full max-w-[500px] aspect-[4/5] sm:aspect-video lg:aspect-[4/3] flex items-center justify-center">
                             <!-- Background Glow (Replacing Sparkle) -->
@@ -1728,6 +1715,40 @@
                                 </div> -->
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Map Action Buttons - Centered in Bottom Space -->
+                <div class="flex justify-center mt-12 reveal">
+                    <div class="flex flex-col sm:flex-row gap-6 w-full max-w-[700px] px-4">
+                        <a href="https://wa.me/919159159139" target="_blank"
+                            class="flex-1 bg-white border-2 border-slate-100 p-6 rounded-[32px] flex items-center gap-5 hover:shadow-2xl hover:border-emerald-500 hover:-translate-y-1 transition-all group">
+                            <div
+                                class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                <i
+                                    class="fab fa-whatsapp text-emerald-600 text-3xl group-hover:text-white group-hover:scale-110 transition-all"></i>
+                            </div>
+                            <div class="text-left">
+                                <span
+                                    class="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-1">Instant
+                                    Support</span>
+                                <span class="block font-black text-slate-900 text-xl tracking-tight">Chat with us</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919159159139"
+                            class="flex-1 bg-white border-2 border-slate-100 p-6 rounded-[32px] flex items-center gap-5 hover:shadow-2xl hover:border-indigo-500 hover:-translate-y-1 transition-all group">
+                            <div
+                                class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                <i
+                                    class="fas fa-phone-alt text-indigo-600 text-2xl group-hover:text-white group-hover:scale-110 transition-all"></i>
+                            </div>
+                            <div class="text-left">
+                                <span
+                                    class="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-1">Call
+                                    Anywhere</span>
+                                <span class="block font-black text-slate-900 text-xl tracking-tight">Contact Us</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1815,12 +1836,14 @@
         <footer class="bg-black text-white pt-12 sm:pt-20 pb-8 sm:pb-12">
             <div class="w-full px-4 sm:px-12">
                 <!-- Large Title Header -->
-                <h1 class="text-[1.5rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-6xl xl:text-7xl
+                <h1 class="text-[1.4rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-6xl xl:text-7xl
            font-black font-display
            tracking-tight
            mb-10 sm:mb-16
            border-b border-white/10 pb-4 sm:pb-6
-           uppercase leading-[1.1] whitespace-nowrap">
+           uppercase leading-[1.1] whitespace-nowrap
+           text-gray-400
+           text-center lg:text-center">
                     <span class="hover-letter">T</span><span class="hover-letter">4</span><span
                         class="hover-letter">T</span><span class="hover-letter">E</span><span
                         class="hover-letter">Q</span>
@@ -1985,14 +2008,14 @@
                                 <div class="flex items-center gap-3 text-slate-400 group">
                                     <div
                                         class="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
-                                        <span class="material-symbols-outlined text-sm">mail</span>
+                                        <i class="fas fa-envelope text-sm text-emerald-500"></i>
                                     </div>
                                     <span class="text-xs sm:text-sm font-medium">contact@t4teq.com</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-slate-400 group">
                                     <div
                                         class="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
-                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        <i class="fas fa-phone-alt text-sm text-emerald-500"></i>
                                     </div>
                                     <span class="text-xs sm:text-sm font-medium">+91 91591 59139</span>
                                 </div>
@@ -2346,12 +2369,12 @@
                 const type = () => {
                     const currentWord = words[wordIndex];
                     if (isDeleting) {
-                        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
                         charIndex--;
+                        typewriterElement.textContent = currentWord.substring(0, charIndex);
                         typeSpeed = 100;
                     } else {
-                        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
                         charIndex++;
+                        typewriterElement.textContent = currentWord.substring(0, charIndex);
                         typeSpeed = 150;
                     }
 
@@ -2759,23 +2782,28 @@
                 /* list container */
                 const list = document.getElementById("list-" + section);
 
-                // Transition styling
-                list.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                // Transition styling - bottom to top with translateY
+                list.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 list.style.opacity = '0';
-                list.style.transform = 'translateY(10px)';
+                list.style.transform = 'translateY(40px)';
 
                 setTimeout(() => {
                     const data = topics[section][lang];
 
                     // Split syllabus string into array and create card HTML for each
                     const syllabusItems = data.syllabus.split('•').map(s => s.trim());
-                    const syllabusCards = syllabusItems.map(item => `
-                        <div class="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-s font-semibold text-gray-700 shadow-sm hover:shadow-md transition-shadow cursor-default border-l-4 border-l-blue-400">
+                    const syllabusCards = syllabusItems.map((item, i) => `
+                        <div class="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-s font-semibold text-gray-700 shadow-sm hover:shadow-md transition-all cursor-default border-l-4 border-l-blue-400" style="opacity:0; transform: translateY(15px); animation: courseSlideUp 0.4s ease forwards; animation-delay: ${i * 0.08}s;">
                             ${item}
                         </div>
                     `).join('');
 
                     const contentHtml = `
+                        <style>
+                            @keyframes courseSlideUp {
+                                to { opacity: 1; transform: translateY(0); }
+                            }
+                        </style>
                         <div class="flex flex-col w-full gap-4">
                             <!-- Top Row: Desc + Logo -->
                             <div class="flex items-start justify-between gap-4">
@@ -2811,7 +2839,7 @@
                     list.className = "w-full";
                     list.innerHTML = contentHtml;
 
-                    // Transition In
+                    // Transition In - bottom to top
                     list.style.opacity = '1';
                     list.style.transform = 'translateY(0)';
 
@@ -2827,6 +2855,58 @@
 
             }
 
+        </script>
+
+        <script type="module">
+            import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.524/build/spline-runtime.js';
+
+            async function initSpline() {
+                console.log('Spline init started...');
+                const canvas = document.getElementById('canvas3d');
+                if (!canvas) {
+                    console.error('Canvas #canvas3d not found');
+                    return;
+                }
+
+                try {
+                    const app = new Application(canvas);
+                    console.log('Spline application created');
+
+                    const observer = new IntersectionObserver((entries, self) => {
+                        entries.forEach(async (entry) => {
+                            if (entry.isIntersecting) {
+                                console.log('Spline canvas is visible, loading scene...');
+                                try {
+                                    await app.load('https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode');
+                                    console.log('Spline scene loaded successfully');
+                                } catch (err) {
+                                    console.error('Spline scene load failed:', err);
+                                }
+                                self.unobserve(canvas);
+                            }
+                        });
+                    }, { threshold: 0 });
+
+                    observer.observe(canvas);
+
+                    // CSS to hide Spline watermark
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        #canvas3d + div, 
+                        #canvas3d ~ div[style*="position: absolute"] { 
+                            display: none !important; 
+                            opacity: 0 !important; 
+                            pointer-events: none !important; 
+                            visibility: hidden !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                } catch (error) {
+                    console.error('Spline initialization failed:', error);
+                }
+            }
+
+            initSpline();
         </script>
 
         <!-- Fixed WhatsApp Icon -->
