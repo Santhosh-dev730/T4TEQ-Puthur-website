@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <!-- Spline 3D Viewer -->
-    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script> -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
@@ -59,7 +59,7 @@
         "@type": "EducationalOrganization",
         "name": "T4TEQ Software Solutions",
         "url": "https://www.t4teq.com/",
-        "logo": "https://www.t4teq.com/img/logo.png",
+        "logo": "https://www.t4teq.com/assets/img/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Trichy",
@@ -102,6 +102,13 @@
             width: max-content;
             flex-wrap: nowrap;
             animation: marquee 30s linear infinite;
+        }
+
+        /* Hide Spline Viewer on mobile and tablet */
+        @media (max-width: 1023px) {
+            spline-viewer {
+                display: none !important;
+            }
         }
         .glass-nav {
             background: rgba(255, 255, 255, 0.8);
@@ -633,7 +640,7 @@
 
 
                         <!-- Left Content (Refined Layout) -->
-                        <div class="order-1 lg:order-1 space-y-6 lg:space-y-8 mt-8 sm:mt-10 lg:mt-0">
+                        <div class="order-1 lg:order-1 space-y-6 lg:space-y-8 mt-2 sm:mt-10 lg:mt-0">
                             <div class="space-y-4 sm:space-y-6">
                                 <h1
                                     class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 tracking-tight reveal">
@@ -812,21 +819,31 @@
                                 style="transform-style: preserve-3d; transition: transform 0.12s ease-out; will-change: transform;">
 
                                 <!-- 3D Spline Model -->
-                                <!-- <div class="relative rounded-[32px] overflow-hidden h-[420px]">
+                                <div class="relative rounded-[32px] overflow-hidden h-[420px]">
 
                                     <spline-viewer id="hero-spline"
                                         url="https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode"
-                                        class="absolute inset-0 w-full h-full"></spline-viewer>
-                                </div> -->
+                                        class="absolute inset-0 w-full h-[120%] top-0"></spline-viewer>
+                                </div>
 
                                 <!-- Floating Card: Label (top-left, like "Creating Marketing Models...") -->
 
 
-                                <!-- Floating Card: AI Integrated badge (bottom-right, orange pill) -->
-                                <div class="absolute bottom-12 -right-2 z-30 animate-float-delayed"
-                                    style="transform: translateZ(40px);">
-                                    <div
-                                        class="bg-orange-500 text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg text-sm font-bold">
+                                <div class="absolute 
+            bottom-10 right-32
+            md:bottom-10 md:right-16
+            lg:bottom-16 lg:right-4
+            xl:right-0
+            z-20 animate-float-delayed" style="transform: translateZ(40px);">
+
+                                    <div class="bg-orange-500 text-white 
+                rounded-full 
+                px-4 py-2 
+                md:px-5 md:py-2.5
+                flex items-center gap-2 
+                shadow-[0_10px_25px_rgba(249,115,22,0.4)] 
+                text-xs md:text-sm 
+                font-bold">
                                         <i class="fas fa-certificate text-base"></i>
                                         ISO Certified
                                     </div>
@@ -835,36 +852,57 @@
 
 
 
-                                <!-- Floating Card: Students count (top-right) -->
-                                <div class="absolute -top-2 -right-3 z-20 animate-float"
-                                    style="animation-delay: 0.5s; transform: translateZ(25px);">
-                                    <div
-                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[140px] flex items-center gap-3">
-                                        <div
-                                            class="h-10 w-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                            <i class="fas fa-briefcase text-blue-500 text-sm"></i>
+
+                                <div class="absolute 
+            top-2 right-[4.25rem] 
+            md:top-2 md:right-[4.25rem] 
+            lg:-right-3
+            z-20 animate-float" style="animation-delay: 0.5s; transform: translateZ(25px);">
+
+                                    <div class="bg-white/95 backdrop-blur-md rounded-[28px] 
+                shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+                border border-slate-100 
+                p-4 min-w-[190px] 
+                flex items-center gap-4">
+
+                                        <div class="h-12 w-12 bg-blue-50/80 rounded-2xl 
+                    flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-briefcase text-blue-600 text-lg"></i>
                                         </div>
+
                                         <div>
-                                            <div class="text-slate-900 text-sm font-black leading-tight">Goal Oriented
+                                            <div class="text-slate-900 text-base font-bold leading-tight">
+                                                Goal Oriented
                                             </div>
-                                            <div class="text-slate-400 text-[10px] font-medium">Career Guidance</div>
+                                            <div class="text-slate-400 text-xs font-medium mt-0.5">
+                                                Career Guidance
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
 
-                                <!-- Floating Card: Job Icon (bottom-left) -->
-                                <div class="absolute -bottom-10 -left-4 z-20 animate-float-delayed"
-                                    style="animation-delay: 1s; transform: translateZ(35px);">
+                                <!-- Floating Card: Students (bottom-left) -->
+                                <div class="absolute 
+            bottom-0 left-0
+            lg:-bottom-12 lg:-left-6
+            xl:-bottom-16 xl:-left-10
+            z-20 animate-float-delayed" style="animation-delay: 1s; transform: translateZ(35px);">
 
                                     <div
-                                        class="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 px-4 py-3 min-w-[130px]">
+                                        class="bg-white/95 backdrop-blur-md rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 p-4 min-w-[160px]">
                                         <div
-                                            class="text-slate-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                                            <i class="fas fa-user-graduate text-emerald-500 text-sm"></i>
-                                            Students
+                                            class="text-emerald-500 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 mb-2">
+                                            <div
+                                                class="h-6 w-6 bg-emerald-50/80 rounded-lg flex items-center justify-center">
+                                                <i class="fas fa-graduation-cap text-[10px]"></i>
+                                            </div>
+
+
+                                            <div class="text-slate-900 text-2xl font-black tracking-tight">1,000+</div>
                                         </div>
-                                        <div class="text-slate-900 text-2xl font-black">1,000+</div>
-                                        <div class="text-emerald-500 text-[10px] font-bold">↑ +96.5% this year</div>
+                                        <div class="text-emerald-500 text-xs font-bold mt-1 ml-8">↑ +96.5% <span
+                                                class="text-slate-400 font-medium">this year</span></div>
                                     </div>
                                 </div>
 
@@ -1041,16 +1079,23 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/java.png" alt="Java" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/python.jpg" alt="Python" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/react.png" alt="C/C++"
-                                    class="w-14 h-14 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/sql.png" alt="SQL"
-                                    class="w-14 h-14 object-contain"></li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-3xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/java.png" alt="Java" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/python.jpg" alt="Python" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/react.png" alt="C/C++" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="courses remove logos images/courses remove logos images/sql.png" alt="SQL"
+                                    class="w-full h-full">
+                            </li>
                         </ul>
                     </div>
 
@@ -1110,17 +1155,23 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/react.png" alt="React"
-                                    class="w-14 h-14 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/springboot.png" alt="Spring Boot" class="w-10 h-10 object-contain">
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/react.png" alt="React" class="w-full h-full object-contain">
                             </li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/django.png" alt="MongoDB" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/node.png" alt="Java"
-                                    class="w-10 h-10 object-contain"></li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/springboot.png" alt="Spring Boot" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/django.png" alt="MongoDB" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="courses remove logos images/courses remove logos images/node.png" alt="Java"
+                                    class="w-full h-full object-contain">
+                            </li>
                         </ul>
                     </div>
 
@@ -1181,16 +1232,24 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/python.jpg" alt="Python" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/powerbi (1).png" alt="SQL" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/sql.png" alt="BI"
-                                    class="w-14 h-14 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/r.png" alt="Data"
-                                    class="w-14 h-14 object-contain"></li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/python.jpg" alt="Python" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/powerbi (1).png" alt="SQL" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="courses remove logos images/courses remove logos images/sql.png" alt="BI"
+                                    class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="courses remove logos images/courses remove logos images/r.png" alt="Data"
+                                    class="w-full h-full object-contain">
+                            </li>
                         </ul>
                     </div>
 
@@ -1251,16 +1310,23 @@
 
                         <!-- Logos -->
                         <ul class="grid grid-cols-4 gap-2 mt-4 lg:mt-0 max-w-60 lg:ml-auto shrink-0">
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/react.png" alt="Design" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="assets/springboot.png" alt="App" class="w-10 h-10 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/react.png" alt="UX"
-                                    class="w-20 h-20 object-contain"></li>
-                            <li class="w-14 h-14 bg-gray-200/40 rounded-full flex items-center justify-center"><img
-                                    src="courses remove logos images/courses remove logos images/flutter.png" alt="Dev"
-                                    class="w-14 h-14 object-contain"></li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/react.png" alt="Design" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/springboot.png" alt="App" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="assets/react.png" alt="UX" class="w-full h-full object-contain">
+                            </li>
+                            <li
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
+                                <img src="courses remove logos images/courses remove logos images/flutter.png" alt="Dev"
+                                    class="w-full h-full object-contain">
+                            </li>
                         </ul>
                     </div>
 
@@ -1999,13 +2065,13 @@
                     </div>
                 </div>
 
-                <!-- Recognition Row: 5 Cards (Flex-wrap for mobile centering) -->
-                <div class="flex flex-wrap justify-center gap-4 mt-8 pb-4 px-4 lg:px-[10%] xl:px-[20%]">
+                <!-- Recognition Row: 5 Cards -->
+                <div class="flex flex-wrap lg:flex-nowrap justify-center gap-4 mt-8 pb-4 px-4 lg:px-4 xl:px-[10%]">
                     <!-- Google Review Card -->
                     <div
-                        class="bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.02] w-[calc(50%-0.5rem)] sm:w-40 lg:flex-1">
-                        <div class="mb-2 flex justify-center">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24">
+                        class="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] sm:w-44 lg:flex-1 min-h-[140px]">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24">
                                 <path fill="#4285F4"
                                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                                 <path fill="#34A853"
@@ -2016,46 +2082,51 @@
                                     d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 12 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                             </svg>
                         </div>
-                        <div class="text-[11px] font-bold text-[#4285F4] uppercase mb-1 text-center">Google Review</div>
-                        <div class="text-[13px] font-bold text-orange-500 text-center">4.8 Rating</div>
+                        <div class="flex gap-1 mb-2">
+                            <i class="fas fa-star text-[#ff4b2b] text-sm"></i>
+                            <i class="fas fa-star text-[#ff4b2b] text-sm"></i>
+                            <i class="fas fa-star text-[#ff4b2b] text-sm"></i>
+                            <i class="fas fa-star text-[#ff4b2b] text-sm"></i>
+                            <i class="fas fa-star-half-alt text-[#ff4b2b] text-sm"></i>
+                        </div>
+                        <div class="text-[12px] font-bold text-white uppercase tracking-tight">Google (4.8)</div>
                     </div>
 
                     <!-- ISO Card -->
                     <div
-                        class="bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.02] w-[calc(50%-0.5rem)] sm:w-40 lg:flex-1">
-                        <div class="text-[11px] font-bold text-[#0066cc] uppercase mb-1 text-center">ISO Certified</div>
-                        <div class="text-[15px] font-black text-black text-center">9001:2015</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-tight text-center">Quality
-                            Mgmt</div>
+                        class="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] sm:w-44 lg:flex-1 min-h-[140px]">
+                        <div class="text-[11px] font-bold text-slate-400 uppercase mb-2 tracking-wider">ISO Certified
+                        </div>
+                        <div class="text-[18px] font-black text-white mb-1">9001:2015</div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-tight">Quality Mgmt</div>
                     </div>
 
                     <!-- Ministry Card -->
                     <div
-                        class="bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.02] w-[calc(50%-0.5rem)] sm:w-40 lg:flex-1">
-                        <div class="text-[11px] font-bold text-[#20a3a3] uppercase mb-1 text-center">Ministry Affairs
+                        class="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] sm:w-44 lg:flex-1 min-h-[140px]">
+                        <div class="text-[11px] font-bold text-slate-400 uppercase mb-2 tracking-wider">Ministry Affairs
                         </div>
-                        <div class="text-[15px] font-black text-black text-center">MCA Registered</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-tight text-center">Govt of
-                            India</div>
+                        <div class="text-[18px] font-black text-white mb-1">MCA Registered</div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-tight">Govt of India</div>
                     </div>
 
                     <!-- Excellence Card -->
                     <div
-                        class="bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.02] w-[calc(50%-0.5rem)] sm:w-40 lg:flex-1">
-                        <div class="text-[11px] font-bold text-purple-600 uppercase mb-1 text-center">Excellence</div>
-                        <div class="text-[15px] font-black text-black text-center">TPL Awards</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-tight text-center">Tech
-                            Leader</div>
+                        class="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] sm:w-44 lg:flex-1 min-h-[140px]">
+                        <div class="text-[11px] font-bold text-slate-400 uppercase mb-2 tracking-wider">Excellence</div>
+                        <div class="text-[18px] font-black text-white mb-1">TPL Awards</div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-tight">Tech Leader</div>
                     </div>
 
                     <!-- Partner Card -->
                     <div
-                        class="bg-white rounded-xl p-4 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.02] w-[calc(50%-0.5rem)] sm:w-40 lg:flex-1">
-                        <div class="text-[11px] font-bold text-orange-600 uppercase mb-1 text-center">Official Partner
+                        class="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center justify-center shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] sm:w-44 lg:flex-1 min-h-[140px]">
+                        <div class="text-[11px] font-bold text-slate-400 uppercase mb-2 tracking-wider">Official Partner
                         </div>
-                        <div class="text-[15px] font-black text-black text-center">Tally Education</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-tight text-center">Training
-                            Partner</div>
+                        <div class="text-[18px] font-black text-white mb-1 text-center leading-tight">Tally Education
+                        </div>
+                        <div class="text-[10px] text-slate-500 font-bold uppercase tracking-tight mt-1">Training Partner
+                        </div>
                     </div>
                 </div>
             </div>
