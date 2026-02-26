@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>T4TEQ Software Solutions | Best Software Training Institute in Trichy | Python, Java, Full Stack</title>
-    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <title>T4TEQ Software Solutions | Best Software Training Institute in Trichy</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <meta name="title"
         content="T4TEQ Software Solutions | Best Software Training Institute in Trichy | Python, Java, Full Stack & More">
     <meta name="description"
@@ -20,22 +20,21 @@
         content="T4TEQ Software Solutions | Leading IT Training in Trichy – Full Stack, Data Science, UI/UX, Digital Marketing, Mobile App Development">
     <meta property="og:description"
         content="Join T4TEQ Software Solutions in Trichy for expert-led IT training in Full Stack, Data Science, UI/UX, Digital Marketing, & Mobile App Development. Start your career!">
-    <meta property="og:image" content="./img/logo t4teq.ico">
-    <meta property="og:url" content="https://www.t4teq.com/">
+    <!-- <meta property="og:image" content="./img/logo t4teq.ico"> -->
+    <meta property="og:url" content="https://www.t4teqputhur.netlify.app/">
     <meta property="og:type" content="Corporate Training">
     <meta property="og:site_name" content="www.t4teq.com/">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link rel="canonical" href="https://www.t4teq.com/">
-
+    <link rel="canonical" href="https://www.t4teqputhur.netlify.app/">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <!-- Spline 3D Viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js"></script>
-    <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
@@ -47,20 +46,20 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/fav/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"> -->
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- AOS Animation CSS -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "T4TEQ Software Solutions",
         "url": "https://www.t4teq.com/",
-        "logo": "https://www.t4teq.com/assets/img/logo.png",
+        "logo": "https://www.t4teq.com/assets/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Trichy",
@@ -93,439 +92,7 @@
             },
         };
     </script>
-    <style type="text/tailwindcss">
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: marquee 20s linear infinite;
-        }
-
-        /* Hide Spline Viewer on mobile and tablet */
-        @media (max-width: 1023px) {
-            spline-viewer {
-                display: none !important;
-            }
-        }
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #ffffff;
-        }
-        
-        /* Icon Wave Styles */
-        .icon-list {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .grid-col {
-            transition: transform 0.3s ease;
-        }
-        .bouncer.symbol {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 5rem;
-            height: 5rem;
-            background: rgba(0, 0, 0, 0.02);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            border-radius: 50%;
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 2rem;
-            color: rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .bouncer.symbol:hover {
-            background: rgba(168, 85, 247, 0.05);
-            border-color: rgba(168, 85, 247, 0.2);
-            color: #a855f7;
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1);
-        }
-        
-        .box-transition {
-            transition: background-color 0.8s ease;
-        }
-
-        /* Navbar link underline effect */
-        .nav-link {
-            position: relative;
-            padding-bottom: 4px;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #4f46e5;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Responsive grid background */
-        @media (max-width: 768px) {
-            .grid-background {
-                display: none !important;
-            }
-        }
-
-        /* Prevent carousel overflow */
-        .carousel-container {
-            overflow: hidden;
-            width: 100%;
-        }
-
-        /* Footer Letter Hover Effect */
-        .hover-letter {
-            display: inline-block;
-            transition: color 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
-        }
-        .hover-letter:hover {
-            color: #FFB347 !important; /* Soft Orange */
-        }
-
-        /* Gradient Text Animation */
-        @keyframes gradient-text {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-gradient-text {
-            background: linear-gradient(90deg, #f43f5e, #a855f7, #3b82f6, #f43f5e);
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient-text 8s linear infinite;
-        }
-
-        /* Rotating Text Animation Refined */
-        .rotating-text-wrapper {
-            height: 1.5em; /* Increased for scale */
-            overflow: hidden;
-            display: inline-flex;
-            flex-direction: column;
-        }
-        .rotating-text-list {
-            animation: rotate-text 12s cubic-bezier(0.76, 0, 0.24, 1) infinite;
-        }
-        .rotating-text-list span {
-            display: block;
-            height: 1.5em;
-            line-height: 1.5em;
-            transform-origin: left center;
-        }
-        @keyframes rotate-text {
-            0%, 20% { transform: translateY(0) scale(1); opacity: 1; }
-            22.5% { transform: translateY(-10%) scale(0.8); opacity: 0; }
-            25%, 45% { transform: translateY(-25%) scale(1); opacity: 1; }
-            47.5% { transform: translateY(-35%) scale(0.8); opacity: 0; }
-            50%, 70% { transform: translateY(-50%) scale(1); opacity: 1; }
-            72.5% { transform: translateY(-60%) scale(0.8); opacity: 0; }
-            75%, 95% { transform: translateY(-75%) scale(1); opacity: 1; }
-            97.5% { transform: translateY(-85%) scale(0.8); opacity: 0; }
-            100% { transform: translateY(0); }
-        }
-
-        /* About Us Redesign Styles */
-        /* ... existing about us styles if any ... */
-
-        /* ========================= */
-        /* New Gallery Styles (grid2) */
-        /* ========================= */
-        .gallery-container-new {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-tabs-new {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            background: white;
-            padding: 8px;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 25px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .gallery-tab-new {
-            padding: 8px 24px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: 600;
-            font-size: 14px;
-            color: #4b5563;
-        }
-
-        .gallery-tab-new.active {
-            background: black;
-            color: white;
-        }
-
-        .gallery-wrapper-new {
-            overflow: hidden;
-            border-radius: 32px;
-            background: #ff8a8a;
-            padding: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .gallery-slider-new {
-            display: flex;
-            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-            gap: 25px;
-        }
-        .gallery-slide-new {
-            min-width: 100%;
-            flex-shrink: 0;
-            padding: 10px; /* add spacing inside slide */
-        }
-
-        .photos-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1.5fr;
-            gap: 40px;
-            height: 380px;
-        }
-
-        .left-card,
-        .middle-top,
-        .middle-bottom,
-        .right-card {
-            background: #f07272;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: white;
-            transition: 0.4s;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .left-card img,
-        .middle-top img,
-        .middle-bottom img,
-        .right-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: transform 0.6s ease;
-        }
-
-        .left-card:hover img,
-        .middle-top:hover img,
-        .middle-bottom:hover img,
-        .right-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .left-card { height: 100%; }
-        .middle-column {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            gap: 32px;
-        }
-        .middle-top, .middle-bottom { height: 100%; }
-        .right-card { height: 100%; }
-
-        .left-card:hover, .middle-top:hover, .middle-bottom:hover, .right-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .photos-layout {
-                height: 320px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .photos-layout {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-                height: auto;
-                gap: 24px;
-            }
-
-            .middle-column {
-                display: contents;
-            }
-
-            .left-card, .middle-top, .middle-bottom, .right-card {
-                height: 180px;
-            }
-        }
-
-        @media (max-width: 480px) {
-             .photos-layout {
-                grid-template-columns: 1fr 1fr;
-            }
-            .gallery-tab-new {
-                padding: 6px 16px;
-                font-size: 12px;
-            }
-        }
-        .dashed-arc {
-            position: absolute;
-            width: 520px;
-            height: 260px;
-            border: 2px dashed #f97316;
-            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-            border-bottom: none;
-            left: 50px;
-            top: 60px;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-        @media (max-width: 768px) {
-            .dashed-arc { width: 300px; height: 150px; left: 10px; top: 100px; }
-        }
-        .card-back {
-            position: absolute;
-            width: 400px;
-            height: 280px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            transform: rotate(-8deg) translate(20px, -45px);
-            top: 20px;
-            right: 0;
-            z-index: 10;
-        }
-        .card-front {
-            position: absolute;
-            width: 410px;
-            height: 290px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
-            transform: rotate(8deg) translate(-10px, 65px);
-            top: 40px;
-            right: 20px;
-            z-index: 20;
-            border: 8px solid white;
-        }
-        @media (max-width: 1024px) {
-            .card-back {
-                width: 300px;
-                height: 210px;
-                right: 5%;
-                transform: rotate(-8deg) translate(0, -30px);
-            }
-            .card-front {
-                width: 310px;
-                height: 220px;
-                right: 0;
-                transform: rotate(8deg) translate(0, 40px);
-            }
-        }
-        @media (max-width: 640px) {
-            .card-back {
-                width: 240px;
-                height: 170px;
-                right: 15%;
-            }
-            .card-front {
-                width: 250px;
-                height: 180px;
-                right: 5%;
-            }
-        }
-        .btn-premium {
-            background: #f97316;
-            color: #fff;
-            border-radius: 9999px;
-            padding: 12px 32px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-premium:hover {
-            background: #ea6c0a;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
-        }
-
-
-         /* Stacking Card Styles */
-        .skill-card {
-            transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.2s ease;
-            transform-origin: center top;
-            will-change: transform, opacity;
-            overflow: visible !important;
-            height: auto !important;
-        }
-
-        @media (min-width: 1024px) {
-            .skill-card-sticky {
-                position: sticky;
-                top: 100px;
-                margin-bottom: 5rem;
-            }
-        }
-
-        /* Initial spacing adjustment for stacking */
-        /* .skill-card-container {
-            padding-bottom: 200px;
-        } */
-
-        /* Hero floating card animations */
-        /* @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes float-delayed {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        .animate-float {
-            animation: float 4s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-            animation: float-delayed 4s ease-in-out infinite;
-            animation-delay: 1.5s;
-        } */
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 <body>
     <div id="particles-js"></div>
@@ -982,7 +549,7 @@
 
 
         <!-- About Section - Redesigned -->
-        <section id="about" class="bg-white relative overflow-hidden scroll-mt-20 pb-20">
+        <section id="about" class="bg-white relative overflow-hidden scroll-mt-20">
             <!-- Dashed arc decoration -->
             <div class="dashed-arc hidden lg:block"></div>
 
@@ -1031,11 +598,11 @@
                         class="w-full lg:w-[45%] relative h-[300px] sm:h-[350px] lg:h-[380px] flex justify-center items-center reveal reveal-right lg:mt-0 lg:mr-[50px] mb-4 lg:mb-0">
                         <!-- Back card -->
                         <div class="card-back">
-                            <img src="assets/director_1.jpg" alt="Training Session" loading="lazy">
+                            <img src="assets/director_1.webp" alt="Training Session" loading="lazy">
                         </div>
                         <!-- Front card -->
                         <div class="card-front">
-                            <img src="assets/director.jpg" alt="Our Director" loading="lazy">
+                            <img src="assets/director.webp" alt="Our Director" loading="lazy">
                         </div>
 
                         <!-- Paper plane SVG -->
@@ -1085,7 +652,7 @@
             </div>
         </section>
         <!-- Tech Skills Section -->
-        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="pt-2 sm:pt-4 bg-white py-6 ">
+        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="pt-2 sm:pt-4 bg-white py-3">
             <div class="max-w-7xl mx-auto px-4 sm:px-4">
                 <!-- Section Header -->
                 <div class="text-center mb-6">
@@ -1135,7 +702,7 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+                    <div class="h-[2px] w-full bg-white/50 mt-5 rounded mb-6"></div>
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -1192,7 +759,7 @@
                             </li>
                             <li
                                 class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
-                                <img src="assets/web.webp" alt="Spring Boot" class="w-full h-full object-contain">
+                                <img src="assets/web.svg" alt="Spring Boot" class="w-full h-full object-contain">
                             </li>
                             <li
                                 class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
@@ -1206,7 +773,7 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+                    <div class="h-[2px] w-full bg-white/50 mt-5 rounded mb-6"></div>
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -1282,7 +849,7 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+                    <div class="h-[2px] w-full bg-white/50 mt-5 rounded mb-6"></div>
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -1354,7 +921,7 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="h-[1px] w-full bg-white/50 mt-5 rounded mb-6"></div>
+                    <div class="h-[2px] w-full bg-white/50 mt-5 rounded mb-6"></div>
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -1366,13 +933,14 @@
                             class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-yellow-200">
                             Photoshop / Illustrator
                         </div>
-                        <div onclick="showTopics('design','flutter')"
-                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-sky-200">
-                            Flutter
-                        </div>
+
                         <div onclick="showTopics('design','rn')"
                             class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-blue-200">
                             React Native
+                        </div>
+                        <div onclick="showTopics('design','flutter')"
+                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-sky-200">
+                            Flutter
                         </div>
                     </div>
 
@@ -1401,9 +969,11 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0 brightness-0">
-                                <img src="assets/tcs-logo-1.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Zoho'"
-                                    class="max-w-full max-h-full object-contain transition duration-300 " alt="tcs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="174" height="58" fill="none"
+                                    viewBox="0 0 174 58">
+                                    <path fill="#fff"
+                                        d="m66.468 31.819-4.14-2.825c-1.618-1.14-2.324-2.18-2.324-3.419 0-1.586 1.314-2.575 3.182-2.575 2.375 0 3.486 1.089 4.9 1.089 1.11 0 1.867-.743 1.867-1.833 0-.792-.404-1.437-1.465-1.932-1.667-.792-3.485-1.09-5.455-1.09-2.072 0-3.89.595-5.202 1.587a9 9 0 0 0-.758.643c-1.515 1.587-2.777 3.914-3.788 7.184l-1.162 3.765c-2.072 6.64-5.354 9.81-10.456 9.81-5.607 0-9.141-3.815-9.141-9.462s3.534-9.513 8.637-9.513q.332 0 .652.018l.076.004q.287.016.565.047l.093.01q.277.031.544.076l.081.012q.283.048.556.108.023.006.042.008c.797.18 1.538.438 2.242.76.656.297 1.212.397 1.716.397 1.213 0 2.02-.792 2.02-1.982 0-.743-.455-1.486-1.515-1.98-1.92-.941-4.395-1.487-7.072-1.487-7.981 0-13.486 5.548-13.486 13.624 0 2.126.386 4.077 1.108 5.795-1.048 2.236-2.65 3.42-4.745 3.42-2.526 0-4.193-1.437-4.193-4.707V23.4h5.91c1.363 0 2.272-.792 2.272-1.933 0-1.14-.909-1.932-2.273-1.932H19.85v-5.056c0-1.486-1.01-2.478-2.425-2.478-1.413 0-2.424.992-2.424 2.478v23.435c0 5.45 3.182 8.324 8.585 8.324 1.212 0 2.323-.198 3.334-.546a8.08 8.08 0 0 0 4.197-3.439c2.4 2.543 5.962 4.034 10.4 4.034 2.322 0 4.344-.446 6.163-1.387 3.686-1.883 6.314-5.697 8.132-11.543l1.061-3.419c.708.926 1.698 1.812 3.03 2.724l3.789 2.576c1.716 1.19 2.424 2.181 2.424 3.617 0 2.13-1.716 3.567-4.193 3.567-2.374 0-4.394-1.19-5.505-1.19s-1.868.744-1.868 1.833c0 .792.405 1.438 1.466 1.933 1.465.694 3.838 1.289 5.96 1.289 2.677 0 4.898-.792 6.465-2.181 1.414-1.289 2.273-3.122 2.273-5.251-.002-2.971-1.214-4.954-4.245-7.035M79.99 20.538h3.404v-6.08h2.415V12h-8.235v2.457h2.415zM88.32 20.538l1.735-5.106 1.733 5.106h3.33L91.854 12h-3.6l-3.262 8.538zM96.716 20.538h3.404v-6.08h2.415V12h-8.234v2.457h2.415zM105.039 20.538l1.735-5.106 1.733 5.106h3.33L108.575 12h-3.602l-3.262 8.538zM137.713 26.646c.421.966.976 2.012 1.529 2.944l2.227 3.755h1.614v-8.537h-1.442v2.979c0 1.305.029 2.404.141 3.538l-.03.008a24 24 0 0 0-1.452-2.86l-2.203-3.665h-1.781v8.537h1.439v-3.053c0-1.4-.021-2.529-.082-3.639zM129.988 30.933h2.709l.772 2.412h1.672l-2.769-8.537h-1.982l-2.738 8.537h1.611zm.913-3.286c.151-.509.28-1.1.404-1.6h.027c.13.495.27 1.078.431 1.605l.672 2.105h-2.198zM104.591 32.187a4.3 4.3 0 0 1-2.061-.545l-.346 1.292c.465.286 1.402.545 2.304.545 2.2 0 3.235-1.191 3.235-2.566 0-1.226-.712-1.973-2.193-2.537-1.138-.434-1.632-.744-1.632-1.398 0-.503.42-1.027 1.41-1.027.801 0 1.396.243 1.703.405l.373-1.258c-.444-.225-1.121-.421-2.045-.421-1.849 0-3.018 1.054-3.018 2.452 0 1.223.899 1.98 2.309 2.481 1.077.392 1.511.774 1.511 1.417 0 .694-.558 1.16-1.55 1.16M82.206 25.963c.696 0 1.265.153 1.661.334l.339-1.242c-.318-.173-1.04-.38-2.066-.38-2.606 0-4.566 1.696-4.566 4.503 0 2.598 1.648 4.303 4.354 4.303 1.032 0 1.844-.204 2.212-.39l-.257-1.228c-.41.185-1.069.31-1.7.31-1.876 0-2.969-1.192-2.969-3.075 0-2.05 1.252-3.135 2.992-3.135M125.752 33.345V26.12h2.458v-1.311h-6.452v1.31h2.436v7.227zM156.888 24.808l-1.027 2.187c-.291.62-.526 1.15-.738 1.695h-.026a37 37 0 0 0-.744-1.692l-1.015-2.19h-1.783l2.698 4.983v3.554h1.558V29.75l2.833-4.939h-1.756zM88.713 24.669c-2.407 0-4.06 1.851-4.06 4.473 0 2.5 1.523 4.345 3.935 4.345h.014c2.335 0 4.068-1.636 4.068-4.496-.005-2.442-1.47-4.322-3.957-4.322m-.061 7.568h-.013c-1.49 0-2.36-1.435-2.355-3.132-.002-1.703.818-3.189 2.373-3.189s2.355 1.523 2.355 3.133c-.003 1.785-.855 3.188-2.36 3.188M149.062 25.963a4.1 4.1 0 0 1 1.661.334l.338-1.242c-.317-.173-1.039-.38-2.066-.38-2.605 0-4.565 1.696-4.565 4.503 0 2.598 1.648 4.303 4.354 4.303 1.031 0 1.844-.201 2.211-.39l-.256-1.228c-.41.185-1.069.31-1.701.31-1.876 0-2.968-1.192-2.968-3.075 0-2.05 1.251-3.135 2.992-3.135M119.107 24.808h-1.558v8.537h5.066v-1.308h-3.508zM115.776 29.684v-4.875h-1.558v4.978c0 1.674-.675 2.444-1.796 2.444-1.056 0-1.749-.776-1.749-2.444V24.81h-1.558v4.886c0 2.685 1.283 3.794 3.249 3.794 2.06-.002 3.412-1.175 3.412-3.805M100.78 24.808h-1.441v2.979c0 1.305.029 2.404.14 3.538l-.03.008a24 24 0 0 0-1.451-2.86l-2.204-3.665h-1.78v8.537h1.441v-3.053c0-1.4-.02-2.529-.082-3.636l.04-.008c.42.967.976 2.013 1.529 2.945l2.227 3.755h1.614v-8.54zM107.441 37.612h-1.558v8.538h1.558zM95.167 42.146v-.034c.796-.284 1.537-1.025 1.537-2.116 0-.726-.265-1.314-.728-1.7-.571-.477-1.555-.684-2.61-.684-1.056 0-1.755.075-2.344.183v8.355h1.534v-3.482h.778c.878.02 1.28.378 1.523 1.483.236 1.054.44 1.753.569 1.999h1.587c-.17-.331-.4-1.303-.667-2.362-.211-.824-.566-1.409-1.18-1.642m-1.696-.614h-.915v-2.678c.156-.04.47-.076.96-.076 1 .002 1.648.434 1.648 1.358 0 .842-.645 1.396-1.693 1.396M102.069 41.515a38 38 0 0 0-.868 3.085h-.026c-.223-1.032-.514-2.03-.836-3.108l-1.164-3.883h-1.698l2.759 8.538h1.785l2.947-8.538h-1.659zM118.222 42.36h3.214v-1.27h-3.214v-2.196h3.405v-1.282h-4.963v8.535h5.15v-1.281h-3.592zM113.409 38.764c.696 0 1.265.153 1.661.333l.339-1.242c-.317-.172-1.039-.378-2.066-.378-2.605 0-4.566 1.694-4.566 4.502 0 2.597 1.648 4.303 4.355 4.303 1.031 0 1.843-.201 2.211-.39l-.257-1.228c-.412.185-1.068.31-1.701.31-1.875 0-2.968-1.192-2.968-3.075 0-2.05 1.252-3.135 2.992-3.135M80.92 41.176c-1.14-.434-1.633-.744-1.633-1.398 0-.503.42-1.028 1.407-1.028.802 0 1.397.244 1.704.406l.373-1.258c-.445-.225-1.122-.421-2.045-.421-1.849 0-3.018 1.054-3.018 2.452 0 1.223.9 1.98 2.31 2.481 1.076.392 1.51.773 1.51 1.417 0 .699-.556 1.165-1.55 1.165a4.3 4.3 0 0 1-2.061-.545l-.347 1.292c.466.286 1.402.545 2.304.545 2.201 0 3.236-1.191 3.236-2.566.002-1.231-.71-1.978-2.19-2.542M86.072 42.36h3.214v-1.27h-3.214v-2.196h3.407v-1.282h-4.965v8.535h5.153v-1.281h-3.595zM126.148 41.176c-1.138-.434-1.632-.744-1.632-1.398 0-.503.42-1.028 1.407-1.028.801 0 1.397.244 1.703.406l.373-1.258c-.444-.225-1.121-.421-2.044-.421-1.849 0-3.019 1.054-3.019 2.452 0 1.223.9 1.98 2.31 2.481 1.076.392 1.51.773 1.51 1.417 0 .699-.555 1.165-1.55 1.165a4.3 4.3 0 0 1-2.061-.545l-.346 1.292c.465.286 1.402.545 2.304.545 2.201 0 3.235-1.191 3.235-2.566.003-1.231-.709-1.978-2.19-2.542" />
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
                                 <img src="assets/cts.png" onerror="this.src='https://placehold.co/120x120?text=Google'"
@@ -1417,14 +987,20 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/deloitte.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=IBM'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="deloitte">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
+                                    viewBox="17.086 17.192 885.828 165.617">
+                                    <path fill="#86bc24"
+                                        d="M855.963 159.337c0-12.962 10.524-23.478 23.479-23.478 12.962 0 23.472 10.516 23.472 23.478s-10.51 23.472-23.472 23.472c-12.955 0-23.479-10.51-23.479-23.472" />
+                                    <path fill="#0f0b0b"
+                                        d="M107.195 97.16q0-22.308-8.62-33.092c-5.755-7.18-14.47-10.767-26.19-10.767H59.92v90.938h9.538c13.016 0 22.554-3.86 28.628-11.604 6.066-7.73 9.11-19.558 9.11-35.475m44.456-1.55q0 40.641-21.848 62.623c-14.565 14.66-35.04 21.99-61.434 21.99H17.086V17.88h54.865c25.448 0 45.095 6.665 58.94 19.987 13.839 13.329 20.761 32.568 20.761 57.745m142.058 84.61h40.808V17.198H293.71zm98.137-60.809c0 10.394 1.358 18.322 4.07 23.77 2.717 5.456 7.268 8.18 13.667 8.18 6.332 0 10.809-2.724 13.418-8.18 2.608-5.448 3.906-13.376 3.906-23.77q.002-15.508-3.96-23.403c-2.65-5.28-7.168-7.922-13.574-7.922-6.264 0-10.74 2.63-13.458 7.86-2.71 5.238-4.07 13.057-4.07 23.465m76.597 0c0 19.803-5.19 35.252-15.598 46.325q-15.6 16.622-43.675 16.624c-17.948 0-32.235-5.666-42.84-16.998-10.618-11.331-15.924-26.644-15.924-45.95 0-19.743 5.198-35.083 15.605-46.02s25-16.406 43.79-16.406c11.611 0 21.883 2.534 30.782 7.595 8.906 5.06 15.782 12.31 20.612 21.753 4.837 9.429 7.248 20.462 7.248 33.077m16.207 60.809h40.815V59.128H484.65zm-.002-135.742h40.816V17.192h-40.816zm123.507 104.856c5.51 0 12.072-1.4 19.728-4.178v30.469c-5.503 2.418-10.734 4.15-15.707 5.176-4.972 1.04-10.808 1.556-17.486 1.556-13.703 0-23.58-3.444-29.647-10.32-6.04-6.874-9.069-17.431-9.069-31.677v-49.92H541.68V59.139h14.294V28.214l41.128-7.153v38.077h26.04v31.305h-26.04v47.133c0 7.84 3.689 11.76 11.053 11.76m94.461 0c5.51 0 12.073-1.4 19.729-4.178v30.469c-5.496 2.418-10.734 4.15-15.707 5.176-4.98 1.04-10.794 1.556-17.486 1.556-13.702 0-23.58-3.444-29.634-10.32q-9.08-10.31-9.082-31.677v-49.92h-14.3V59.139h14.3V27.746l41.12-6.685v38.077h26.054v31.305h-26.053v47.133q.002 11.76 11.06 11.76m71.227-44.675c.557-6.63 2.453-11.488 5.686-14.592 3.248-3.098 7.256-4.647 12.052-4.647 5.231 0 9.389 1.739 12.473 5.244 3.104 3.485 4.721 8.153 4.85 13.995zm57.555-33.397c-9.702-9.51-23.465-14.273-41.27-14.273q-28.074 0-43.215 16.406-15.133 16.406-15.135 47.08c0 19.802 5.455 35.074 16.338 45.794 10.89 10.72 26.182 16.087 45.876 16.087q14.186-.002 24.416-1.929c6.78-1.27 13.343-3.567 19.709-6.882l-6.271-27.29c-4.626 1.89-9.028 3.343-13.186 4.3q-9.008 2.092-19.77 2.093-11.799 0-18.627-5.767c-4.552-3.852-6.977-9.165-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.558-41.094m-625.583 33.397c.557-6.63 2.453-11.488 5.686-14.592 3.24-3.098 7.255-4.647 12.059-4.647 5.217 0 9.375 1.739 12.466 5.244 3.104 3.485 4.714 8.153 4.857 13.995zm57.561-33.397c-9.708-9.51-23.465-14.273-41.277-14.273-18.723 0-33.118 5.469-43.207 16.406-10.088 10.938-15.142 26.63-15.142 47.08 0 19.802 5.448 35.074 16.345 45.794 10.883 10.72 26.175 16.087 45.87 16.087q14.184-.002 24.415-1.929c6.78-1.27 13.343-3.567 19.715-6.882l-6.277-27.29c-4.627 1.89-9.029 3.343-13.18 4.3-6.018 1.394-12.601 2.093-19.776 2.093-7.86 0-14.075-1.922-18.627-5.767q-6.838-5.78-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.552-41.094" />
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/SVG_Brand_hexaware_technologies.webp"
-                                    onerror="this.src='https://placehold.co/120x120?text=Accenture'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="hexaware">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 163.4 43">
+                                    <path fill="#a100ff" d="m95.1 12 9.4-3.5-9.4-3.6V0l16.1 6.5v4L95.1 17z" />
+                                    <path
+                                        d="M6.2 43C2.8 43 0 41.3 0 37.5v-.2c0-4.6 4-6.2 8.9-6.2h2.3v-.9c0-1.9-.8-3-2.8-3-1.8 0-2.7 1-2.8 2.4h-5c.4-4.2 3.7-6.2 8.1-6.2 4.5 0 7.8 1.9 7.8 6.6v12.6h-5.1v-2.2c-1 1.4-2.7 2.6-5.2 2.6m5-6.6v-1.8H9.1c-2.6 0-3.9.7-3.9 2.4v.2c0 1.3.8 2.2 2.6 2.2 1.8-.1 3.4-1.1 3.4-3M28.4 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8c-.3 4.4-3.2 7.4-8.3 7.4M48 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8C56 40 53.1 43 48 43m19.7 0c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3H63.9c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.6 3.5-3.6 6.2-8.5 6.2M64 31h7c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.5 4m15.4-7.2h5.3v2.8c.9-1.8 2.8-3.2 5.7-3.2 3.4 0 5.7 2.1 5.7 6.6v12.6h-5.3V30.8c0-2.2-.9-3.2-2.8-3.2-1.8 0-3.3 1.1-3.3 3.5v11.5h-5.3zm26.4-5.7v5.7h3.6v3.9h-3.6v8.9c0 1.4.6 2.1 1.9 2.1.8 0 1.3-.1 1.8-.3v4.1c-.6.2-1.7.4-3 .4-4.1 0-6-1.9-6-5.7v-9.5h-2.2v-3.9h2.2v-3.5zm23.4 24.5H124v-2.8c-.9 1.8-2.7 3.2-5.5 3.2-3.4 0-5.9-2.1-5.9-6.5V23.8h5.3v12c0 2.2.9 3.2 2.7 3.2s3.3-1.2 3.3-3.5V23.8h5.3zm3.9-18.8h5.3v3.5c1.1-2.5 2.9-3.7 5.7-3.7v5.2c-3.6 0-5.7 1.1-5.7 4.2v9.7h-5.3zM154.8 43c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3h-12.2c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.8 3.5-3.7 6.2-8.6 6.2M151 31h7.1c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.6 4" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -1434,14 +1010,35 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0 brightness-1">
-                                <img src="assets/capgemini.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=BMW'"
-                                    class="max-w-full max-h-full object-contain transition duration-300"
-                                    alt="capgemini">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
+                                    viewBox="0 -19.939 159.448 69.59">
+                                    <g fill-rule="evenodd">
+                                        <path fill="#12abdb"
+                                            d="M153.218 21.278c3.496 0 6.196-2.846 6.23-6.225-.244-1.475-.762-4.204-4.584-4.204-4.19 0-5.577 5.85-8.985 9.624-.274 2.144-2.305 4.063-4.839 4.385.62.649 2.002 1.001 3.652 1.001 3.018 0 6.67-.908 8.584-2.798-2.554.035-4.194-1.607-4.355-3.877 1.245 1.51 2.652 2.094 4.297 2.094" />
+                                        <path fill="#0070ad"
+                                            d="M126.373 11.972c0-1.86-.113-3.1-1.33-3.1-.556 0-.824.113-1.308.273.43 6.28-.991 11.812-2.724 11.812-2.271 0-1.138-13.463-5.947-13.463-4.439 0-5.079 10.748-5.581 10.748-.343 0-.396-2.822-.377-4.976.187-1.03.289-1.958.289-2.661 0-1-.41-2.73-2.681-1.865.079 7.686-1.46 12.328-3.194 12.328-2.539 0-2.567-6.967-2.567-8.886 0-1.875.136-4.38-2.652-3.491-.415 6.703-2.174 11.762-3.281 11.762-1.651 0-1.319-11.581-4.889-11.581-3.212 0-4.204 10.971-4.872 10.971-1.197 0 .376-12.349-4.263-12.349-2.431 0-3.399 4.122-4.351 8.735-.185.894-.375.924-.41-.087a65 65 0 0 1-.019-2.582c1.166-4.639-.259-6.353-2.408-5.118.694 8.56-3.237 12.744-6.25 12.744-1.088 0-1.948-.464-2.587-1.196 3.612-2.216 5.219-4.76 5.219-7.246 0-2.69-1.548-4.243-4.117-4.243-3.583 0-5.59 3.691-5.59 6.831 0 1.69.318 3.125.835 4.307-1.23.586-2.392 1.093-3.472 1.586-.098-3.228-.459-6.615-.736-9.745-1.91-.528-2.467.39-2.613 2.089-.342 3.877-1.777 6.285-3.047 6.285-.953 0-1.538-1.163-1.607-2.398-.356-6.216 4.688-7.945 7.33-7.041.547-1.373-.055-2.359-2.437-2.359-2.886 0-5.044 1.754-6.626 4.004-1.054 1.5-2.275 2.564-3.897 3.849a9 9 0 0 0 .064-1.104c0-4.38-2.373-6.304-4.638-6.304-1.875 0-3.057 1.123-3.74 2.851-.167-1.733-.513-2.48-1.519-2.48-.43 0-1.03.122-1.67.434.292.968.405 3.111.405 4.518 0 5.267-1.509 7.631-2.959 7.631-1.66 0-1.924-6.25-2.065-8.681a2.3 2.3 0 0 0-.811-.152c-1.504 0-1.699 2.017-2.07 3.872-.41 2.056-1.591 4.638-3.345 4.638-1.059 0-1.724-1.02-1.806-2.856-.172-3.725 2.93-8.14 7.778-6.767.634-1.484-.362-2.613-2.373-2.613-3.545 0-6.475 2.651-7.754 5.791-1.299 2.882-3.57 7.11-8.189 7.11-3.261 0-5.761-2.847-5.761-8.818 0-5.147 3.246-10.035 6.709-10.035 2.421 0 2.983 2.383 2.768 4.62 1.255 1.005 3.31.067 3.31-2.447 0-1.733-1.406-4.673-5.95-4.673C4.97.444 0 6.055 0 13.422c0 7.14 3.622 11.358 8.75 11.358 3.237 0 6.289-1.845 8.394-5.254.532 2.984 2.563 4.239 4.086 4.239 2.466 0 4.077-1.598 4.956-3.755.548 2.162 1.704 3.765 3.629 3.765 1.352 0 2.411-.689 3.207-1.788-.317 7.52-.712 12.314 3.73 11.373-.687-2.139-.907-6.031-.907-9.527 0-9.565 1.577-12.714 3.555-12.714 1.435 0 1.899 1.825 1.899 3.773 0 1.045-.103 2.247-.367 3.325-2.43 1.534-4.37 2.745-4.37 4.283 0 1.216.904 1.327 1.685 1.327 1.865 0 4.112-1.83 5.352-5.282 1.083-.659 2.172-1.411 3.212-2.436a11 11 0 0 0-.054 1.063c0 3.428 1.499 5.504 3.896 5.504 1.88 0 3.287-1.333 4.283-3.33q.095 1.727.117 3.183c-3.808 1.764-8.022 3.55-8.022 8.521 0 2.573 1.855 4.506 4.272 4.506 5.308 0 6.52-5.6 6.568-12.108 1.729-.748 3.012-1.324 4.497-2.062 1.27 1.593 2.998 2.389 4.58 2.389 2.993 0 5.244-1.587 7.05-4.805.318 2.446.953 4.805 2.257 4.805 2.372 0 2.856-12.412 4.618-12.412 1.353 0 .245 13.427 3.814 13.427 3.056 0 3.628-11.816 5.118-11.816 1.055 0 1.132 10.801 4.462 10.801 1.636 0 3.414-1.969 4.301-6.09.42 2.745 1.803 6.09 4.508 6.09 1.577 0 2.935-1.597 3.984-3.716.288 2.182.903 3.716 2.1 3.716 3.11 0 3.007-12.384 5.468-12.384 1.92 0 1.33 12.384 5.9 12.384 2.172 0 3.202-1.851 3.818-4.18.839 3.423 2.201 4.18 3.315 4.18.707 0 1.245-.25 1.949-1.085-3.537-1.532-3.238-7.114-3.238-10.717m-74.844 21.27c-1.098 0-1.68-1.045-1.68-2.223 0-3.179 2.334-4.862 5.205-6.312-.127 6.942-1.743 8.535-3.525 8.535m14.278-22.51c1.069 0 1.679.98 1.571 2.392-.121 1.655-1.327 3.555-3.427 5.044-1.094-3.115-.278-7.436 1.856-7.436m33.866-4.698c1.016-.034 1.729-.907 1.734-1.947.01-1.04-.699-1.862-1.719-1.823-1.02.035-1.85.909-1.855 1.949a1.78 1.78 0 0 0 1.84 1.821m25.333.528c.927-.034 1.685-.864 1.685-1.855 0-.992-.743-1.768-1.67-1.74-.93.035-1.685.87-1.69 1.86-.01.992.747 1.768 1.675 1.735m34.438 8.242c-.079-3.926-1.943-7.236-4.825-9.879-2.187-1.996-4.785-3.515-7.508-4.657-.215-.092-.44-.181-.66-.269-3.354 4.019-14.965 7.016-14.965 15.44 0 3.29 2.08 6.371 5.13 7.608 1.773.668 3.54.702 5.313.106 1.578-.518 2.872-1.494 3.95-2.68 3.41-3.775 4.795-9.619 8.98-9.619 3.828 0 4.345 2.724 4.59 4.199 0-.01 0-.108-.01-.249" />
+                                    </g>
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/pwc.svg" onerror="this.src='https://placehold.co/120x120?text=TCS'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="pwc">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1897"
+                                    viewBox="0 0 1000 758.994">
+                                    <path fill="#e669a2" d="M1000 325.903H636.264v-93.1H1000z" />
+                                    <path fill="#f3be26" d="M952.755 325.903H636.264V93.051h316.491z" />
+                                    <path fill="#ee9c34" d="M821.998 325.903H636.264V0h185.734z" />
+                                    <path fill="#f3bc87" d="M858.538 325.903H636.264V36.365h222.274z" />
+                                    <path fill="#e3721c" d="M636.213 36.42v289.453h185.765V36.42z" />
+                                    <path fill="#ad1b02" d="M450.016 325.903h186.248v46.555H450.016z" />
+                                    <path fill="#e88d14" d="M636.213 93v232.873h222.432V93z" />
+                                    <path fill="#d85604" d="M636.213 93v232.873h185.765V93z" />
+                                    <path fill="#c14303" d="M752.413 325.903H636.264V186.142h116.149z" />
+                                    <path fill="#db4e18" d="M636.213 232.869v93.004h316.649v-93.004z" />
+                                    <path fill="#d1390d" d="M636.213 232.869v93.004h222.432v-93.004z" />
+                                    <path fill="#c22303" d="M636.213 232.869v93.004h185.765v-93.004z" />
+                                    <path fill="#ad1b02" d="M636.213 232.869v93.004h116.315v-93.004z" />
+                                    <path
+                                        d="M676.76 501.249c-31.689 5.634-48.59 29.577-48.59 71.126 0 42.254 22.534 70.423 55.633 70.423 16.197 0 30.281-5.634 59.858-20.423v34.508c-35.915 16.9-57.042 21.126-85.21 21.126-31.69 0-54.227-7.746-71.832-26.76-18.31-18.311-28.169-42.254-28.169-69.72 0-59.858 45.07-101.407 110.563-101.407 42.958 0 73.24 20.423 73.24 49.296 0 19.014-14.086 32.395-34.508 32.395-10.563 0-19.015-3.521-30.986-9.86M518.31 581.53c28.873-35.915 39.437-50.704 39.437-68.31s-14.085-33.1-33.803-33.1c-11.268 0-21.83 6.339-26.76 11.973v73.943L450 629.416v-143.66h-45.07l-74.649 123.24v-123.24h-25.353l-68.31 15.494v17.605l37.324 3.52v152.818h47.183l71.831-118.31v118.31h52.817M93.662 651.249h10.563c38.027 0 59.154-23.24 59.154-69.72 0-38.731-16.9-59.858-48.592-59.858-4.225 0-10.563.704-21.126 2.817zm0 83.098 30.985 7.042v17.605H2.817v-17.605l28.168-7.042V521.67H0v-17.605l73.943-22.535h19.72v25.353c34.506-21.127 46.478-24.648 64.787-24.648 40.846 0 71.831 38.028 71.831 90.846 0 60.563-41.549 102.112-104.93 102.112-7.042 0-19.014-.704-31.689-1.408" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -1451,15 +1048,64 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/accenture-7.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Benz'"
-                                    class="max-w-full max-h-full object-contain transition duration-300"
-                                    alt="accenture">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 163.4 43">
+                                    <path fill="#a100ff" d="m95.1 12 9.4-3.5-9.4-3.6V0l16.1 6.5v4L95.1 17z" />
+                                    <path
+                                        d="M6.2 43C2.8 43 0 41.3 0 37.5v-.2c0-4.6 4-6.2 8.9-6.2h2.3v-.9c0-1.9-.8-3-2.8-3-1.8 0-2.7 1-2.8 2.4h-5c.4-4.2 3.7-6.2 8.1-6.2 4.5 0 7.8 1.9 7.8 6.6v12.6h-5.1v-2.2c-1 1.4-2.7 2.6-5.2 2.6m5-6.6v-1.8H9.1c-2.6 0-3.9.7-3.9 2.4v.2c0 1.3.8 2.2 2.6 2.2 1.8-.1 3.4-1.1 3.4-3M28.4 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8c-.3 4.4-3.2 7.4-8.3 7.4M48 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8C56 40 53.1 43 48 43m19.7 0c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3H63.9c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.6 3.5-3.6 6.2-8.5 6.2M64 31h7c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.5 4m15.4-7.2h5.3v2.8c.9-1.8 2.8-3.2 5.7-3.2 3.4 0 5.7 2.1 5.7 6.6v12.6h-5.3V30.8c0-2.2-.9-3.2-2.8-3.2-1.8 0-3.3 1.1-3.3 3.5v11.5h-5.3zm26.4-5.7v5.7h3.6v3.9h-3.6v8.9c0 1.4.6 2.1 1.9 2.1.8 0 1.3-.1 1.8-.3v4.1c-.6.2-1.7.4-3 .4-4.1 0-6-1.9-6-5.7v-9.5h-2.2v-3.9h2.2v-3.5zm23.4 24.5H124v-2.8c-.9 1.8-2.7 3.2-5.5 3.2-3.4 0-5.9-2.1-5.9-6.5V23.8h5.3v12c0 2.2.9 3.2 2.7 3.2s3.3-1.2 3.3-3.5V23.8h5.3zm3.9-18.8h5.3v3.5c1.1-2.5 2.9-3.7 5.7-3.7v5.2c-3.6 0-5.7 1.1-5.7 4.2v9.7h-5.3zM154.8 43c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3h-12.2c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.8 3.5-3.7 6.2-8.6 6.2M151 31h7.1c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.6 4" />
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/wipro-1.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Vodafone'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="wipro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
+                                    viewBox="48 101.6 504 396.8">
+                                    <path fill="#2b4c87"
+                                        d="M504.4 257.3c2.9 10.7 13.8 17 24.5 14.2 10.7-2.9 17-13.8 14.2-24.5-2.9-10.7-13.8-17-24.5-14.2-10.7 2.9-17 13.9-14.2 24.5m-27.2 21.5c7.3-2 11.6-9.4 9.7-16.7-2-7.3-9.4-11.6-16.7-9.7-7.3 2-11.6 9.4-9.7 16.7s9.4 11.6 16.7 9.7m-40.1 7c5.3-1.4 8.5-6.9 7.1-12.3-1.4-5.3-6.9-8.5-12.3-7.1-5.3 1.4-8.5 6.9-7.1 12.3 1.4 5.3 6.9 8.5 12.3 7.1" />
+                                    <path fill="#2e4e88"
+                                        d="M405.8 290.4c3.4-.9 5.4-4.4 4.5-7.8s-4.4-5.4-7.8-4.5-5.4 4.4-4.5 7.8 4.4 5.4 7.8 4.5" />
+                                    <path fill="#1e3e70"
+                                        d="M489.5 216.7c5 8.7 16.2 11.7 24.9 6.7s11.7-16.2 6.7-24.9-16.2-11.7-24.9-6.7c-8.8 5.1-11.7 16.2-6.7 24.9m-40.2 23.2c3.5 6.1 11.3 8.2 17.4 4.7s8.2-11.3 4.7-17.4-11.3-8.2-17.4-4.7c-6.2 3.5-8.3 11.3-4.7 17.4m-28.7 6c-4.4 2.5-5.8 8.1-3.3 12.4 2.5 4.4 8.1 5.8 12.4 3.3 4.4-2.5 5.8-8.1 3.3-12.4-2.4-4.3-8-5.8-12.4-3.3M395 264.4c-2.8 1.6-3.8 5.2-2.2 8.1 1.6 2.8 5.3 3.8 8.1 2.2s3.8-5.3 2.2-8.1c-1.6-2.9-5.2-3.8-8.1-2.2" />
+                                    <path fill="#184d89"
+                                        d="M487.4 180.9c6.4-6.4 6.4-16.8 0-23.2s-16.8-6.4-23.2 0-6.4 16.8 0 23.2 16.8 6.4 23.2 0m-39.9 16.8c-4.6-4.6-12.1-4.6-16.7 0s-4.6 12.1 0 16.7 12.1 4.6 16.7 0 4.6-12.1 0-16.7m-42.8 31.2c-3.2 3.2-3.2 8.4 0 11.6s8.4 3.2 11.6 0 3.2-8.4 0-11.6-8.4-3.2-11.6 0m-20.3 31.9c2.1 2.1 5.6 2.1 7.7 0s2.1-5.6 0-7.7-5.6-2.1-7.7 0c-2.2 2.1-2.2 5.5 0 7.7" />
+                                    <path fill="#3569a4"
+                                        d="M429.8 153.4c7.4 4.3 16.9 1.7 21.1-5.7 4.3-7.4 1.7-16.9-5.7-21.1-7.4-4.3-16.9-1.7-21.1 5.7-4.3 7.4-1.7 16.8 5.7 21.1m-27.7 26.1c-3 5.2-1.2 11.9 4 14.9s11.9 1.2 14.9-4 1.2-11.9-4-14.9-11.9-1.2-14.9 4m-7.2 34.2c-3.5-2-7.9-.8-10 2.7-2 3.5-.8 7.9 2.7 10 3.5 2 7.9.8 9.9-2.7 2.1-3.5.9-7.9-2.6-10m-16.8 29.2c-2.4-1.4-5.5-.6-6.8 1.8-1.4 2.4-.6 5.5 1.8 6.8 2.4 1.4 5.5.6 6.8-1.8 1.4-2.3.6-5.4-1.8-6.8" />
+                                    <path fill="#4b8dcb"
+                                        d="M389.1 135.6c7.8 2.1 15.8-2.5 17.8-10.3 2.1-7.8-2.5-15.8-10.3-17.8-7.8-2.1-15.8 2.5-17.8 10.3-2.1 7.8 2.6 15.8 10.3 17.8m-12.2 45.8c5.3 1.4 10.8-1.7 12.3-7.1 1.4-5.3-1.7-10.8-7.1-12.3-5.3-1.4-10.8 1.7-12.3 7.1-1.4 5.4 1.7 10.9 7.1 12.3m-9.7 36.1c3.6 1 7.4-1.2 8.4-4.8s-1.2-7.4-4.8-8.4-7.4 1.2-8.4 4.8 1.2 7.4 4.8 8.4M356.4 240c-.6 2.4.8 4.9 3.2 5.6s4.9-.8 5.6-3.2c.6-2.4-.8-4.9-3.2-5.6-2.4-.6-4.9.8-5.6 3.2" />
+                                    <path fill="#3398b3"
+                                        d="M345 129c7.5 0 13.7-6.1 13.7-13.7 0-7.5-6.1-13.7-13.7-13.7-7.5 0-13.7 6.1-13.7 13.7.1 7.6 6.2 13.7 13.7 13.7m0 29.1c-5 0-9.1 4.1-9.1 9.1s4.1 9.1 9.1 9.1 9.1-4.1 9.1-9.1-4-9.1-9.1-9.1m6.4 49.7c0-3.5-2.9-6.4-6.4-6.4s-6.4 2.9-6.4 6.4 2.9 6.4 6.4 6.4c3.6-.1 6.4-2.9 6.4-6.4m-6.4 27.3c-2.3 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1-1.8-4.1-4.1-4.1" />
+                                    <path fill="#02a496"
+                                        d="M300.5 134c6.8-1.8 10.8-8.8 9-15.6s-8.8-10.8-15.6-9-10.8 8.8-9 15.6 8.8 10.8 15.6 9m2.2 39.9c1.2 4.4 5.7 7 10 5.8 4.4-1.2 7-5.7 5.8-10-1.2-4.4-5.7-7-10-5.8-4.4 1.2-7 5.7-5.8 10m12.7 38.6c.8 3.2 4.1 5 7.2 4.2 3.2-.8 5-4.1 4.2-7.3s-4.1-5-7.2-4.2c-3.2.9-5 4.1-4.2 7.3m10.3 29.8c.5 1.9 2.5 3.1 4.5 2.6 1.9-.5 3.1-2.5 2.6-4.5-.5-1.9-2.5-3.1-4.5-2.6-1.9.5-3.1 2.5-2.6 4.5" />
+                                    <path fill="#00aa75"
+                                        d="M258.5 150.5c5.7-3.3 7.6-10.5 4.3-16.2s-10.5-7.6-16.2-4.3-7.6 10.5-4.3 16.2c3.3 5.6 10.6 7.5 16.2 4.3m23.7 41c3.5-2 4.7-6.5 2.7-9.9-2-3.5-6.5-4.7-10-2.7s-4.7 6.5-2.7 10c2.1 3.4 6.5 4.6 10 2.6m19.4 33.5c2.6-1.5 3.5-4.9 2-7.5s-4.9-3.5-7.5-2-3.5 4.8-2 7.5c1.5 2.6 4.9 3.5 7.5 2m15.7 20.9c-.9-1.5-2.8-2-4.4-1.2-1.5.9-2 2.8-1.2 4.4.9 1.5 2.8 2 4.4 1.2 1.6-1 2.1-2.9 1.2-4.4" />
+                                    <path fill="#4fba69"
+                                        d="M222.1 177.4c4.3-4.3 4.3-11.2 0-15.5s-11.2-4.3-15.5 0-4.3 11.2 0 15.5c4.3 4.2 11.2 4.2 15.5 0m33.5 24.4c-2.5-2.5-6.5-2.5-9 0s-2.5 6.5 0 9 6.5 2.5 9 0c2.5-2.4 2.5-6.5 0-9m27.7 29.6c-2-2-5.1-2-7.1 0s-2 5.1 0 7.1 5.1 2 7.1 0c1.9-1.9 1.9-5.1 0-7.1m20.6 23.9c-1.1-1.1-2.8-1.1-3.9 0s-1.1 2.8 0 3.9 2.8 1.1 3.9 0 1.1-2.9 0-3.9" />
+                                    <path fill="#7ec45f"
+                                        d="M179.7 216.3c4.8 2.8 10.9 1.1 13.7-3.7s1.1-10.9-3.7-13.7-10.9-1.1-13.7 3.7-1.1 10.9 3.7 13.7m53 12.9c-2.6-1.5-6-.6-7.5 2s-.6 6 2 7.5 6 .6 7.5-2c1.5-2.7.6-6-2-7.5m34.7 21c-2.2-1.3-5-.5-6.2 1.7-1.3 2.2-.5 5 1.7 6.2 2.2 1.3 5 .5 6.2-1.7 1.2-2.1.4-4.9-1.7-6.2" />
+                                    <path fill="#4c609b"
+                                        d="M530.1 278.1c-12.1 0-21.9 9.8-21.9 21.9s9.8 21.9 21.9 21.9S552 312.1 552 300s-9.8-21.9-21.9-21.9M493.9 300c0-8.6-7-15.7-15.7-15.7s-15.7 7-15.7 15.7c0 8.6 7 15.7 15.7 15.7s15.7-7 15.7-15.7m-56.2-10.7c-5.9 0-10.7 4.8-10.7 10.7s4.8 10.7 10.7 10.7 10.7-4.8 10.7-10.7-4.8-10.7-10.7-10.7" />
+                                    <path fill="#54669f"
+                                        d="M413.2 300c0-3.8-3.1-7-7-7-3.8 0-7 3.1-7 7 0 3.8 3.1 7 7 7s7-3.2 7-7" />
+                                    <path fill="#746fa8"
+                                        d="M529 328.5c-10.7-2.9-21.7 3.5-24.5 14.2-2.9 10.7 3.5 21.7 14.2 24.5 10.7 2.9 21.7-3.5 24.5-14.2s-3.6-21.6-14.2-24.5m-58.9 19.1c7.3 2 14.8-2.4 16.7-9.7 2-7.3-2.4-14.8-9.7-16.7-7.3-2-14.8 2.4-16.7 9.7s2.4 14.7 9.7 16.7m-38.2-14c5.3 1.4 10.8-1.7 12.3-7.1 1.4-5.3-1.7-10.8-7.1-12.3-5.3-1.4-10.8 1.7-12.3 7.1-1.4 5.4 1.7 10.9 7.1 12.3m-29.4-11.7c3.4.9 6.9-1.1 7.8-4.5s-1.1-6.9-4.5-7.8-6.9 1.1-7.8 4.5 1.1 6.9 4.5 7.8" />
+                                    <path fill="#99558e"
+                                        d="M514.4 376.6c-8.7-5-19.8-2-24.9 6.7-5 8.7-2 19.8 6.7 24.9 8.7 5 19.9 2 24.9-6.7s2-19.8-6.7-24.9m-43.1-3.8c3.5-6.1 1.4-13.9-4.7-17.4s-13.9-1.4-17.4 4.7-1.4 13.9 4.7 17.4 13.9 1.4 17.4-4.7m-38.2-22.1c2.5-4.4 1-9.9-3.3-12.4-4.4-2.5-9.9-1-12.4 3.3-2.5 4.4-1 9.9 3.3 12.4 4.3 2.6 9.9 1.1 12.4-3.3m-30-17.3c1.6-2.8.7-6.5-2.2-8.1-2.8-1.6-6.5-.7-8.1 2.2-1.6 2.8-.7 6.4 2.2 8.1 2.9 1.6 6.5.7 8.1-2.2" />
+                                    <path fill="#af3579"
+                                        d="M464.2 419.1c-6.4 6.4-6.4 16.8 0 23.2s16.8 6.4 23.2 0 6.4-16.8 0-23.2-16.8-6.4-23.2 0m-16.7-16.8c4.6-4.6 4.6-12.1 0-16.7s-12.1-4.6-16.7 0-4.6 12.1 0 16.7c4.6 4.7 12.1 4.7 16.7 0m-31.2-31.2c3.2-3.2 3.2-8.4 0-11.6s-8.4-3.2-11.6 0-3.2 8.4 0 11.6 8.4 3.2 11.6 0M384.4 347c2.1 2.1 5.6 2.1 7.7 0s2.1-5.6 0-7.7-5.6-2.1-7.7 0c-2.2 2.1-2.2 5.5 0 7.7" />
+                                    <path fill="#be266a"
+                                        d="M429.8 446.6c-7.4 4.3-9.9 13.7-5.7 21.1 4.3 7.4 13.7 9.9 21.1 5.7 7.4-4.3 9.9-13.7 5.7-21.1-4.3-7.4-13.7-10-21.1-5.7m-8.8-37c-3-5.2-9.7-7-14.9-4s-7 9.7-4 14.9 9.7 7 14.9 4 7-9.7 4-14.9m-26.1-23.3c3.5-2 4.7-6.5 2.7-10s-6.5-4.7-9.9-2.7c-3.5 2-4.7 6.5-2.7 9.9 2 3.6 6.4 4.8 9.9 2.8m-21.8-37.9c-2.4 1.4-3.2 4.4-1.8 6.8s4.4 3.2 6.8 1.8 3.2-4.4 1.8-6.8c-1.4-2.3-4.4-3.2-6.8-1.8" />
+                                    <path fill="#d4535c"
+                                        d="M389.1 464.4c-7.8 2.1-12.4 10.1-10.3 17.8 2.1 7.8 10.1 12.4 17.8 10.3 7.8-2.1 12.4-10.1 10.3-17.8-2-7.8-10-12.4-17.8-10.3m-7-26.4c5.3-1.4 8.5-6.9 7.1-12.3-1.4-5.3-6.9-8.5-12.3-7.1-5.3 1.4-8.5 6.9-7.1 12.3 1.4 5.3 6.9 8.5 12.3 7.1m-6.5-50.6c-1-3.6-4.7-5.8-8.4-4.8-3.6 1-5.8 4.7-4.8 8.4 1 3.6 4.7 5.8 8.4 4.8 3.6-1 5.7-4.8 4.8-8.4m-10.4-29.8c-.7-2.4-3.1-3.9-5.6-3.2-2.4.6-3.9 3.2-3.2 5.6s3.1 3.9 5.6 3.2c2.4-.7 3.9-3.2 3.2-5.6" />
+                                    <path fill="#e06550"
+                                        d="M345 471c-7.5 0-13.7 6.1-13.7 13.7 0 7.5 6.1 13.7 13.7 13.7 7.5 0 13.7-6.1 13.7-13.7S352.6 471 345 471m-9.1-38.2c0 5 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1-4.1-9.1-9.1-9.1-9.1 4-9.1 9.1m9.1-34.2c3.5 0 6.4-2.9 6.4-6.4s-2.9-6.4-6.4-6.4-6.4 2.9-6.4 6.4c.1 3.6 2.9 6.4 6.4 6.4m0-41.9c-2.3 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1c0-2.2-1.8-4.1-4.1-4.1" />
+                                    <path fill="#f57f28"
+                                        d="M300.5 466c-6.8-1.8-13.8 2.2-15.6 9s2.2 13.8 9 15.6 13.8-2.2 15.6-9-2.2-13.8-9-15.6m12.3-45.7c-4.4-1.2-8.9 1.4-10 5.8-1.2 4.4 1.4 8.9 5.8 10 4.4 1.2 8.9-1.4 10-5.8s-1.5-8.9-5.8-10m9.9-37c-3.2-.8-6.4 1-7.2 4.2s1 6.4 4.2 7.3c3.2.8 6.4-1 7.2-4.2s-1.1-6.4-4.2-7.3m10.1-23.7c.5-1.9-.6-3.9-2.6-4.5-1.9-.5-3.9.6-4.5 2.6-.5 1.9.6 3.9 2.6 4.5 2 .5 4-.6 4.5-2.6" />
+                                    <path fill="#f89829"
+                                        d="M258.5 449.6c-5.7-3.3-12.9-1.3-16.2 4.3-3.3 5.7-1.3 12.9 4.3 16.2 5.7 3.3 12.9 1.3 16.2-4.3 3.3-5.7 1.4-13-4.3-16.2m23.7-41.1c-3.5-2-7.9-.8-10 2.7-2 3.5-.8 7.9 2.7 9.9s7.9.8 10-2.7c2-3.4.8-7.9-2.7-9.9m13.9-24c2.6 1.5 6 .6 7.5-2s.6-6-2-7.5-6-.6-7.5 2-.6 6 2 7.5m20.1-34.7c-1.5-.9-3.5-.4-4.4 1.2-.9 1.5-.4 3.5 1.2 4.4 1.5.9 3.5.4 4.4-1.2.8-1.6.3-3.5-1.2-4.4" />
+                                    <path fill="#fdc126"
+                                        d="M206.6 422.7c-4.3 4.3-4.3 11.2 0 15.5s11.2 4.3 15.5 0 4.3-11.2 0-15.5-11.2-4.3-15.5 0m40-33.5c-2.5 2.5-2.5 6.5 0 9s6.5 2.5 9 0 2.5-6.5 0-9-6.5-2.5-9 0m29.6-27.7c-2 2-2 5.1 0 7.1s5.1 2 7.1 0 2-5.1 0-7.1-5.1-2-7.1 0m27.7-20.6c-1.1-1.1-2.8-1.1-3.9 0s-1.1 2.8 0 3.9 2.8 1.1 3.9 0 1.1-2.9 0-3.9" />
+                                    <path fill="#fed626"
+                                        d="M180 383.4c-4.8 2.8-6.4 8.9-3.7 13.7 2.8 4.8 8.9 6.4 13.7 3.7 4.8-2.8 6.4-8.9 3.7-13.7-2.8-4.8-8.9-6.5-13.7-3.7m47.3-22c-2.6 1.5-3.5 4.9-2 7.5s4.9 3.5 7.5 2 3.5-4.9 2-7.5c-1.6-2.6-4.9-3.5-7.5-2m35.5-19.5c-2.2 1.3-2.9 4-1.7 6.2 1.3 2.2 4 2.9 6.2 1.7 2.2-1.3 2.9-4 1.7-6.2s-4-3-6.2-1.7" />
+                                    <path fill="#341d55"
+                                        d="M159.6 268.2h16.1V330h-16.1zm9.9-27.6c-5-1.3-10.1 1.6-11.4 6.6s1.6 10.1 6.6 11.4 10.1-1.6 11.4-6.6-1.7-10.1-6.6-11.4m55.9 90.7c-4.2 0-8-.7-11.3-2.2q-5.1-2.25-8.1-6.6v38.4h-15.7v-92.7h15.6v8.6q3.15-4.65 8.1-7.2c3.4-1.8 7.1-2.6 11.3-2.6 3.9 0 7.6.7 11.2 2.2s6.8 3.6 9.5 6.5q4.05 4.2 6.6 10.2c1.6 4 2.5 8.4 2.5 13.3 0 5-.8 9.4-2.5 13.3s-3.9 7.3-6.6 10.1-5.9 5-9.4 6.5c-3.7 1.5-7.4 2.2-11.2 2.2m-3.2-14.9c2.4 0 4.6-.5 6.6-1.4 2.1-.9 3.9-2.2 5.4-3.7 1.6-1.6 2.8-3.4 3.7-5.5s1.3-4.4 1.3-6.8-.4-4.7-1.3-6.8-2.1-3.9-3.7-5.5-3.4-2.8-5.4-3.7c-2.1-.9-4.3-1.4-6.6-1.4-2.4 0-4.7.5-6.8 1.4s-3.9 2.2-5.4 3.7c-1.5 1.6-2.7 3.4-3.6 5.6-.9 2.1-1.3 4.4-1.3 6.8s.4 4.7 1.3 6.8 2.1 3.9 3.6 5.5 3.3 2.8 5.4 3.7c2 .9 4.3 1.3 6.8 1.3m44.2-48.2H282v9.5c1.5-3.7 3.8-6.4 6.7-8.1s6.4-2.6 10.4-2.6c2.1 0 4 .2 5.8.7s3.3 1 4.6 1.7l-5.7 15.6c-.8-.6-2-1.1-3.4-1.5q-2.25-.6-4.8-.6c-4 0-7.3 1.1-9.7 3.4s-3.7 6-3.7 11.2v32.6h-15.7zm78 63.1c-4.7 0-9-.8-12.9-2.5-4-1.7-7.4-4-10.4-6.9-2.9-2.9-5.2-6.4-6.9-10.2-1.6-3.9-2.5-8.1-2.5-12.5s.8-8.6 2.5-12.5q2.4-5.85 6.9-10.2c2.9-2.9 6.4-5.2 10.4-6.9s8.3-2.5 12.9-2.5 8.9.8 12.9 2.5 7.5 4 10.4 6.9 5.2 6.3 6.9 10.2 2.5 8.1 2.5 12.5-.8 8.6-2.5 12.5-4 7.3-6.9 10.2-6.4 5.2-10.4 6.9c-3.9 1.7-8.2 2.5-12.9 2.5m.2-15c2.4 0 4.6-.5 6.6-1.4 2.1-.9 3.9-2.1 5.4-3.7q2.25-2.25 3.6-5.4c1.35-3.15 1.3-4.4 1.3-6.8s-.4-4.6-1.3-6.8c-.9-2.1-2.1-4-3.6-5.5s-3.3-2.7-5.4-3.7c-2.1-.9-4.3-1.4-6.6-1.4-2.4 0-4.6.5-6.6 1.4-2.1.9-3.9 2.1-5.4 3.7-1.5 1.5-2.7 3.4-3.6 5.5s-1.3 4.4-1.3 6.8.4 4.7 1.3 6.8 2.1 3.9 3.6 5.4 3.3 2.7 5.4 3.7c2 1 4.2 1.4 6.6 1.4M48 268.2h16l12.5 39.5 14.6-39.5h14.1l14.4 39.5 12.9-39.5h16L127.6 330h-14.9L98 289.7 83.1 330H68z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -1469,13 +1115,59 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/zoho-seeklogo.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Microland'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="zoho">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 512 177">
+                                    <defs>
+                                        <linearGradient id="a" x1="49.996%" x2="49.996%" y1="1.431%" y2="96.981%">
+                                            <stop offset=".562%" stop-color="#ffe513" />
+                                            <stop offset="100%" stop-color="#fdb924" />
+                                        </linearGradient>
+                                        <linearGradient id="b" x1="4.512%" x2="95.672%" y1="13.494%" y2="87.064%">
+                                            <stop offset=".562%" stop-color="#008cd2" />
+                                            <stop offset="100%" stop-color="#00649d" />
+                                        </linearGradient>
+                                        <linearGradient id="c" x1="50.002%" x2="50.002%" y1="27.779%" y2="97.529%">
+                                            <stop offset="0%" stop-color="#26a146" />
+                                            <stop offset="100%" stop-color="#008a52" />
+                                        </linearGradient>
+                                        <linearGradient id="d" x1="43.734%" x2="57.544%" y1="8.208%" y2="93.198%">
+                                            <stop offset="0%" stop-color="#d92231" />
+                                            <stop offset="100%" stop-color="#ba2234" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="#e79225" d="M512 37.7v121.4l-16.8 16.4V56.7z" />
+                                    <path fill="#fff16d" d="m401.9 37.8-17.4 18.9.9 1.2 109.1-.4 1-.8 16.5-19z" />
+                                    <path fill="url(#a)" d="M.5 19.7h111v118.9H.5z" transform="translate(384 37)" />
+                                    <path fill="#fff"
+                                        d="M478.6 99.5c-2.2-5.5-5.5-10.5-9.8-14.8-4.1-4.2-8.7-7.4-13.9-9.5-5.1-2.1-10.6-3.2-16.6-3.2s-11.6 1.1-16.7 3.2c-5.2 2.1-9.8 5.3-13.9 9.5-4.3 4.3-7.5 9.3-9.7 14.8s-3.2 11.5-3.2 18.1q0 9.6 3.3 18c2.2 5.6 5.4 10.6 9.7 15 4 4.1 8.6 7.2 13.7 9.3s10.8 3.2 16.9 3.2c5.9 0 11.4-1.1 16.5-3.2s9.8-5.2 13.9-9.3c4.3-4.4 7.6-9.4 9.8-14.9s3.3-11.6 3.3-18c0-6.7-1.1-12.7-3.3-18.2m-22.9 39.2c-4.3 5.1-10 7.7-17.4 7.7s-13.2-2.6-17.5-7.7-6.4-12.2-6.4-21.2c0-9.2 2.2-16.3 6.4-21.5 4.3-5.2 10-7.7 17.5-7.7 7.4 0 13.1 2.6 17.4 7.7 4.2 5.2 6.4 12.3 6.4 21.5 0 9-2.1 16.1-6.4 21.2" />
+                                    <path fill="#009ada"
+                                        d="M373.6 27.8v.6l14.2 109.1-8.3 23-1.1-.8-14.6-104.6.3-1.4 9.1-25.3z" />
+                                    <path fill="#91c9ed" d="m264.3 43 109.3-15.2-9.2 26.2-1.3 1.4-102.2 15 .5-18.7z" />
+                                    <path fill="url(#b)" d="m107.4 27 15.1 106.5-107.7 15.1L.3 45.7l6.3-4.9z"
+                                        transform="translate(257 27)" />
+                                    <path fill="#fff"
+                                        d="M346.1 74.4c-.5-3.3-1.6-5.8-3.4-7.5-1.5-1.3-3.3-2-5.4-2-.5 0-1.1 0-1.7.1-2.8.4-4.9 1.7-6.2 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.6l3.9 27.7-31 4.6-3.9-27.7c-.5-3.2-1.6-5.7-3.4-7.4-1.5-1.4-3.3-2.1-5.3-2.1-.5 0-1 0-1.5.1-2.9.4-5.1 1.7-6.5 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.7l10.6 72.1c.5 3.3 1.6 5.8 3.6 7.5 1.5 1.3 3.3 1.9 5.5 1.9.6 0 1.2 0 1.8-.1 2.7-.4 4.7-1.7 6-3.8.9-1.5 1.3-3.3 1.3-5.4 0-.8-.1-1.7-.2-2.6l-4.3-28.5 31-4.6 4.3 28.5c.5 3.3 1.6 5.8 3.5 7.4 1.5 1.3 3.3 2 5.4 2 .5 0 1.1 0 1.7-.1 2.8-.4 4.9-1.7 6.2-3.8.9-1.5 1.4-3.3 1.4-5.5 0-.8-.1-1.7-.2-2.6z" />
+                                    <path fill="#66bf6b"
+                                        d="m162 0-38.9 92.4 5.3 40.6.3-.1 43.7-98.3-.2-2.1-9.4-31.2z" />
+                                    <path fill="#98d0a0" d="m162 0 10.1 33.9.2.7 96.2 43.1.3-.2-8.2-32.4z" />
+                                    <path fill="url(#c)" d="m49.1 33.9 96.7 43.6-43.7 99.1L5.4 133z"
+                                        transform="translate(123)" />
+                                    <path fill="#fff"
+                                        d="M239.5 85.5c-2.1-5.6-5-10.4-8.8-14.4s-8.4-7.2-13.8-9.5-10.8-3.4-16.3-3.4h-.3c-5.6 0-11.1 1.3-16.5 3.7-5.7 2.5-10.6 5.9-14.8 10.4-4.2 4.4-7.6 9.8-10.2 16-2.6 6.1-4 12.3-4.3 18.4v2.1c0 5.4.9 10.7 2.8 15.9 2 5.5 4.9 10.2 8.7 14.2s8.5 7.2 14.1 9.5c5.3 2.3 10.7 3.4 16.2 3.4h.1c5.5 0 11-1.2 16.4-3.5 5.7-2.5 10.7-6 14.9-10.5 4.2-4.4 7.7-9.7 10.3-15.9s4-12.3 4.3-18.4v-1.8c.1-5.5-.8-10.9-2.8-16.2m-19.3 28.8c-3.6 8.6-8.5 14.5-14.4 17.7-3.2 1.7-6.5 2.6-9.8 2.6-2.9 0-6-.7-9.1-2-6.8-2.9-11-7.5-12.8-14.1q-.9-3.3-.9-6.9c0-4.8 1.2-10.1 3.6-15.8 3.7-8.8 8.6-14.8 14.5-18.1 3.2-1.8 6.5-2.6 9.8-2.6 3 0 6 .7 9.2 2 6.7 2.9 10.9 7.5 12.7 14.1.6 2.1.9 4.4.9 6.8 0 5-1.2 10.4-3.7 16.3" />
+                                    <path fill="#760d16"
+                                        d="m115.4 15.7 15.8 105.8-7.2 37.2-1-1.3-15.4-102.2v-2l6.8-35.7z" />
+                                    <path fill="#ef463e" d="M0 70.4 7.5 33l107.9-17.3-7.3 38.1v2.5L1.3 71.4z" />
+                                    <path fill="url(#d)" d="M108.1 38.8 124 143.7 17.2 160.4 0 55.4z"
+                                        transform="translate(0 15)" />
+                                    <path fill="#fff"
+                                        d="M96.6 142c-.8-1-2-1.7-3.4-2.2s-3.1-.7-5.2-.7c-1.9 0-4.1.2-6.5.6l-28.2 4.8c.3-2.2 1.4-5 3.3-8.5 2.1-3.9 5.3-8.6 9.4-14 1.4-1.9 2.5-3.3 3.3-4.3.5-.7 1.3-1.6 2.3-2.9 6.5-8.5 10.4-15.4 12-20.8.9-3.1 1.4-6.2 1.6-9.3.1-.9.1-1.7.1-2.5q0-3.3-.6-6.6c-.3-2-.8-3.6-1.5-4.9s-1.5-2.3-2.5-2.9c-1.1-.7-2.8-1-4.9-1q-2.55 0-6.3.6L36.9 73c-3.9.7-6.9 1.8-8.7 3.6-1.5 1.4-2.2 3.2-2.2 5.2 0 .5 0 1.1.1 1.7.5 2.8 1.9 4.8 4.2 5.8 1.4.6 3 .9 5 .9 1.3 0 2.8-.1 4.4-.4L66.9 85c0 .5.1 1 .1 1.4 0 1.7-.3 3.4-.9 5-.8 2.3-2.8 5.5-6.1 9.6-.9 1.1-2.3 2.9-4.2 5.2-7.4 8.9-12.6 16.5-15.8 22.8-2.3 4.4-3.8 8.6-4.7 12.9-.5 2.5-.8 4.8-.8 7.1 0 1.6.1 3.2.4 4.7.4 2.2.9 4 1.6 5.4s1.7 2.5 2.8 3.1 2.6.8 4.8.8q4.05 0 11.1-1.2l29.6-5.1c5.2-.9 8.9-2.2 11-3.9 1.7-1.4 2.6-3.3 2.6-5.5 0-.6-.1-1.2-.2-1.8-.2-1.3-.7-2.5-1.6-3.5" />
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/ibm.svg" onerror="this.src='https://placehold.co/120x120?text=Google'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="ibm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 1000 400">
+                                    <path fill="#1f70c1"
+                                        d="M0 0v27.367h194.648V0zm222.226 0v27.367h277.383S471.276 0 433.75 0zm331.797 0v27.367h167.812L711.875 0zm288.125 0-9.961 27.367h166.289V0zM0 53.222v27.367h194.648V53.222zm222.226.039V80.59h309.57s-3.615-21.063-9.922-27.329zm331.797 0V80.59h186.211l-9.219-27.329zm268.203 0-9.219 27.329h185.469V53.261zM55.937 106.444v27.406h84.297v-27.406zm222.227 0v27.406h84.297v-27.406zm166.289 0v27.406h84.297s5.352-14.473 5.352-27.406zm165.508 0v27.406h149.453l-9.961-27.406zm193.906 0-10 27.406h150.195v-27.406zm-747.93 53.262v27.367h84.297v-27.367zm222.227 0v27.367h215.312s18.012-14.042 23.75-27.367zm331.797 0v27.367h84.297v-15.234l5.352 15.234h154.414l5.742-15.234v15.234h84.297v-27.367H785.82l-8.398 23.18-8.438-23.18zM55.937 212.928v27.367h84.297v-27.367zm222.227 0v27.367h239.062c-5.739-13.281-23.75-27.367-23.75-27.367zm331.797 0v27.367h84.297v-27.367zm99.609 0 10.195 27.367h115.781l9.688-27.367zm150.195 0v27.367h84.297v-27.367zM55.937 266.15v27.366h84.297V266.15zm222.227 0v27.366h84.297V266.15zm166.289 0v27.366h89.648c0-12.915-5.352-27.366-5.352-27.366zm165.508 0v27.366h84.297V266.15zm118.75 0 9.883 27.366h77.617l9.961-27.366zm131.054 0v27.366h84.297V266.15zM1.523 319.372v27.406h194.648v-27.406zm220.703 0v27.406h299.648c6.307-6.275 9.922-27.406 9.922-27.406zm333.321 0v27.406h138.711v-27.406zm192.343 0 10.156 27.406h39.492l9.531-27.406zm111.875 0v27.406H1000v-27.406zM1.523 372.633V400h194.648v-27.367zm220.703 0v27.328H433.75c37.526 0 65.859-27.328 65.859-27.328zm333.321 0V400h138.711v-27.367zm211.601 0 9.766 27.29 1.68.038 9.922-27.328zm92.617 0V400H1000v-27.367z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -1485,15 +1177,24 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/microsoft-logo.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Microsoft'"
-                                    class="max-w-full max-h-full object-contain transition duration-300"
-                                    alt="microsoft">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="110"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 512 110">
+                                    <title>Microsoft</title>
+                                    <path fill="#706d6e"
+                                        d="M512 49.449v-9.005h-11.182V26.446l-.376.115-10.503 3.214-.206.063v10.606h-16.577v-5.908c0-2.751.615-4.857 1.828-6.26 1.204-1.388 2.926-2.093 5.122-2.093 1.58 0 3.214.372 4.86 1.105l.412.184V17.99l-.194-.07c-1.535-.553-3.623-.83-6.21-.83-3.262 0-6.225.709-8.81 2.116s-4.62 3.419-6.045 5.976c-1.42 2.554-2.14 5.503-2.14 8.767v6.496h-7.786v9.005h7.786v37.933h11.177V49.449h16.577v24.106c0 9.928 4.682 14.96 13.918 14.96 1.518 0 3.114-.179 4.746-.528 1.66-.357 2.79-.714 3.456-1.095l.147-.087v-9.088l-.454.301c-.607.405-1.362.735-2.248.98-.89.25-1.633.376-2.208.376-2.164 0-3.764-.583-4.758-1.734-1.004-1.16-1.514-3.191-1.514-6.031v-22.16zm-82.768 29.926c-4.057 0-7.255-1.346-9.51-3.995-2.267-2.664-3.417-6.46-3.417-11.285 0-4.977 1.15-8.872 3.419-11.583 2.255-2.692 5.423-4.059 9.417-4.059 3.875 0 6.96 1.305 9.17 3.882 2.221 2.589 3.348 6.453 3.348 11.488 0 5.097-1.06 9.013-3.15 11.632-2.075 2.6-5.196 3.92-9.277 3.92m.498-40.062c-7.74 0-13.888 2.268-18.27 6.741-4.381 4.474-6.602 10.664-6.602 18.402 0 7.349 2.168 13.26 6.444 17.567s10.096 6.49 17.295 6.49c7.503 0 13.528-2.299 17.91-6.834 4.38-4.53 6.6-10.662 6.6-18.22 0-7.463-2.083-13.418-6.192-17.696-4.112-4.28-9.895-6.45-17.185-6.45m-42.894 0c-5.265 0-9.62 1.347-12.947 4.002-3.346 2.671-5.044 6.175-5.044 10.414 0 2.203.366 4.16 1.088 5.82.725 1.666 1.848 3.132 3.34 4.363 1.48 1.221 3.765 2.5 6.794 3.8 2.545 1.048 4.444 1.935 5.65 2.633 1.179.685 2.016 1.373 2.488 2.043.459.655.692 1.553.692 2.66 0 3.154-2.361 4.688-7.22 4.688-1.803 0-3.859-.376-6.111-1.118a23 23 0 0 1-6.257-3.173l-.464-.332v10.76l.17.08c1.582.73 3.576 1.345 5.926 1.83 2.346.484 4.476.731 6.328.731 5.713 0 10.314-1.353 13.67-4.024 3.38-2.69 5.092-6.275 5.092-10.662 0-3.163-.922-5.877-2.74-8.065-1.803-2.17-4.935-4.163-9.303-5.924-3.48-1.397-5.71-2.556-6.629-3.446-.887-.86-1.337-2.076-1.337-3.615 0-1.366.556-2.459 1.697-3.345 1.15-.89 2.75-1.343 4.756-1.343 1.863 0 3.768.294 5.663.87 1.894.577 3.556 1.35 4.945 2.294l.456.312V41.358l-.175-.075c-1.28-.55-2.97-1.02-5.02-1.4-2.044-.378-3.897-.57-5.508-.57m-47.13 40.062c-4.056 0-7.255-1.346-9.509-3.995-2.268-2.664-3.415-6.46-3.415-11.285 0-4.977 1.148-8.872 3.418-11.583 2.253-2.692 5.42-4.059 9.416-4.059 3.875 0 6.96 1.305 9.17 3.882 2.221 2.589 3.348 6.453 3.348 11.488 0 5.097-1.06 9.013-3.15 11.632-2.076 2.6-5.196 3.92-9.278 3.92m.499-40.062c-7.742 0-13.89 2.268-18.27 6.741-4.38 4.474-6.603 10.664-6.603 18.402 0 7.352 2.17 13.26 6.445 17.567s10.095 6.49 17.296 6.49c7.5 0 13.528-2.299 17.91-6.834 4.379-4.53 6.6-10.662 6.6-18.22 0-7.463-2.084-13.418-6.194-17.696-4.113-4.28-9.895-6.45-17.184-6.45m-41.84 9.26v-8.129h-11.041v46.937h11.04V63.37c0-4.083.926-7.437 2.753-9.97 1.803-2.503 4.207-3.772 7.14-3.772.995 0 2.111.164 3.32.489 1.197.322 2.064.672 2.575 1.04l.464.337V40.364l-.18-.077c-1.027-.437-2.482-.657-4.322-.657-2.775 0-5.258.891-7.384 2.646-1.867 1.543-3.217 3.659-4.248 6.297zm-30.813-9.26c-5.065 0-9.584 1.087-13.427 3.228-3.85 2.145-6.829 5.21-8.855 9.105-2.017 3.887-3.041 8.427-3.041 13.49 0 4.434.993 8.504 2.955 12.09 1.964 3.593 4.744 6.404 8.262 8.354 3.514 1.947 7.575 2.934 12.07 2.934 5.247 0 9.727-1.049 13.32-3.117l.144-.084V75.198l-.463.339a20.8 20.8 0 0 1-5.402 2.812c-1.952.681-3.73 1.025-5.29 1.025-4.333 0-7.81-1.355-10.335-4.027-2.53-2.677-3.813-6.434-3.813-11.163 0-4.758 1.338-8.612 3.974-11.457 2.629-2.835 6.113-4.273 10.356-4.273 3.629 0 7.165 1.229 10.51 3.656l.463.336V41.788l-.149-.084c-1.26-.705-2.976-1.287-5.108-1.728-2.122-.44-4.198-.663-6.171-.663m-32.927 1.131h-11.042v46.937h11.042zm-5.408-19.995c-1.817 0-3.402.619-4.704 1.844-1.308 1.23-1.972 2.778-1.972 4.604 0 1.798.656 3.317 1.95 4.514 1.287 1.193 2.877 1.798 4.726 1.798 1.848 0 3.444-.605 4.746-1.796 1.31-1.199 1.975-2.718 1.975-4.516 0-1.762-.647-3.295-1.921-4.554-1.273-1.257-2.889-1.894-4.8-1.894m-27.548 16.533V87.38h11.268V21.886h-15.595l-19.823 48.647-19.236-48.647h-16.23v65.495h10.589V36.977h.364l20.313 50.404h7.99l19.996-50.4z" />
+                                    <path fill="#f1511b" d="M51.939 51.939H0V0h51.939z" />
+                                    <path fill="#80cc28" d="M109.287 51.939H57.348V0h51.939z" />
+                                    <path fill="#00adef" d="M51.938 109.307H0V57.368h51.938z" />
+                                    <path fill="#fbbc09" d="M109.287 109.307H57.348V57.368h51.939z" />
+                                </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <img src="assets/infosys-3.svg"
-                                    onerror="this.src='https://placehold.co/120x120?text=Amazon'"
-                                    class="max-w-full max-h-full object-contain transition duration-300" alt="infosys">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
+                                    viewBox="3.442 3.076 394.049 154.542">
+                                    <path fill="#3781c2" fill-rule="evenodd"
+                                        d="M3.442 18.787V3.397h15.07v126.327H3.442v-15.39zm153.58 65.087c.32 23.085 14.749 41.36 31.742 41.04s30.78-19.237 30.46-42.002c-.321-23.085-14.75-41.36-31.743-41.04-16.993 0-30.78 18.917-30.459 42.002M282.387 55.98c.32.962-.642-1.283-.642-1.283zm10.26 95.226c.641-1.283 1.603-2.886 2.885-5.13zm.641-103.242c.32.641.32.962.641 1.603l5.13 12.505zm-63.163 63.163c9.298 8.657 17.634 12.825 28.535 12.825s20.841-5.45 20.841-15.71c0-8.657-7.695-13.787-21.482-19.558-11.542-5.13-20.2-8.657-24.688-16.032.641 3.206.962 6.413.962 9.94 0 28.215-20.2 50.98-45.53 50.98-25.008 0-45.528-22.765-45.528-50.98 0-16.994 7.374-32.063 18.917-41.361h-30.78v88.493h-13.787V41.552h-12.184v-9.299h12.184c1.603-18.596 13.146-29.177 28.856-29.177 10.26 0 16.032.962 19.238 2.565V19.75h-.32c-4.81-4.489-9.94-8.016-21.162-8.016-8.978 0-15.07 7.375-12.825 20.52h50.98c2.244-.32 4.168-.64 6.412-.64 18.276 0 33.986 12.183 41.04 29.497v-2.886c0-18.276 17.314-25.97 35.59-25.97h1.923c6.413 0 15.39 1.923 21.162 3.526l10.9 26.612 15.39 37.834 1.925 6.092 1.923-6.092 19.559-48.414c3.526-13.467 17.634-19.238 33.345-18.917 7.695 0 13.466.961 20.52 3.206V50.85c-8.657-6.092-14.75-9.94-24.368-9.94-8.336 0-18.596 3.848-18.596 16.352-.32 9.298 5.45 11.222 22.123 19.558 13.466 5.772 25.97 12.505 26.291 27.574 0 25.33-24.688 29.498-36.872 29.818-10.9 0-20.52-2.565-25.97-7.374v-16.673l.962.642c9.939 9.298 18.275 14.107 29.497 14.107 10.901 0 20.84-5.45 20.84-15.71 0-8.657-7.694-13.787-21.481-19.559-13.146-5.77-21.803-9.618-25.33-18.917-5.45 13.146-30.138 74.065-35.91 86.89H289.44l6.092-11.542c3.207-6.734 8.337-16.994 12.505-26.933l-25.65-62.522c-.32-.32-.642-1.283-1.603-3.206-1.924-4.49-3.848-8.657-9.299-10.902-2.885-.961-6.091-1.603-9.939-1.603-8.336 0-19.238 3.848-19.238 16.352-.32 9.298 6.092 11.222 22.765 19.558 13.466 6.092 25.97 12.505 26.291 27.574 0 25.33-24.688 29.498-36.872 29.818-9.619 0-18.275-2.244-24.047-5.77v-17.315M46.727 32.895l.32 10.9v.642c.32-.32.32-.962.642-1.282 5.45-6.092 12.504-11.864 29.176-11.864 16.032 0 26.292 13.467 26.612 22.124v75.988H89.691V59.828c0-10.581-9.299-18.276-20.841-18.276-9.619 0-21.803 8.656-22.123 17.313v70.859H32.94V32.895z"
+                                        clip-rule="evenodd" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -1501,7 +1202,7 @@
         </section>
 
         <!-- Relume Style Testimonials Section -->
-        <section id="testimonials" class="bg-white relative overflow-hidden mt-16">
+        <section id="testimonials" class="bg-white relative overflow-hidden mt-[20px]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -1653,7 +1354,7 @@
         </section>
 
         <!-- TEQ Gallery Section -->
-        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 py-4 lg:py-16 mt-10 lg:mt-16">
+        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 mt-10 lg:mt-16">
             <div class="gallery-container-new">
                 <!-- Section Header -->
                 <div class="text-center mb-10" data-aos="fade-up">
@@ -1676,9 +1377,9 @@
                         <!-- Slide 1: Photos -->
                         <div class="gallery-slide-new">
                             <div class="photos-layout">
-                                <div class="left-card"><img src="assets/director_1.jpg" alt="Gallery Photo 1"></div>
+                                <div class="left-card"><img src="assets/director_1.webp" alt="Gallery Photo 1"></div>
                                 <div class="middle-column">
-                                    <div class="middle-top"><img src="assets/ceo.jpg" alt="Gallery Photo 2"></div>
+                                    <div class="middle-top"><img src="assets/ceo.webp" alt="Gallery Photo 2"></div>
                                     <div class="middle-bottom"><img src="assets/mou.webp" alt="Gallery Photo 3"></div>
                                 </div>
                                 <div class="right-card"><img src="assets/puthur.webp" alt="Gallery Photo 4"></div>
@@ -1691,9 +1392,10 @@
                                 <div class="left-card"><img src="assets/class_1.jpeg" alt="Internship Photo 1">
                                 </div>
                                 <div class="middle-column">
-                                    <div class="middle-top"><img src="assets/internship_7.jpg" alt="Internship Photo 2">
+                                    <div class="middle-top"><img src="assets/internship_7.webp"
+                                            alt="Internship Photo 2">
                                     </div>
-                                    <div class="middle-bottom"><img src="assets/internship_6.jpg"
+                                    <div class="middle-bottom"><img src="assets/internship_6.webp"
                                             alt="Internship Photo 3">
                                     </div>
                                 </div>
@@ -1705,9 +1407,9 @@
                         <!-- Slide 3: Workshops -->
                         <div class="gallery-slide-new">
                             <div class="photos-layout">
-                                <div class="left-card"><img src="assets/workshop_1.jpg" alt="Workshop Photo 1"></div>
+                                <div class="left-card"><img src="assets/workshop_1.webp" alt="Workshop Photo 1"></div>
                                 <div class="middle-column">
-                                    <div class="middle-top"><img src="assets/class.jpeg" alt="Workshop Photo 2">
+                                    <div class="middle-top"><img src="assets/class.webp" alt="Workshop Photo 2">
                                     </div>
                                     <div class="middle-bottom"><img src="assets/workshop_2.jpg" alt="Workshop Photo 3">
                                     </div>
@@ -1721,11 +1423,11 @@
                             <div class="photos-layout">
                                 <div class="left-card"><img src="assets/certficate_1.webp" alt="Certificate 1"></div>
                                 <div class="middle-column">
-                                    <div class="middle-top"><img src="assets/lab_5.jpeg" alt="Certificate 2"></div>
-                                    <div class="middle-bottom"><img src="assets/certificate_5.jpeg" alt="Certificate 3">
+                                    <div class="middle-top"><img src="assets/lab_5.webp" alt="Certificate 2"></div>
+                                    <div class="middle-bottom"><img src="assets/certificate_5.webp" alt="Certificate 3">
                                     </div>
                                 </div>
-                                <div class="right-card"><img src="assets/certificate.jpeg" alt="Certificate 4"></div>
+                                <div class="right-card"><img src="assets/certificate.webp" alt="Certificate 4"></div>
                             </div>
                         </div>
 
@@ -1735,9 +1437,9 @@
                                 <div class="left-card"><img src="assets/awards.webp" alt="Award 1"></div>
                                 <div class="middle-column">
                                     <div class="middle-top"><img src="assets/awards_1.webp" alt="Award 2"></div>
-                                    <div class="middle-bottom"><img src="assets/guest.jpg" alt="Award 3"></div>
+                                    <div class="middle-bottom"><img src="assets/guest.webp" alt="Award 3"></div>
                                 </div>
-                                <div class="right-card"><img src="assets/meet.jpg" alt="Award 4"></div>
+                                <div class="right-card"><img src="assets/meet.webp" alt="Award 4"></div>
                             </div>
                         </div>
 
@@ -1775,7 +1477,7 @@
                                     <div
                                         class="flex flex-row-reverse items-center justify-end gap-2 text-blue-600 font-bold text-sm">
                                         <span class="text-sm">+91 99427 41234</span>
-                                        <i class="fas fa-phone-alt text-xs"></i>
+                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1797,7 +1499,7 @@
                                     <div
                                         class="flex flex-row-reverse items-center justify-end gap-2 text-purple-600 font-bold text-sm">
                                         <span class="text-sm">+91 94895 41234</span>
-                                        <i class="fas fa-phone-alt text-xs"></i>
+                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1818,7 +1520,7 @@
                                     <div
                                         class="flex flex-row-reverse items-center justify-end gap-2 text-emerald-600 font-bold text-sm">
                                         <span class="text-sm">+91 91591 59139</span>
-                                        <i class="fas fa-phone-alt text-xs"></i>
+                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1879,7 +1581,7 @@
 
                         <!-- Map Action Buttons - Same Row on Mobile -->
                         <div class="flex flex-row gap-3 mt-8 w-full max-w-[450px]">
-                            <a href="https://wa.me/919159159139" target="_blank"
+                            <a id="quick-chat-link" href="https://wa.me/919159159139" target="_blank"
                                 class="flex-1 bg-white border-2 border-slate-100 p-3 sm:p-4 rounded-[20px] flex items-center justify-center gap-2 sm:gap-3 hover:shadow-xl hover:border-emerald-500 transition-all group">
                                 <div
                                     class="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-50 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
@@ -1890,10 +1592,12 @@
                                     <span
                                         class="block text-[7px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-0.5">Quick
                                         Chat</span>
-                                    <span class="block font-black text-slate-900 text-xs sm:text-sm">Chat with us</span>
+                                    <span id="quick-chat-num"
+                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 99427
+                                        41234</span>
                                 </div>
                             </a>
-                            <a href="tel:+919159159139"
+                            <a id="direct-call-link" href="tel:+919159159139"
                                 class="flex-1 bg-white border-2 border-slate-100 p-3 sm:p-4 rounded-[20px] flex items-center justify-center gap-2 sm:gap-3 hover:shadow-xl hover:border-indigo-500 transition-all group">
                                 <div
                                     class="w-8 h-8 sm:w-10 sm:h-10 bg-indigo-50 rounded-xl flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
@@ -1904,7 +1608,9 @@
                                     <span
                                         class="block text-[7px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-0.5">Direct
                                         Call</span>
-                                    <span class="block font-black text-slate-900 text-xs sm:text-sm">Contact Us</span>
+                                    <span id="direct-call-num"
+                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 99427
+                                        41234</span>
                                 </div>
                             </a>
                         </div>
@@ -1998,7 +1704,7 @@
         <footer class="bg-black text-white pt-12 sm:pt-20 pb-8 sm:pb-12">
             <div class="w-full px-4 sm:px-12">
                 <!-- Large Title Header -->
-                <h1 class="text-[1.8rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-5xl xl:text-[4.75rem]
+                <h2 class="text-[1.8rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-5xl xl:text-[4.75rem]
            font-black font-display
            tracking-tight
            mb-10 sm:mb-16
@@ -2018,7 +1724,7 @@
                         class="hover-letter">T</span><span class="hover-letter">I</span><span
                         class="hover-letter">O</span><span class="hover-letter">N</span><span
                         class="hover-letter">S</span>
-                </h1>
+                </h2>
                 <!-- Four Column Grid -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-16 px-4">
 
@@ -2146,7 +1852,7 @@
                     <div
                         class="bg-[#111111] border border-white/10 rounded-2xl p-[0.3rem] flex items-center gap-4 shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] lg:flex-1 min-h-[80px]">
                         <div class="flex-shrink-0">
-                            <img src="assets/ministry.png" alt="Ministry Affairs" class="h-8 w-auto">
+                            <img src="assets/ministry.webp" alt="Ministry Affairs" class="h-8 w-auto">
                         </div>
                         <div class="flex flex-col items-start text-left">
                             <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Govt of
@@ -2181,7 +1887,7 @@
                     <div
                         class="bg-[#111111] border border-white/10 rounded-2xl p-[0.3rem] flex items-center gap-4 shadow-lg transition-transform hover:scale-[1.05] w-[calc(50%-0.5rem)] lg:flex-1 min-h-[80px]">
                         <div class="flex-shrink-0">
-                            <img src="assets/tally.png" alt="Tally Authorized"
+                            <img src="assets/tally.webp" alt="Tally Authorized"
                                 class="h-10 w-auto brightness-0 invert opacity-90">
                         </div>
                         <div class="flex flex-col items-start text-left">
@@ -2231,6 +1937,10 @@
                     </div>
                     <div
                         class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
+                        <img src="assets/saravana kumar.webp" class="w-full h-full object-cover" alt="Employee 4">
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
                         <img src="assets/santhosh.webp" class="w-full h-full object-cover" alt="Employee 4">
                     </div>
                     <div
@@ -2238,894 +1948,12 @@
                         <img src="assets/linkesh.webp" class="w-full h-full object-cover" alt="Employee 4">
                         class="w-full h-full object-cover" alt="Employee 4">
                     </div>
-                    <div
-                        class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                        <img src="assets/saravana kumar.webp" class="w-full h-full object-cover" alt="Employee 4">
-                    </div>
+
                 </div>
             </div>
             </div>
         </footer>
 
-
-        <script>
-            // Logo Slider Animation
-            const slides = document.querySelectorAll(".logo-slide");
-            let showingSecond = false;
-
-            function animateLogos() {
-                let delay = 0;
-
-                slides.forEach((slide) => {
-                    slide.style.transform = showingSecond ? "translateY(0)" : "translateY(-100%)";
-                });
-
-                showingSecond = !showingSecond;
-            }
-
-            setTimeout(() => {
-                animateLogos();
-                setInterval(animateLogos, 4000);
-            }, 3000);
-        </script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#a855f7"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": false,
-                        "distance": 150,
-                        "color": "#a855f7",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 140,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
-        </script>
-        <script>
-            // Scroll Animation Observer
-            document.addEventListener('DOMContentLoaded', () => {
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.1
-                };
-
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            // Optional: Stop observing once animated
-                            // observer.unobserve(entry.target); 
-                        }
-                    });
-                }, observerOptions);
-
-                const hiddenElements = document.querySelectorAll('.reveal');
-                hiddenElements.forEach(el => {
-                    // Ensure initial state is applied before observing
-                    el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-                    observer.observe(el);
-                });
-
-
-                // Dynamic Navbar Blending Logic
-                const sections = document.querySelectorAll('[data-nav-color]');
-                const nav = document.querySelector('nav');
-
-                const navObserverOptions = {
-                    threshold: 0.2 // Trigger when 20% of section is visible
-                };
-
-                const navObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const color = entry.target.getAttribute('data-nav-color');
-                            nav.style.backgroundColor = color;
-                            nav.style.transition = 'background-color 0.8s ease';
-                        }
-                    });
-                }, navObserverOptions);
-
-                sections.forEach(section => navObserver.observe(section));
-
-                // Mobile Menu Toggle Logic
-                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-                const closeMenuBtn = document.getElementById('close-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                const mobileContent = mobileMenu.querySelector('div');
-                const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-                const toggleMobileMenu = (show) => {
-                    if (show) {
-                        mobileMenu.classList.remove('hidden');
-                        // Force reflow
-                        mobileMenu.offsetHeight;
-                        mobileMenu.classList.remove('opacity-0');
-                        mobileContent.classList.remove('translate-x-full');
-                        document.body.style.overflow = 'hidden'; // Prevent scroll
-                    } else {
-                        mobileMenu.classList.add('opacity-0');
-                        mobileContent.classList.add('translate-x-full');
-                        document.body.style.overflow = ''; // Restore scroll
-                        setTimeout(() => {
-                            mobileMenu.classList.add('hidden');
-                        }, 300);
-                    }
-                };
-
-                mobileMenuBtn?.addEventListener('click', () => toggleMobileMenu(true));
-                closeMenuBtn?.addEventListener('click', () => toggleMobileMenu(false));
-                mobileMenu?.addEventListener('click', (e) => {
-                    if (e.target === mobileMenu) toggleMobileMenu(false);
-                });
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => toggleMobileMenu(false));
-                });
-
-                // New Gallery Slider Logic
-                let currentGallerySlideNew = 0;
-                const galleryMainSliderNew = document.getElementById('galleryMainSliderNew');
-                const galleryTabsNew = document.querySelectorAll('.gallery-tab-new');
-                const totalGallerySlidesNew = 5; // Fixed number for this design
-
-                window.updateGalleryCarouselNew = () => {
-                    if (!galleryMainSliderNew) return;
-
-                    const firstSlide = galleryMainSliderNew.querySelector('.gallery-slide-new');
-                    if (!firstSlide) return;
-
-                    // Calculate offset based on slide width + gap (25px)
-                    const gap = 25;
-                    const slideWidth = firstSlide.offsetWidth + gap;
-                    galleryMainSliderNew.style.transform = `translateX(-${currentGallerySlideNew * slideWidth}px)`;
-
-                    // Update Tabs Active State
-                    galleryTabsNew.forEach((tab, index) => {
-                        if (index === currentGallerySlideNew) {
-                            tab.classList.add('active');
-                        } else {
-                            tab.classList.remove('active');
-                        }
-                    });
-                };
-
-                window.goToGallerySlideNew = (index) => {
-                    currentGallerySlideNew = index;
-                    updateGalleryCarouselNew();
-
-                    // Reset interval when user interacts
-                    clearInterval(galleryIntervalNew);
-                    galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
-                };
-
-                window.nextGallerySlideNew = () => {
-                    currentGallerySlideNew = (currentGallerySlideNew + 1) % totalGallerySlidesNew;
-                    updateGalleryCarouselNew();
-                };
-
-                // Gallery Interval
-                let galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
-
-                // Pause on hover
-                const galleryContainerNew = galleryMainSliderNew ? galleryMainSliderNew.parentElement : null;
-                if (galleryContainerNew) {
-                    galleryContainerNew.addEventListener('mouseenter', () => clearInterval(galleryIntervalNew));
-                    galleryContainerNew.addEventListener('mouseleave', () => {
-                        clearInterval(galleryIntervalNew);
-                        galleryIntervalNew = setInterval(nextGallerySlideNew, 6000);
-                    });
-                }
-
-                // FAQ Toggle Logic
-                window.toggleFAQ = (index) => {
-                    const contents = document.querySelectorAll('.faq-content');
-                    const icons = document.querySelectorAll('.faq-icon');
-
-                    contents.forEach((content, i) => {
-                        if (i === index) {
-                            if (content.style.maxHeight) {
-                                content.style.maxHeight = null;
-                                icons[i].style.transform = 'rotate(0deg)';
-                            } else {
-                                content.style.maxHeight = content.scrollHeight + "px";
-                                icons[i].style.transform = 'rotate(180deg)';
-                            }
-                        } else {
-                            content.style.maxHeight = null;
-                            icons[i].style.transform = 'rotate(0deg)';
-                        }
-                    });
-                };
-
-                // Typewriter Animation Logic
-                const typewriterElement = document.getElementById('typewriter-text');
-                const words = ["Programming", "Full Stack", "Analytics", "Designing"];
-                let wordIndex = 0;
-                let charIndex = 0;
-                let isDeleting = false;
-                let typeSpeed = 150;
-
-                const type = () => {
-                    const currentWord = words[wordIndex];
-                    if (isDeleting) {
-                        charIndex--;
-                        typewriterElement.textContent = currentWord.substring(0, charIndex);
-                        typeSpeed = 100;
-                    } else {
-                        charIndex++;
-                        typewriterElement.textContent = currentWord.substring(0, charIndex);
-                        typeSpeed = 150;
-                    }
-
-                    if (!isDeleting && charIndex === currentWord.length) {
-                        isDeleting = true;
-                        typeSpeed = 2000; // Pause at end
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        wordIndex = (wordIndex + 1) % words.length;
-                        typeSpeed = 500; // Pause before next word
-                    }
-
-                    setTimeout(type, typeSpeed);
-                };
-
-                if (typewriterElement) setTimeout(type, 1000);
-
-                // Navbar Scroll State Fix
-                const mainHeader = document.getElementById('main-header');
-                const footer = document.querySelector('footer');
-
-                const handleNavScroll = () => {
-                    if (window.scrollY > 50) {
-                        mainHeader?.classList.add('scrolled');
-                        nav.classList.remove('bg-slate-100/90');
-                        nav.classList.add('bg-white/95', 'shadow-lg');
-                    } else {
-                        mainHeader?.classList.remove('scrolled');
-                        nav.classList.add('bg-slate-100/90');
-                        nav.classList.remove('bg-white/95', 'shadow-lg');
-                    }
-
-                    // Navbar Visibility Toggle on Footer Scroll
-                    if (footer) {
-                        const footerTop = footer.getBoundingClientRect().top;
-                        if (footerTop < 100) { // If footer is near or in view
-                            nav.style.transform = 'translateY(-100%)';
-                            nav.style.opacity = '0';
-                        } else {
-                            nav.style.transform = 'translateY(0)';
-                            nav.style.opacity = '1';
-                        }
-                    }
-                };
-                window.addEventListener('scroll', handleNavScroll);
-                handleNavScroll(); // Initial check
-            });
-
-            // Premium Stacking Scroll Animation - Optimized with rAF and Metadata Caching
-            const skillCards = document.querySelectorAll('.skill-card');
-            const STICKY_TOP = 100; // Match CSS top
-
-            let isScrolling = false;
-            let cardMeta = [];
-
-            // Cache geometry to avoid getBoundingClientRect during scroll (Layout Thrashing)
-            const cacheCardMeta = () => {
-                const scrollY = window.pageYOffset;
-                cardMeta = Array.from(skillCards).map(card => {
-                    const rect = card.getBoundingClientRect();
-                    return {
-                        top: rect.top + scrollY,
-                        height: card.offsetHeight
-                    };
-                });
-            };
-
-            const updateAnimations = () => {
-                // Skip animations/transforms on mobile devices below 1024px
-                if (window.innerWidth < 1024) {
-                    skillCards.forEach(card => {
-                        card.style.transform = '';
-                        card.style.opacity = '';
-                        const content = card.querySelectorAll('p, ul, .lang-btn, [id^="sidebar-"]');
-                        content.forEach(el => el.style.opacity = '1');
-                    });
-                    return;
-                }
-
-                const scrollY = window.pageYOffset;
-
-                skillCards.forEach((card, index) => {
-                    const nextMeta = cardMeta[index + 1];
-                    const description = card.querySelector('p');
-                    const logos = card.querySelector('ul');
-                    const buttons = card.querySelectorAll('.lang-btn');
-                    const sidebar = card.querySelector('[id^="sidebar-"]');
-
-                    if (nextMeta) {
-                        // Calculate distance using cached absolute positions
-                        const distance = nextMeta.top - scrollY - STICKY_TOP;
-                        const cardHeight = cardMeta[index].height;
-
-                        // Ratio of how much of the NEXT card has slid over the CURRENT card
-                        let progress = 0;
-                        if (distance < cardHeight) {
-                            progress = 1 - (distance / cardHeight);
-                        }
-                        if (distance <= 0) progress = 1;
-                        if (distance >= cardHeight) progress = 0;
-
-                        // Apply smooth transforms and opacity
-                        const scale = 1 - (progress * 0.05); // Scale down to 0.95
-                        const opacity = 1 - (progress * 0.5); // Fade to 0.5
-                        const translateY = -(progress * 20); // Subtle parallax lift
-
-                        card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-                        card.style.opacity = opacity.toString();
-
-                        // Hide internal content as it gets covered
-                        const contentOpacity = 1 - (progress * 2); // Fade out faster
-                        if (description) description.style.opacity = Math.max(0, contentOpacity).toString();
-                        if (logos) logos.style.opacity = Math.max(0, contentOpacity).toString();
-                        buttons.forEach(btn => btn.style.opacity = Math.max(0, contentOpacity).toString());
-
-                        // Explicitly hide sidebar to prevent height issues
-                        if (sidebar) {
-                            if (progress > 0.1) {
-                                sidebar.style.display = 'none';
-                                sidebar.classList.add("hidden");
-                            } else if (progress <= 0.1 && !sidebar.dataset.isManuallyHidden) {
-                                // Only show if it's not manually hidden by the toggle logic
-                                if (!sidebar.classList.contains('hidden')) {
-                                    sidebar.style.display = 'flex';
-                                }
-                            }
-                        }
-                    } else {
-                        // Reset last card content visibility
-                        card.style.transform = '';
-                        card.style.opacity = '1';
-                        if (description) description.style.opacity = '1';
-                        if (logos) logos.style.opacity = '1';
-                        buttons.forEach(btn => btn.style.opacity = '1');
-                    }
-                });
-                isScrolling = false;
-            };
-
-            const handleScroll = () => {
-                if (!isScrolling) {
-                    requestAnimationFrame(updateAnimations);
-                    isScrolling = true;
-                }
-            };
-
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            window.addEventListener('resize', cacheCardMeta);
-
-            // Initial setup
-            cacheCardMeta();
-            updateAnimations();
-
-
-            // Map Switching Logic
-            const branchMaps = {
-                puthur: {
-                    name: "Puthur Branch (HO)",
-                    addr: "#5, All Saints Complex, Puthur Main Road, Trichy",
-                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.841578!2d78.682393!3d10.823617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5099356391d%3A0x6a0f6a67f18b9cad!2sT4TEQ%20SOFTWARE%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1739328000000!5m2!1sen!2sin"
-                },
-                thillai: {
-                    name: "Thillai Nagar ",
-                    addr: "C35, 1st Floor, K.M Towers, 5th Cross, Thillai Nagar, Trichy",
-                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8!2d78.68!3d10.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50000000000%3A0x0!2sT4TEQ%20Corporate%20Office!5e0!3m2!1sen!2sin!4v1739329000000!5m2!1sen!2sin"
-                },
-                kattur: {
-                    name: "Kattur ",
-                    addr: "#12, Navaladiyan Arcade, Oil Mill Bus Stop, Kattur, Trichy",
-                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0!2d78.75!3d10.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50000000001%3A0x0!2sT4TEQ%20Kattur%20Branch!5e0!3m2!1sen!2sin!4v1739330000000!5m2!1sen!2sin"
-                }
-            };
-
-            window.switchBranch = (branchId) => {
-                const data = branchMaps[branchId];
-                if (!data) return;
-
-                // Update Map
-                document.getElementById('branch-map').src = data.url;
-                document.getElementById('map-branch-name').innerText = data.name;
-                document.getElementById('map-branch-addr').innerText = data.addr;
-
-                // Update Active Card
-                document.querySelectorAll('.address-card').forEach(card => {
-                    card.classList.remove('active');
-                    card.classList.add('border-slate-100');
-                });
-                const activeCard = document.getElementById(`card-${branchId}`);
-                activeCard.classList.add('active');
-                activeCard.classList.remove('border-slate-100');
-            };
-
-            // Testimonial Scroll Fade Effect
-            function updateTestimonialFade() {
-                const cards = Array.from(document.querySelectorAll(".testimonial-card"));
-                if (!cards.length) return;
-
-                const scrollBottom = window.scrollY + window.innerHeight;
-                const section = document.getElementById('testimonials');
-                if (!section) return;
-
-                const rect = section.getBoundingClientRect();
-                const sectionBottom = window.scrollY + rect.bottom;
-                const distanceToBottom = sectionBottom - scrollBottom;
-
-                // Reset all first
-                cards.forEach(c => c.style.opacity = 1);
-
-                // Start fading when near section bottom
-                const fadeStartThreshold = 200;
-
-                if (distanceToBottom < fadeStartThreshold) {
-                    const fadeCount = 3;
-                    const lastCards = cards.slice(-fadeCount);
-                    const progress = Math.min(1, (fadeStartThreshold - distanceToBottom) / fadeStartThreshold);
-
-                    lastCards.forEach((card, index) => {
-                        const delay = index * 0.15;
-                        let local = (progress - delay) / (1 - delay);
-                        local = Math.max(0, Math.min(1, local));
-                        card.style.opacity = 1 - local * 0.85;
-                    });
-                }
-            }
-            window.addEventListener("scroll", updateTestimonialFade, { passive: true });
-            // ── Animated Counters ──────────────────────────────────────────
-            function animateCounters() {
-                document.querySelectorAll('.count').forEach(el => {
-                    const target = parseInt(el.dataset.target);
-                    const duration = 1600;
-                    const start = performance.now();
-                    function step(now) {
-                        const elapsed = now - start;
-                        const progress = Math.min(elapsed / duration, 1);
-                        const ease = 1 - Math.pow(1 - progress, 3);
-                        const value = Math.floor(ease * target);
-                        el.textContent = value >= 1000 ? (value / 1000).toFixed(0) + ',000' : value;
-                        if (progress < 1) requestAnimationFrame(step);
-                        else el.textContent = target >= 1000 ? target.toLocaleString() : target;
-                    }
-                    requestAnimationFrame(step);
-                });
-            }
-
-
-            // Trigger counters when stats section enters viewport
-            const statsSection = document.getElementById('stats');
-            if (statsSection) {
-                const counterObserver = new IntersectionObserver(entries => {
-                    if (entries[0].isIntersecting) {
-                        animateCounters();
-                        counterObserver.disconnect();
-                    }
-                }, { threshold: 0.3 });
-                counterObserver.observe(statsSection);
-            }
-        </script>
-
-        <!-- AOS Animation JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: false,
-                mirror: true,
-                anchorPlacement: 'top-bottom',
-            });
-        </script>
-
-
-
-        <script>
-
-            const topics = {
-                prog: {
-                    java: {
-                        color: "#FFEDD5",
-                        logo: "assets/java.svg",
-                        desc: "Architect enterprise-grade applications with confidence. Built for scalability, security, and long-term performance.",
-                        syllabus: "Basics • OOPs • Packages • Multi-threading • JDBC "
-                    },
-                    python: {
-                        color: "#FEF9C3",
-                        logo: "assets/python.svg",
-                        desc: "Write clean code and innovate faster. From web development to AI, possibilities are limitless.",
-                        syllabus: "Basics • Modules • Collections • OOPs • DB Connectivity "
-                    },
-                    sql: {
-                        color: "#E0F2FE",
-                        logo: "assets/sql.svg",
-                        desc: "Structure and manage data efficiently. Turn information into actionable business insights.",
-                        syllabus: "SQL Commands • Joins & Queries • PL/SQL • Procedures • Cursor "
-                    },
-                    dsa: {
-                        color: "#FEE2E2",
-                        logo: "assets/dsa.png",
-                        desc: "Strengthen logic with arrays, stacks, trees, and algorithms. Essential for coding interviews.",
-                        syllabus: "Collections • Stack • Queue & List • Graphs & Trees • Algorithm"
-                    }
-                },
-
-                fs: {
-                    react: {
-                        color: "#DBEAFE",
-                        logo: "assets/react.svg",
-                        desc: "Design dynamic and responsive user interfaces. Power modern web applications with seamless performance.",
-                        syllabus: "Components & Props • Event Handling • Hooks & Routing • Forms  • API Integration"
-                    },
-                    webdev: {
-                        color: "#FFEDD5",
-                        logo: "assets/web.webp",
-                        desc: "Learn HTML, CSS, JS, Bootstrap, jQuery, forms, responsive layouts & version control.",
-                        syllabus: "Basics & HTML • CSS Layouts • Javascript • DOM & BOM •  Bootstrap"
-                    },
-                    spring: {
-                        color: "#DCFCE7",
-                        logo: "assets/spring_boot.svg",
-                        desc: "Build powerful enterprise solutions with simplified configuration. Streamlined Java backend development for scalable systems.",
-                        syllabus: "Core Concepts • Thymeleaf  • Security • Microservices • API Integration  "
-                    },
-                    django: {
-                        color: "#F1F5F9",
-                        logo: "assets/django.svg",
-                        desc: "Develop secure and scalable web applications efficiently. Rapid backend development with clean architecture.",
-                        syllabus: "Core Concepts • Templates & Static files • Models and Forms • Authentication • API Integration "
-                    },
-                    node: {
-                        color: "#FEF9C3",
-                        logo: "assets/node.svg",
-                        desc: "Create fast, real-time backend applications. Scalable server-side development using JavaScript.",
-                        syllabus: "Core Concepts • NPM & Server • Express • DB Connectivity • API Integration"
-                    }
-                },
-
-                da: {
-                    dapython: {
-                        color: "#DBEAFE",
-                        logo: "assets/python.svg",
-                        desc: "Leverage Python to clean, process, and analyze complex data efficiently. Build strong foundations in automation, visualization, and statistical analysis.",
-                        syllabus: "Basic Python •  NumPy & Pandas • Data Visualization • EDA • Statistics"
-                    },
-                    excel: {
-                        color: "#E0F2FE",
-                        logo: "assets/excel.png",
-                        desc: "Master data organization and advanced analysis. Essential skills for business intelligence.",
-                        syllabus: "Data Visualization • Analysis Tools • Data Manpulation • Data Validation  • VBA"
-                    },
-                    powerbi: {
-                        color: "#DCFCE7",
-                        logo: "assets/powerbi.svg",
-                        desc: "Convert data into interactive dashboards. Drive smarter decisions with visual analytics.",
-                        syllabus: "Visualization • DAX & Data Models • ETL Tools • Interactive Dashboards • Fabric"
-                    },
-                    aiml: {
-                        color: "#EEF2FF",
-                        logo: "assets/ai.svg",
-                        desc: "Explore intelligent systems that simulate human decision-making and develop predictive models that learn from data automatically.",
-                        syllabus: "Basics • ML Libraries • Supervised & Unsupervised  • Reinforcment •  NLP "
-                    }
-                },
-
-                design: {
-                    figma: {
-                        color: "#FFEDD5",
-                        logo: "assets/figma.svg",
-                        desc: "Transform creative ideas into interactive designs. Collaborative UI/UX design made simple and powerful.",
-                        syllabus: "Fundamentals • Prototypes • Layout & Positioning • Components • Wireframing"
-                    },
-                    photoshop: {
-                        color: "#FEF9C3",
-                        logo: "assets/illustrator.svg",
-                        desc: "Create professional graphics and stunning visual content. Industry-standard tools for digital creativity.",
-                        syllabus: "Image Editing • Retouching • Layers & Masks • Design Principles • Graphic Designing"
-                    },
-                    flutter: {
-                        color: "#E0F2FE",
-                        logo: "assets/flutter.svg",
-                        desc: "Build beautiful cross-platform apps from one codebase. Fast, expressive, and performance-driven development.",
-                        syllabus: "Mobile App Development • Overview of Dart • OOPs • State Management • Routing • Widgets & Navigation"
-                    },
-                    rn: {
-                        color: "#DBEAFE",
-                        logo: "assets/react_native.svg",
-                        desc: "Develop mobile apps with native-like performance. JavaScript-powered apps across platforms.",
-                        syllabus: "Mobile App Development • Overview of React Native • Hooks • State Management • Native Apps • API Integration"
-                    }
-                }
-            };
-
-
-            function showTopics(section, lang) {
-                const sidebar = document.getElementById("sidebar-" + section);
-                const clickedBtn = event ? (event.currentTarget || event.target.closest('.lang-btn')) : null;
-
-                // Toggle logic: if clicking already active button, hide syllabus with transition
-                if (clickedBtn && clickedBtn.classList.contains('ring-4')) {
-                    // Start fade out transition
-                    const content = sidebar.querySelector('.flex.flex-col.w-full');
-                    if (content) {
-                        content.style.opacity = '0';
-                        content.style.transform = 'translateY(-10px)';
-                        content.style.transition = 'all 0.4s ease';
-                    }
-
-                    setTimeout(() => {
-                        sidebar.classList.add("hidden");
-                        sidebar.classList.remove("flex");
-                        sidebar.style.display = 'none';
-                        sidebar.dataset.isManuallyHidden = "true";
-                        clickedBtn.style.transform = "scale(1)";
-                        clickedBtn.classList.remove('ring-4', 'ring-blue-200');
-                        /* Recalculate heights after hiding */
-                        window.dispatchEvent(new Event('resize'));
-                    }, 400);
-                    return;
-                }
-
-                /* reset buttons inside same section */
-                document.querySelectorAll(`[onclick*="${section}"]`).forEach(btn => {
-                    btn.style.transform = "scale(1)";
-                    btn.classList.remove('ring-4', 'ring-blue-200');
-                });
-
-                /* active button */
-                if (clickedBtn) {
-                    clickedBtn.style.transform = "scale(1.05)";
-                    clickedBtn.classList.add('ring-4', 'ring-blue-200');
-                }
-
-                /* sidebar show */
-                sidebar.classList.remove("hidden");
-                sidebar.classList.add("flex");
-                sidebar.style.display = 'flex';
-                delete sidebar.dataset.isManuallyHidden;
-
-                /* list container */
-                const list = document.getElementById("list-" + section);
-
-                // Transition styling - immediate populate then animate content
-                const data = topics[section][lang];
-
-                // Split syllabus string into array and create card HTML for each
-                const syllabusItems = data.syllabus.split('•').map(s => s.trim());
-                const syllabusCards = syllabusItems.map((item, i) => `
-                    <div class="px-3 py-1 bg-[#F1F5F9] border border-gray-100 rounded-full text-l font-semibold text-gray-700 shadow-sm hover:shadow-md transition-all cursor-default" style="opacity:0; transform: translateY(15px); animation: courseSlideUp 0.4s ease forwards; animation-delay: ${i * 0.08}s;">
-                        ${item}
-                    </div>
-                `).join('');
-
-                const contentHtml = `
-                    <style>
-                        @keyframes courseSlideUp {
-                            to { opacity: 1; transform: translateY(0); }
-                        }
-                    </style>
-                    <div class="flex flex-col w-full gap-5">
-                        <!-- Top Row: Title + Desc + Logo -->
-                        <div class="flex items-start justify-between gap-4">
-                            <div class="w-full lg:w-3/4" style="opacity:0; transform: translateY(20px); animation: courseSlideUp 0.6s ease forwards; animation-delay: 0.1s;">
-                                <h4 class="text-2xl font-bold mb-2 uppercase tracking-tight text-slate-900">${lang.replace('rn', 'React Native').replace('ui', 'UI/UX').replace('dapython', 'Data Analytics python').replace('aiml', 'AI and ML')}</h4>
-                                <p class="text-slate-600 text-md leading-relaxed line-clamp-2 mb-4">
-                                    ${data.desc}
-                                </p>
-                            </div>
-                            <div class="hidden sm:flex w-1/4 justify-end" style="opacity:0; transform: translateY(20px); animation: courseSlideUp 0.6s ease forwards; animation-delay: 0.2s;">
-                                <div class="bg-white p-2 rounded-2xl shadow-sm border border-slate-100">
-                                    <img src="${data.logo}" alt="${lang}" class="w-20 h-20 object-contain">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Middle Row: Syllabus Highlights -->
-                        <div class="w-full mt-1">
-                            <span class="text-xs font-black uppercase tracking-widest text-slate-500 block mb-3">Syllabus Highlights</span>
-                            <div class="flex flex-wrap gap-2">
-                                ${syllabusCards}
-                            </div>
-                        </div>
-
-                        <!-- Bottom Row: Info Row + Enroll -->
-                        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-                            <div class="flex flex-wrap items-center gap-6 text-slate-600 font-semibold">
-                                <div class="flex items-center gap-2">
-                                    <i class="fas fa-certificate text-blue-500/70 text-sm"></i>
-                                    <span class="text-xs uppercase tracking-tight">1 Certificate</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <i class="fas fa-project-diagram text-blue-500/70 text-sm"></i>
-                                    <span class="text-xs uppercase tracking-tight">Real-time projects</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <i class="fas fa-headset text-blue-500/70 text-sm"></i>
-                                    <span class="text-xs uppercase tracking-tight">Live Mentor Support</span>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-auto">
-                                <button type="button" onclick="sendToWhatsApp('${section.replace('prog', 'Programming').replace('fs', 'Full Stack').replace('da', 'Data Analytics').replace('design', 'Designing')}')"
-                                    class="w-full sm:w-auto px-10 py-3 text-white bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 duration-200">
-                                    Enroll Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-                list.className = "w-full transition-all duration-500 ease-in-out";
-                list.style.opacity = '1';
-                list.style.transform = 'translateY(0)';
-                list.innerHTML = contentHtml;
-
-                // Store current course for floating button
-                window.currentSelectedCourse = lang;
-
-                /* Force recalculation of scroll headers/animations IMMEDIATELY */
-                cacheCardMeta();
-                updateAnimations();
-
-                // Scroll to the new content with a slight delay to ensure layout is ready
-                setTimeout(() => {
-                    list.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
-            }
-
-        </script>
-
-        <!-- <script type="module">
-            import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.524/build/spline-runtime.js';
-
-            async function initSpline() {
-                console.log('Spline init started...');
-                const canvas = document.getElementById('canvas3d');
-                if (!canvas) {
-                    console.error('Canvas #canvas3d not found');
-                    return;
-                }
-
-                try {
-                    const app = new Application(canvas);
-                    console.log('Spline application created');
-
-                    const observer = new IntersectionObserver((entries, self) => {
-                        entries.forEach(async (entry) => {
-                            if (entry.isIntersecting) {
-                                console.log('Spline canvas is visible, loading scene...');
-                                try {
-                                    await app.load('https://prod.spline.design/Bi4UqtdOOu5F6ZkD/scene.splinecode');
-                                    console.log('Spline scene loaded successfully');
-                                } catch (err) {
-                                    console.error('Spline scene load failed:', err);
-                                }
-                                self.unobserve(canvas);
-                            }
-                        });
-                    }, { threshold: 0 });
-
-                    observer.observe(canvas);
-
-                    // CSS to hide Spline watermark
-                    const style = document.createElement('style');
-                    style.innerHTML = `
-                        #canvas3d + div, 
-                        #canvas3d ~ div[style*="position: absolute"] { 
-                            display: none !important; 
-                            opacity: 0 !important; 
-                            pointer-events: none !important; 
-                            visibility: hidden !important;
-                        }
-                    `;
-                    document.head.appendChild(style);
-                } catch (error) {
-                    console.error('Spline initialization failed:', error);
-                }
-            }
-
-            initSpline();
-        </script> -->
 
 
         <!-- WhatsApp Floating Button -->
@@ -3134,36 +1962,12 @@
             <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
         </a>
 
-        <script>
-            function sendToWhatsApp(courseName) {
-                // Use provided course name, or last selected course, or default to General Inquiry
-                var course = courseName || window.currentSelectedCourse || "General Inquiry";
-
-                // Map the internal keys to readable names for the message if needed
-                var displayCourse = course;
-                if (course === "prog") displayCourse = "Programming";
-                else if (course === "fs") displayCourse = "Full Stack";
-                else if (course === "da") displayCourse = "Data Analytics";
-                else if (course === "design") displayCourse = "Designing";
-
-                var phoneNumber = "917092406372"; // Replace with your number
-
-                var message = "Hello! I want enquiry details.\n\n" + "Course: " + displayCourse;
-
-                var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-                window.open(url, "_blank");
-            }
-        </script>
-
 </body>
+<!-- External Libraries -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
-<!-- Dynamic Copyright Year -->
-<script>
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-</script>
+<!-- Main Script -->
+<script src="script.min.js"></script>
 
 </html>
