@@ -1,4 +1,4 @@
-@keyframes marquee {
+﻿@keyframes marquee {
     0% {
         transform: translateX(0);
     }
@@ -6,6 +6,10 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .animate-marquee {
@@ -262,7 +266,7 @@
 .gallery-wrapper-new {
     overflow: hidden;
     border-radius: 32px;
-    background: #ff8a8a;
+    background: #F0EAD6;
     padding: 24px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
@@ -454,15 +458,35 @@
 
 @media (max-width: 640px) {
     .card-back {
-        width: 240px;
-        height: 170px;
-        right: 15%;
+        width: 260px;
+        height: 180px;
+        right: auto;
+        left: 50%;
+        transform: rotate(-8deg) translate(-50%, -20px);
     }
 
     .card-front {
-        width: 250px;
-        height: 180px;
-        right: 5%;
+        width: 270px;
+        height: 190px;
+        right: auto;
+        left: 50%;
+        transform: rotate(8deg) translate(-50%, 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-back {
+        width: 200px;
+        height: 140px;
+        left: 50%;
+        transform: rotate(-6deg) translate(-50%, -15px);
+    }
+
+    .card-front {
+        width: 210px;
+        height: 150px;
+        left: 50%;
+        transform: rotate(6deg) translate(-50%, 20px);
     }
 }
 
@@ -498,7 +522,7 @@
     .skill-card-sticky {
         position: sticky;
         top: 100px;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -544,4 +568,63 @@
     50% {
         opacity: 0;
     }
+}
+
+/* Celebration & Modal Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+}
+
+.popup-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1);
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close-popup:hover {
+    color: #f55301;
 }

@@ -16,16 +16,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="en">
     <meta name="author" content="T4TEQ Software Solutions">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta property="og:title"
         content="T4TEQ Software Solutions | Leading IT Training in Trichy – Full Stack, Data Science, UI/UX, Digital Marketing, Mobile App Development">
     <meta property="og:description"
         content="Join T4TEQ Software Solutions in Trichy for expert-led IT training in Full Stack, Data Science, UI/UX, Digital Marketing, & Mobile App Development. Start your career!">
     <!-- <meta property="og:image" content="./img/logo t4teq.ico"> -->
-    <meta property="og:url" content="https://www.t4teqputhur.netlify.app/">
+    <meta property="og:url" content="https://www.t4teq-puthur-website.vercel.app/">
     <meta property="og:type" content="Corporate Training">
     <meta property="og:site_name" content="www.t4teq.com/">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link rel="canonical" href="https://www.t4teqputhur.netlify.app/">
+    <link rel="canonical" href="https://www.t4teq-puthur-">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -47,7 +48,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"> -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -99,27 +100,33 @@
 
     <!-- Header with improved responsiveness -->
     <header id="main-header"
-        class="fixed top-2 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 transition-transform duration-300">
+        class="fixed  top-2 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 transition-transform duration-300">
         <nav
-            class="max-w-[90%] lg:max-w-[80%] mx-auto bg-[#f0f0f0] backdrop-blur-md border border-slate-200 rounded-full px-4 sm:px-8 py-2 sm:py-2 flex items-center justify-between shadow-sm">
-            <div class="flex items-center gap-2">
-                <!-- <img src="assets/logo.svg" alt="T4TEQ Logo" class="h-8 sm:h-12 w-auto"> -->
+            class="max-w-[95%] lg:max-w-[90%] mx-auto bg-[#f0f0f0] backdrop-blur-md border border-slate-200 rounded-full px-4 sm:px-8 py-2 flex items-center justify-between lg:grid lg:grid-cols-3 shadow-sm">
+            <!-- Left Side: Logo -->
+            <div class="flex items-center">
                 <span class="font-bold text-lg sm:text-2xl">
                     <span style="color: #000067;">T</span><span style="color: #f55301;">4</span><span
                         style="color: #000067;">TEQ</span>
                 </span>
             </div>
+
+            <!-- Center: Navigation Links -->
             <div
-                class="hidden lg:flex items-center space-x-6 xl:space-x-8 font-semibold text-charcoal/80 ml-auto text-base">
+                class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 font-semibold text-charcoal/80 text-base">
                 <a class="nav-link hover:text-charcoal transition-colors" href="#">Home</a>
                 <a class="nav-link hover:text-charcoal transition-colors" href="#about">About</a>
                 <a class="nav-link hover:text-charcoal transition-colors" href="#skills">Courses</a>
                 <a class="nav-link hover:text-charcoal transition-colors" href="#testimonials">Testimonials</a>
                 <a class="nav-link hover:text-charcoal transition-colors" href="#gallery">Gallery</a>
-                <a class="nav-link hover:text-charcoal transition-colors" href="#contact">Contact</a>
-                <a class="nav-link hover:text-charcoal transition-colors" href="#">Verification</a>
             </div>
-            <div class="flex items-center gap-4 ml-4 sm:ml-8">
+
+            <!-- Right Side: Button & Mobile Toggle -->
+            <div class="flex items-center justify-end gap-4">
+                <a href="tel:+919514076220"
+                    class="hidden lg:block text-white px-6 py-2 rounded-full font-bold hover:bg-slate-800 transition-colors"
+                    style="background-color: #000067;">Contact
+                    us</a>
                 <button id="mobile-menu-btn"
                     class="lg:hidden flex items-center justify-center p-2 rounded-full hover:bg-slate-200/50 transition-colors">
                     <i class="fas fa-bars"></i>
@@ -146,33 +153,28 @@
                     <div class="flex flex-col space-y-2 font-bold text-xl text-slate-800">
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#">
-                            <i class="fas fa-home"></i>
                             Home
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#about">
-                            <i class="fas fa-info-circle"></i>
                             About
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#skills">
-                            <i class="fas fa-graduation-cap"></i>
                             Courses
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#testimonals">
-                            <i class="fas fa-chart-bar"></i>
                             Testimonials
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#gallery">
-                            <i class="fas fa-chart-bar"></i>
                             Gallery
                         </a>
-                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
-                            href="#contact">
-                            <i class="fas fa-envelope"></i>
-                            Contact
+                        <a href="tel:+919514076220"
+                            class="text-white text-center p-4 rounded-2xl font-bold hover:bg-slate-800 transition-all mt-4"
+                            style="background-color: #000067;">
+                            Contact us
                         </a>
                     </div>
 
@@ -210,12 +212,9 @@
 
                     <!-- Decor: Background Elements (Blobs + Continuous Curve) -->
                     <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                        <!-- Blobs -->
-                        <div
-                            class="absolute top-0 right-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 w-64 h-64 bg-purple-100/50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3">
+                        <!-- Hero Celebration Popup (Inside Hero) -->
+                        <div id="hero-celebration">
+                            <div class="text-6xl mb-4 animate-bounce"></div>
                         </div>
 
                         <!-- Continuous Orange Curve -->
@@ -558,9 +557,7 @@
             </div>
         </section>
 
-
-
-        <!-- About Section - Redesigned -->
+        <!-- Celebration Image Section -->
         <section id="about" class="bg-white relative overflow-hidden scroll-mt-20">
             <!-- Dashed arc decoration -->
             <div class="dashed-arc hidden lg:block"></div>
@@ -605,7 +602,7 @@
 
                     <!-- Right: Stacked image cards (2 Cards) -->
                     <div
-                        class="w-full lg:w-[45%] relative h-[300px] sm:h-[350px] lg:h-[380px] flex justify-center items-center reveal reveal-right lg:mt-0 lg:mr-[50px] mb-4 lg:mb-0">
+                        class="w-full lg:w-[45%] relative h-[350px] sm:h-[400px] lg:h-[380px] flex justify-center items-center reveal reveal-right lg:mt-0 lg:mr-[50px] mb-8 lg:mb-0">
                         <!-- Back card -->
                         <div class="card-back">
                             <img src="assets/director_1.webp" alt="Training Session" loading="lazy">
@@ -630,31 +627,35 @@
 
         <!-- Stats Section - Reverted to Image Design -->
         <section id="stats" data-nav-color="rgba(248, 250, 252, 0.9)"
-            class="py-16 bg-slate-50 scroll-mt-24 border-t border-slate-100 mt-16">
+            class="py-16 bg-slate-200 scroll-mt-24 border-t border-slate-100 mt-8">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     <div class="text-center reveal">
                         <div class="text-4xl font-black text-slate-900">
-                            <span class="count" data-target="1000">0</span><span class="text-orange-500">+</span>
+                            <span class="count" data-target="10000" style="color: #000067;">0</span><span
+                                class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Students</div>
                     </div>
                     <div class="text-center reveal delay-100">
                         <div class="text-4xl font-black text-slate-900">
-                            <span class="count" data-target="5000">0</span><span class="text-orange-500">+</span>
+                            <span class="count" data-target="5000" style="color: #000067;">0</span><span
+                                class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Interviews</div>
                     </div>
                     <div class="text-center reveal delay-200">
                         <div class="text-4xl font-black text-slate-900">
-                            <span class="count" data-target="20">0</span><span class="text-orange-500">+</span>
+                            <span class="count" data-target="20" style="color: #000067;">0</span><span
+                                class="text-orange-500">+</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Experienced
                             Educator</div>
                     </div>
                     <div class="text-center reveal delay-300">
                         <div class="text-4xl font-black text-slate-900">
-                            <span class="count" data-target="98">0</span><span class="text-orange-500">%</span>
+                            <span class="count" data-target="98" style="color: #000067;">0</span><span
+                                class="text-orange-500">%</span>
                         </div>
                         <div class="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Job Result</div>
                     </div>
@@ -662,7 +663,7 @@
             </div>
         </section>
         <!-- Tech Skills Section -->
-        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="pt-2 sm:pt-4 bg-white py-3">
+        <section id="skills" data-nav-color="rgba(255, 255, 255, 0.95)" class="pt-2 sm:pt-4 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-4">
                 <!-- Section Header -->
                 <div class="text-center mb-6">
@@ -877,7 +878,7 @@
                         </div>
                         <div onclick="showTopics('da','aiml', event)"
                             class="lang-btn bg-[#EEF2FF] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
-                            AI and ML
+                            AI & ML
                         </div>
                     </div>
 
@@ -969,8 +970,7 @@
         <section class="bg-gray-300 overflow-hidden py-16">
             <div class="max-w-screen-2xl mx-auto px-4 sm:px-12">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tight">From Skills to
-                        Companies</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black">From Skills to Companies</h2>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-8 w-full mx-auto">
@@ -1209,7 +1209,7 @@
         </section>
 
         <!-- Relume Style Testimonials Section -->
-        <section id="testimonials" class="bg-white relative overflow-hidden mt-[25px]">
+        <section id="testimonials" class="bg-white relative mt-[30px] pb-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
                 <div class="text-center mb-8" data-aos="fade-up">
@@ -1361,11 +1361,11 @@
         </section>
 
         <!-- TEQ Gallery Section -->
-        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20 mt-10 lg:mt-16">
+        <section id="gallery" class="bg-white overflow-hidden scroll-mt-20">
             <div class="gallery-container-new">
                 <!-- Section Header -->
                 <div class="text-center mb-10" data-aos="fade-up">
-                    <h2 class="text-4xl sm:text-5xl font-bold text-black pb-4">TEQ Gallery</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black pb-4">Testimonials</h2>
 
                     <!-- Navigation Tabs -->
                     <div class="gallery-tabs-new">
@@ -1460,7 +1460,7 @@
             class="py-10 bg-slate-50 overflow-hidden scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-12 relative">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl sm:text-5xl font-black text-black tracking-tight">Visit Us</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black">Visit Us</h2>
                     <p class="mt-4 text-slate-600 font-medium text-lg">Find us at any of our three convenient
                         branches
                         in Trichy.</p>
@@ -1482,9 +1482,9 @@
                                         #5, All Saints Complex, Puthur High Road, Trichy - 620017
                                     </p>
                                     <div
-                                        class="flex flex-row-reverse items-center justify-end gap-2 text-blue-600 font-bold text-sm">
-                                        <span class="text-sm">+91 99427 41234</span>
-                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
+                                        class="flex flex-row-reverse items-center justify-end gap-2 text-orange-600 font-bold text-sm">
+                                        <span class="text-sm">+91 75400 46220</span>
+                                        <i class="fa-solid fa-phone text-xs"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1504,9 +1504,9 @@
                                         Nagar, Trichy - 620018
                                     </p>
                                     <div
-                                        class="flex flex-row-reverse items-center justify-end gap-2 text-purple-600 font-bold text-sm">
-                                        <span class="text-sm">+91 94895 41234</span>
-                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
+                                        class="flex flex-row-reverse items-center justify-end gap-2 text-blue-600 font-bold text-sm">
+                                        <span class="text-sm">+91 75400 86220</span>
+                                        <i class="fa-solid fa-phone text-xs"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1526,8 +1526,8 @@
                                     </p>
                                     <div
                                         class="flex flex-row-reverse items-center justify-end gap-2 text-emerald-600 font-bold text-sm">
-                                        <span class="text-sm">+91 91591 59139</span>
-                                        <i class="fas fa-phone-alt text-xs rotate-12"></i>
+                                        <span class="text-sm">+91 74485 46220</span>
+                                        <i class="fa-solid fa-phone text-xs"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1588,7 +1588,7 @@
 
                         <!-- Map Action Buttons - Same Row on Mobile -->
                         <div class="flex flex-row gap-3 mt-8 w-full max-w-[450px]">
-                            <a id="quick-chat-link" href="https://wa.me/919159159139" target="_blank"
+                            <a id="quick-chat-link" href="https://wa.me/917540046220" target="_blank"
                                 class="flex-1 bg-white border-2 border-slate-100 p-3 sm:p-4 rounded-[20px] flex items-center justify-center gap-2 sm:gap-3 hover:shadow-xl hover:border-emerald-500 transition-all group">
                                 <div
                                     class="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-50 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
@@ -1600,8 +1600,8 @@
                                         class="block text-[7px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-0.5">Quick
                                         Chat</span>
                                     <span id="quick-chat-num"
-                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 99427
-                                        41234</span>
+                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 75400
+                                        46220</span>
                                 </div>
                             </a>
                             <a id="direct-call-link" href="tel:+919159159139"
@@ -1616,8 +1616,8 @@
                                         class="block text-[7px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-0.5">Direct
                                         Call</span>
                                     <span id="direct-call-num"
-                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 99427
-                                        41234</span>
+                                        class="block font-black text-slate-900 text-xs sm:text-sm">+91 75400
+                                        46220</span>
                                 </div>
                             </a>
                         </div>
@@ -1634,7 +1634,7 @@
                     <!-- Left Column: Title -->
                     <div class="lg:w-1/3">
                         <h2
-                            class="text-4xl sm:text-5xl font-extrabold text-[#111827] leading-tight line-height-10 line-spacing-10">
+                            class="text-4xl sm:text-5xl font-extrabold text-[#111827] leading-relaxed line-height-20 line-spacing-20">
                             CURIOUS ABOUT T4TEQ
                         </h2>
                     </div>
@@ -1665,18 +1665,22 @@
                         <div class="border-b border-black/10 reveal">
                             <button onclick="toggleFAQ(1)"
                                 class="w-full flex justify-between items-center py-6 text-left group">
-                                <span class="text-xl font-bold text-black transition-colors">Is T4TEQ suitable
-                                    for
-                                    beginners?</span>
+                                <span class="text-xl font-bold text-black transition-colors">
+                                    What events are conducted at T4TEQ?
+                                </span>
                                 <div class="faq-icon transition-transform duration-300">
                                     <i class="fas fa-chevron-down text-lg"></i>
                                 </div>
                             </button>
+
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-6 text-gray-700 leading-relaxed text-lg">
-                                    Yes, our courses are designed to take you from the basics to advanced
-                                    levels. We
-                                    emphasize "Making Tech Simple" for everyone.
+                                    T4TEQ conducts Teqathon competitions with prizes and vouchers awarded through
+                                    department-based assessments.
+                                    We organize one-day hands-on workshops in Full Stack Development, Data Analytics,
+                                    and Designing using real-time projects.
+                                    Our internship programs (via college MOUs) and mock interviews help students gain
+                                    industry exposure and placement readiness.
                                 </div>
                             </div>
                         </div>
@@ -1694,9 +1698,8 @@
                             </button>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-6 text-gray-700 leading-relaxed text-lg">
-                                    Yes, we provide comprehensive placement support, including resume building,
-                                    interview
-                                    preparation, and connections with our industry partners.
+                                    Yes, we provide comprehensive placement support, including resume building and
+                                    interview preparation assistance.
                                 </div>
                             </div>
                         </div>
@@ -1909,7 +1912,7 @@
             <!-- Bottom Copyright & Decorative Element -->
             <div
                 class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 px-4 sm:px-12">
-                <p class="text-slate-500 text-sm font-medium tracking-wide order-3 md:order-1 text-center md:text-left">
+                <p class="text-slate-500 text-sm font-bold tracking-wide order-3 md:order-1 text-center md:text-left">
                     © <span id="copyright-year">2026</span> T4TEQ Software Solutions. <br> All rights reserved.
                 </p>
 
@@ -1919,7 +1922,7 @@
                 </p>
 
                 <!-- Overlapping Employee Circles -->
-                <div class="flex -space-x-4 order-2 md:order-3">
+                <div class="flex -space-x-3 order-2 md:order-3 md:mr-[3rem]">
                     <div
                         class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
                         <img src="assets/arun.webp" class="w-full h-full object-cover" alt="Employee 4">
@@ -1942,12 +1945,13 @@
                     </div>
                     <div
                         class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                        <img src="assets/saravana kumar.webp" class="w-full h-full object-cover" alt="Employee 4">
+                        <img src="assets/santhosh.webp" class="w-full h-full object-cover" alt="Employee 4">
                     </div>
                     <div
                         class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
-                        <img src="assets/santhosh.webp" class="w-full h-full object-cover" alt="Employee 4">
+                        <img src="assets/saravana kumar.webp" class="w-full h-full object-cover" alt="Employee 4">
                     </div>
+
                     <div
                         class="w-12 h-12 rounded-full border-2 border-black bg-slate-800 overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110 cursor-pointer">
                         <img src="assets/linkesh.webp" class="w-full h-full object-cover" alt="Employee 4">
@@ -1959,13 +1963,28 @@
             </div>
         </footer>
 
-
-
         <!-- WhatsApp Floating Button -->
+
+
+        <!-- Celebration Overlay -->
+        <!-- <div id="celebrationModal" class="popup-overlay">
+            <div id="modalBox"
+                class="popup-content p-0 overflow-hidden border-none bg-transparent shadow-none max-w-[75%] sm:max-w-[500px] md:max-w-[500px] ">
+                <span
+                    class="close-popup !text-white !bg-black/50 w-10 h-10 rounded-full flex items-center justify-center !top-4 !right-4 z-10"
+                    onclick="closeCelebration()">&times;</span>
+                <img src="assets/poster.webp" alt="Celebration Poster" class="w-full h-auto rounded-3xl shadow-2xl m-0">
+            </div>
+        </div> -->
+
+        <!-- Whatsapp -->
         <a href="#" onclick="sendToWhatsApp()" target="_blank" rel="noopener noreferrer"
             class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[9999] bg-[#25D366] text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.3)] hover:scale-110 hover:rotate-6 transition-all duration-300 group">
             <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
         </a>
+
+        <!-- Canvas Confetti -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 </body>
 <!-- External Libraries -->
