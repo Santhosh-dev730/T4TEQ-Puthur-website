@@ -456,6 +456,10 @@ html {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 640px) {
     .card-back {
         width: 260px;
