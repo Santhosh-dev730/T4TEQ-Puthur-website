@@ -101,10 +101,13 @@
     <header id="main-header"
         class="fixed top-2 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 transition-transform duration-300">
         <nav
-            class="max-w-[90%] lg:max-w-[80%] mx-auto bg-slate-100/90 backdrop-blur-md border border-slate-200 rounded-full px-4 sm:px-8 py-2 sm:py-2 flex items-center justify-between shadow-sm">
+            class="max-w-[90%] lg:max-w-[80%] mx-auto bg-[#f0f0f0] backdrop-blur-md border border-slate-200 rounded-full px-4 sm:px-8 py-2 sm:py-2 flex items-center justify-between shadow-sm">
             <div class="flex items-center gap-2">
                 <!-- <img src="assets/logo.svg" alt="T4TEQ Logo" class="h-8 sm:h-12 w-auto"> -->
-                <span class="font-bold text-lg text-blue-600 sm:text-2xl">T4TEQ</span>
+                <span class="font-bold text-lg sm:text-2xl">
+                    <span style="color: #000067;">T</span><span style="color: #f55301;">4</span><span
+                        style="color: #000067;">TEQ</span>
+                </span>
             </div>
             <div
                 class="hidden lg:flex items-center space-x-6 xl:space-x-8 font-semibold text-charcoal/80 ml-auto text-base">
@@ -131,7 +134,10 @@
                 class="absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out">
                 <div class="flex flex-col h-full p-8">
                     <div class="flex items-center justify-between mb-10">
-                        <span class="font-bold text-3xl text-indigo-900">T4TEQ</span>
+                        <span class="font-bold text-3xl">
+                            <span style="color: #000067;">T</span><span style="color: #f55301;">4</span><span
+                                style="color: #000067;">TEQ</span>
+                        </span>
                         <button id="close-menu-btn"
                             class="p-3 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors shadow-sm">
                             <i class="fas fa-times text-indigo-900 translate-y-[2px]"></i>
@@ -154,9 +160,14 @@
                             Courses
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
-                            href="#stats">
+                            href="#testimonals">
                             <i class="fas fa-chart-bar"></i>
                             Testimonials
+                        </a>
+                        <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
+                            href="#gallery">
+                            <i class="fas fa-chart-bar"></i>
+                            Gallery
                         </a>
                         <a class="mobile-nav-link flex items-center gap-4 p-5 rounded-2xl hover:bg-indigo-50 hover:text-indigo-600 transition-all border border-transparent hover:border-indigo-100"
                             href="#contact">
@@ -170,18 +181,18 @@
                         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Connect With Us
                         </div>
                         <div class="flex gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <div
-                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            <a href="https://www.instagram.com/t4teqsoftware/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors">
                                 <i class="fab fa-instagram"></i>
-                            </div>
-                            <div
-                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            </a>
+                            <a href="https://www.linkedin.com/company/learnatt4teq/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors">
                                 <i class="fab fa-linkedin-in"></i>
-                            </div>
+                            </a>
+                            <a href="https://www.youtube.com/c/LearnatT4TEQ" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -191,7 +202,7 @@
 
     <main class="pt-8">
         <!-- Hero Section -->
-        <section class="py-6 lg:py-12 bg-white overflow-hidden">
+        <section class="py-4 lg:py-12 bg-white overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 pt-6 sm:pt-6">
 
                 <!-- Main Rounded Container -->
@@ -228,7 +239,7 @@
                                 </h1>
                             </div>
 
-                            <div class="reveal delay-500">
+                            <div class="reveal delay-100">
                                 <div class="carousel-container relative w-full overflow-hidden py-4">
                                     <ul class="icon-list animate-marquee items-center">
                                         <li class="grid-col px-4 sm:px-8">
@@ -288,6 +299,7 @@
                                                     class="h-10 w-10 hover:scale-110 transition-all" alt="Java">
                                             </div>
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -567,27 +579,25 @@
                             class="inline-block bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-xl font-bold tracking-wide uppercase">
                             Our Story
                         </div>
-                        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 leading-[1.1]">
+                        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 leading-[1.1]"
+                            style="color: #000067;">
                             Making Technology Simple & <span class="text-orange-500">Accessible</span>
                         </h2>
                         <div class="space-y-6">
                             <p class="text-slate-600 text-md leading-relaxed text-left">
-                                T4TEQ Software Solutions, founded in 2017 in Tiruchirappalli, is a leading corporate
-                                training and development organization with a global outlook. ISO 9001:2015 certified,
-                                T4TEQ is widely recognized as the <strong>Best Training Institute in Trichy</strong>,
-                                driven by its commitment to quality, innovation, and excellence in professional
-                                education.
+                                Founded in 2017 in Tiruchirappalli, T4TEQ Software Solutions is an ISO 9001:2015
+                                certified corporate training and development organization with a global outlook.
+                                Recognized as the <strong>Best Training Institute in Trichy</strong>, we are driven by
+                                our commitment to
+                                quality, innovation, and excellence in professional education. Guided by the motto
+                                <strong>Let’s Code</strong> we foster creativity, problem-solving, and continuous
+                                technological
+                                advancement.
                             </p>
                             <p class="text-slate-600 text-md leading-relaxed text-left">
-                                Guided by the motto “Let’s Code,” T4TEQ fosters a culture of creativity,
-                                problem-solving, and continuous technological advancement. The organization delivers
-                                industry-relevant training programs focused on hands-on learning, real-time projects,
-                                and structured skill development.
-                            </p>
-                            <p class="text-slate-600 text-md leading-relaxed text-left">
-                                By bridging the gap between academic knowledge and corporate expectations, T4TEQ equips
-                                learners with practical, job-ready skills. With a strong emphasis on technical expertise
-                                and professional competence, T4TEQ empowers individuals and organizations to thrive in
+                                We bridge the gap between academic knowledge and corporate expectations. Learners gain
+                                practical, job-ready skills that meet industry demands. We emphasize technical expertise
+                                and professional competence. T4TEQ empowers individuals and organizations to thrive in
                                 today’s dynamic digital landscape.
                             </p>
                         </div>
@@ -706,20 +716,20 @@
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
-                        <div onclick="showTopics('prog','java')"
-                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-orange-200">
+                        <div onclick="showTopics('prog','java', event)"
+                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Java
                         </div>
-                        <div onclick="showTopics('prog','python')"
-                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-yellow-200">
+                        <div onclick="showTopics('prog','python', event)"
+                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Python
                         </div>
-                        <div onclick="showTopics('prog','sql')"
-                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-sky-200">
+                        <div onclick="showTopics('prog','sql', event)"
+                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             SQL
                         </div>
-                        <div onclick="showTopics('prog','dsa')"
-                            class="lang-btn bg-[#FEE2E2] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-red-200">
+                        <div onclick="showTopics('prog','dsa', event)"
+                            class="lang-btn bg-[#FEE2E2] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             DSA
                         </div>
                     </div>
@@ -759,7 +769,7 @@
                             </li>
                             <li
                                 class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
-                                <img src="assets/web.svg" alt="Spring Boot" class="w-full h-full object-contain">
+                                <img src="assets/web.webp" alt="Spring Boot" class="w-full h-full object-contain">
                             </li>
                             <li
                                 class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-2">
@@ -777,24 +787,24 @@
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
-                        <div onclick="showTopics('fs','react')"
-                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-blue-200">
+                        <div onclick="showTopics('fs','react', event)"
+                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             React
                         </div>
-                        <div onclick="showTopics('fs','webdev')"
-                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-orange-200">
+                        <div onclick="showTopics('fs','webdev', event)"
+                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Web Development
                         </div>
-                        <div onclick="showTopics('fs','spring')"
-                            class="lang-btn bg-[#DCFCE7] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-green-200">
-                            Spring Boot
+                        <div onclick="showTopics('fs','spring', event)"
+                            class="lang-btn bg-[#DCFCE7] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
+                            Spring boot
                         </div>
-                        <div onclick="showTopics('fs','django')"
-                            class="lang-btn bg-[#F1F5F9] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-slate-200">
+                        <div onclick="showTopics('fs','django', event)"
+                            class="lang-btn bg-[#F1F5F9] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Django
                         </div>
-                        <div onclick="showTopics('fs','node')"
-                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-yellow-200">
+                        <div onclick="showTopics('fs','node', event)"
+                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Node JS
                         </div>
                     </div>
@@ -853,20 +863,20 @@
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
-                        <div onclick="showTopics('da','dapython')"
-                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-blue-200">
+                        <div onclick="showTopics('da','dapython', event)"
+                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             DA Python
                         </div>
-                        <div onclick="showTopics('da','excel')"
-                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-sky-200">
+                        <div onclick="showTopics('da','excel', event)"
+                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Excel
                         </div>
-                        <div onclick="showTopics('da','powerbi')"
-                            class="lang-btn bg-[#DCFCE7] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-green-200">
+                        <div onclick="showTopics('da','powerbi', event)"
+                            class="lang-btn bg-[#DCFCE7] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Power BI
                         </div>
-                        <div onclick="showTopics('da','aiml')"
-                            class="lang-btn bg-[#EEF2FF] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-indigo-200">
+                        <div onclick="showTopics('da','aiml', event)"
+                            class="lang-btn bg-[#EEF2FF] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             AI and ML
                         </div>
                     </div>
@@ -925,21 +935,21 @@
 
                     <!-- Interactive Syllabus Buttons -->
                     <div class="flex flex-wrap gap-4 mb-6">
-                        <div onclick="showTopics('design','figma')"
-                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-orange-200">
+                        <div onclick="showTopics('design','figma', event)"
+                            class="lang-btn bg-[#FFEDD5] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Figma
                         </div>
-                        <div onclick="showTopics('design','photoshop')"
-                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-yellow-200">
+                        <div onclick="showTopics('design','photoshop', event)"
+                            class="lang-btn bg-[#FEF9C3] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Photoshop / Illustrator
                         </div>
 
-                        <div onclick="showTopics('design','rn')"
-                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-blue-200">
+                        <div onclick="showTopics('design','rn', event)"
+                            class="lang-btn bg-[#DBEAFE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             React Native
                         </div>
-                        <div onclick="showTopics('design','flutter')"
-                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm border-b-2 border-sky-200">
+                        <div onclick="showTopics('design','flutter', event)"
+                            class="lang-btn bg-[#E0F2FE] p-2 px-6 font-semibold rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-sm">
                             Flutter
                         </div>
                     </div>
@@ -959,7 +969,7 @@
         <section class="bg-gray-300 overflow-hidden py-16">
             <div class="max-w-screen-2xl mx-auto px-4 sm:px-12">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4 tracking-tight">Teqies Land in
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tight">From Skills to
                         Companies</h2>
                 </div>
 
@@ -969,6 +979,7 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0 brightness-0">
+                                <!-- tcs -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="58" fill="none"
                                     viewBox="0 0 174 58">
                                     <path fill="#fff"
@@ -976,6 +987,7 @@
                                 </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <!-- cts -->
                                 <img src="assets/cts.png" onerror="this.src='https://placehold.co/120x120?text=Google'"
                                     class="max-w-full max-h-full object-contain transition duration-300" alt="cts">
                             </div>
@@ -987,20 +999,63 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+
+                                <!-- Zoho -->
+
                                 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
-                                    viewBox="17.086 17.192 885.828 165.617">
-                                    <path fill="#86bc24"
-                                        d="M855.963 159.337c0-12.962 10.524-23.478 23.479-23.478 12.962 0 23.472 10.516 23.472 23.478s-10.51 23.472-23.472 23.472c-12.955 0-23.479-10.51-23.479-23.472" />
-                                    <path fill="#0f0b0b"
-                                        d="M107.195 97.16q0-22.308-8.62-33.092c-5.755-7.18-14.47-10.767-26.19-10.767H59.92v90.938h9.538c13.016 0 22.554-3.86 28.628-11.604 6.066-7.73 9.11-19.558 9.11-35.475m44.456-1.55q0 40.641-21.848 62.623c-14.565 14.66-35.04 21.99-61.434 21.99H17.086V17.88h54.865c25.448 0 45.095 6.665 58.94 19.987 13.839 13.329 20.761 32.568 20.761 57.745m142.058 84.61h40.808V17.198H293.71zm98.137-60.809c0 10.394 1.358 18.322 4.07 23.77 2.717 5.456 7.268 8.18 13.667 8.18 6.332 0 10.809-2.724 13.418-8.18 2.608-5.448 3.906-13.376 3.906-23.77q.002-15.508-3.96-23.403c-2.65-5.28-7.168-7.922-13.574-7.922-6.264 0-10.74 2.63-13.458 7.86-2.71 5.238-4.07 13.057-4.07 23.465m76.597 0c0 19.803-5.19 35.252-15.598 46.325q-15.6 16.622-43.675 16.624c-17.948 0-32.235-5.666-42.84-16.998-10.618-11.331-15.924-26.644-15.924-45.95 0-19.743 5.198-35.083 15.605-46.02s25-16.406 43.79-16.406c11.611 0 21.883 2.534 30.782 7.595 8.906 5.06 15.782 12.31 20.612 21.753 4.837 9.429 7.248 20.462 7.248 33.077m16.207 60.809h40.815V59.128H484.65zm-.002-135.742h40.816V17.192h-40.816zm123.507 104.856c5.51 0 12.072-1.4 19.728-4.178v30.469c-5.503 2.418-10.734 4.15-15.707 5.176-4.972 1.04-10.808 1.556-17.486 1.556-13.703 0-23.58-3.444-29.647-10.32-6.04-6.874-9.069-17.431-9.069-31.677v-49.92H541.68V59.139h14.294V28.214l41.128-7.153v38.077h26.04v31.305h-26.04v47.133c0 7.84 3.689 11.76 11.053 11.76m94.461 0c5.51 0 12.073-1.4 19.729-4.178v30.469c-5.496 2.418-10.734 4.15-15.707 5.176-4.98 1.04-10.794 1.556-17.486 1.556-13.702 0-23.58-3.444-29.634-10.32q-9.08-10.31-9.082-31.677v-49.92h-14.3V59.139h14.3V27.746l41.12-6.685v38.077h26.054v31.305h-26.053v47.133q.002 11.76 11.06 11.76m71.227-44.675c.557-6.63 2.453-11.488 5.686-14.592 3.248-3.098 7.256-4.647 12.052-4.647 5.231 0 9.389 1.739 12.473 5.244 3.104 3.485 4.721 8.153 4.85 13.995zm57.555-33.397c-9.702-9.51-23.465-14.273-41.27-14.273q-28.074 0-43.215 16.406-15.133 16.406-15.135 47.08c0 19.802 5.455 35.074 16.338 45.794 10.89 10.72 26.182 16.087 45.876 16.087q14.186-.002 24.416-1.929c6.78-1.27 13.343-3.567 19.709-6.882l-6.271-27.29c-4.626 1.89-9.028 3.343-13.186 4.3q-9.008 2.092-19.77 2.093-11.799 0-18.627-5.767c-4.552-3.852-6.977-9.165-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.558-41.094m-625.583 33.397c.557-6.63 2.453-11.488 5.686-14.592 3.24-3.098 7.255-4.647 12.059-4.647 5.217 0 9.375 1.739 12.466 5.244 3.104 3.485 4.714 8.153 4.857 13.995zm57.561-33.397c-9.708-9.51-23.465-14.273-41.277-14.273-18.723 0-33.118 5.469-43.207 16.406-10.088 10.938-15.142 26.63-15.142 47.08 0 19.802 5.448 35.074 16.345 45.794 10.883 10.72 26.175 16.087 45.87 16.087q14.184-.002 24.415-1.929c6.78-1.27 13.343-3.567 19.715-6.882l-6.277-27.29c-4.627 1.89-9.029 3.343-13.18 4.3-6.018 1.394-12.601 2.093-19.776 2.093-7.86 0-14.075-1.922-18.627-5.767q-6.838-5.78-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.552-41.094" />
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 512 177">
+                                    <defs>
+                                        <linearGradient id="a" x1="49.996%" x2="49.996%" y1="1.431%" y2="96.981%">
+                                            <stop offset=".562%" stop-color="#ffe513" />
+                                            <stop offset="100%" stop-color="#fdb924" />
+                                        </linearGradient>
+                                        <linearGradient id="b" x1="4.512%" x2="95.672%" y1="13.494%" y2="87.064%">
+                                            <stop offset=".562%" stop-color="#008cd2" />
+                                            <stop offset="100%" stop-color="#00649d" />
+                                        </linearGradient>
+                                        <linearGradient id="c" x1="50.002%" x2="50.002%" y1="27.779%" y2="97.529%">
+                                            <stop offset="0%" stop-color="#26a146" />
+                                            <stop offset="100%" stop-color="#008a52" />
+                                        </linearGradient>
+                                        <linearGradient id="d" x1="43.734%" x2="57.544%" y1="8.208%" y2="93.198%">
+                                            <stop offset="0%" stop-color="#d92231" />
+                                            <stop offset="100%" stop-color="#ba2234" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="#e79225" d="M512 37.7v121.4l-16.8 16.4V56.7z" />
+                                    <path fill="#fff16d" d="m401.9 37.8-17.4 18.9.9 1.2 109.1-.4 1-.8 16.5-19z" />
+                                    <path fill="url(#a)" d="M.5 19.7h111v118.9H.5z" transform="translate(384 37)" />
+                                    <path fill="#fff"
+                                        d="M478.6 99.5c-2.2-5.5-5.5-10.5-9.8-14.8-4.1-4.2-8.7-7.4-13.9-9.5-5.1-2.1-10.6-3.2-16.6-3.2s-11.6 1.1-16.7 3.2c-5.2 2.1-9.8 5.3-13.9 9.5-4.3 4.3-7.5 9.3-9.7 14.8s-3.2 11.5-3.2 18.1q0 9.6 3.3 18c2.2 5.6 5.4 10.6 9.7 15 4 4.1 8.6 7.2 13.7 9.3s10.8 3.2 16.9 3.2c5.9 0 11.4-1.1 16.5-3.2s9.8-5.2 13.9-9.3c4.3-4.4 7.6-9.4 9.8-14.9s3.3-11.6 3.3-18c0-6.7-1.1-12.7-3.3-18.2m-22.9 39.2c-4.3 5.1-10 7.7-17.4 7.7s-13.2-2.6-17.5-7.7-6.4-12.2-6.4-21.2c0-9.2 2.2-16.3 6.4-21.5 4.3-5.2 10-7.7 17.5-7.7 7.4 0 13.1 2.6 17.4 7.7 4.2 5.2 6.4 12.3 6.4 21.5 0 9-2.1 16.1-6.4 21.2" />
+                                    <path fill="#009ada"
+                                        d="M373.6 27.8v.6l14.2 109.1-8.3 23-1.1-.8-14.6-104.6.3-1.4 9.1-25.3z" />
+                                    <path fill="#91c9ed" d="m264.3 43 109.3-15.2-9.2 26.2-1.3 1.4-102.2 15 .5-18.7z" />
+                                    <path fill="url(#b)" d="m107.4 27 15.1 106.5-107.7 15.1L.3 45.7l6.3-4.9z"
+                                        transform="translate(257 27)" />
+                                    <path fill="#fff"
+                                        d="M346.1 74.4c-.5-3.3-1.6-5.8-3.4-7.5-1.5-1.3-3.3-2-5.4-2-.5 0-1.1 0-1.7.1-2.8.4-4.9 1.7-6.2 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.6l3.9 27.7-31 4.6-3.9-27.7c-.5-3.2-1.6-5.7-3.4-7.4-1.5-1.4-3.3-2.1-5.3-2.1-.5 0-1 0-1.5.1-2.9.4-5.1 1.7-6.5 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.7l10.6 72.1c.5 3.3 1.6 5.8 3.6 7.5 1.5 1.3 3.3 1.9 5.5 1.9.6 0 1.2 0 1.8-.1 2.7-.4 4.7-1.7 6-3.8.9-1.5 1.3-3.3 1.3-5.4 0-.8-.1-1.7-.2-2.6l-4.3-28.5 31-4.6 4.3 28.5c.5 3.3 1.6 5.8 3.5 7.4 1.5 1.3 3.3 2 5.4 2 .5 0 1.1 0 1.7-.1 2.8-.4 4.9-1.7 6.2-3.8.9-1.5 1.4-3.3 1.4-5.5 0-.8-.1-1.7-.2-2.6z" />
+                                    <path fill="#66bf6b"
+                                        d="m162 0-38.9 92.4 5.3 40.6.3-.1 43.7-98.3-.2-2.1-9.4-31.2z" />
+                                    <path fill="#98d0a0" d="m162 0 10.1 33.9.2.7 96.2 43.1.3-.2-8.2-32.4z" />
+                                    <path fill="url(#c)" d="m49.1 33.9 96.7 43.6-43.7 99.1L5.4 133z"
+                                        transform="translate(123)" />
+                                    <path fill="#fff"
+                                        d="M239.5 85.5c-2.1-5.6-5-10.4-8.8-14.4s-8.4-7.2-13.8-9.5-10.8-3.4-16.3-3.4h-.3c-5.6 0-11.1 1.3-16.5 3.7-5.7 2.5-10.6 5.9-14.8 10.4-4.2 4.4-7.6 9.8-10.2 16-2.6 6.1-4 12.3-4.3 18.4v2.1c0 5.4.9 10.7 2.8 15.9 2 5.5 4.9 10.2 8.7 14.2s8.5 7.2 14.1 9.5c5.3 2.3 10.7 3.4 16.2 3.4h.1c5.5 0 11-1.2 16.4-3.5 5.7-2.5 10.7-6 14.9-10.5 4.2-4.4 7.7-9.7 10.3-15.9s4-12.3 4.3-18.4v-1.8c.1-5.5-.8-10.9-2.8-16.2m-19.3 28.8c-3.6 8.6-8.5 14.5-14.4 17.7-3.2 1.7-6.5 2.6-9.8 2.6-2.9 0-6-.7-9.1-2-6.8-2.9-11-7.5-12.8-14.1q-.9-3.3-.9-6.9c0-4.8 1.2-10.1 3.6-15.8 3.7-8.8 8.6-14.8 14.5-18.1 3.2-1.8 6.5-2.6 9.8-2.6 3 0 6 .7 9.2 2 6.7 2.9 10.9 7.5 12.7 14.1.6 2.1.9 4.4.9 6.8 0 5-1.2 10.4-3.7 16.3" />
+                                    <path fill="#760d16"
+                                        d="m115.4 15.7 15.8 105.8-7.2 37.2-1-1.3-15.4-102.2v-2l6.8-35.7z" />
+                                    <path fill="#ef463e" d="M0 70.4 7.5 33l107.9-17.3-7.3 38.1v2.5L1.3 71.4z" />
+                                    <path fill="url(#d)" d="M108.1 38.8 124 143.7 17.2 160.4 0 55.4z"
+                                        transform="translate(0 15)" />
+                                    <path fill="#fff"
+                                        d="M96.6 142c-.8-1-2-1.7-3.4-2.2s-3.1-.7-5.2-.7c-1.9 0-4.1.2-6.5.6l-28.2 4.8c.3-2.2 1.4-5 3.3-8.5 2.1-3.9 5.3-8.6 9.4-14 1.4-1.9 2.5-3.3 3.3-4.3.5-.7 1.3-1.6 2.3-2.9 6.5-8.5 10.4-15.4 12-20.8.9-3.1 1.4-6.2 1.6-9.3.1-.9.1-1.7.1-2.5q0-3.3-.6-6.6c-.3-2-.8-3.6-1.5-4.9s-1.5-2.3-2.5-2.9c-1.1-.7-2.8-1-4.9-1q-2.55 0-6.3.6L36.9 73c-3.9.7-6.9 1.8-8.7 3.6-1.5 1.4-2.2 3.2-2.2 5.2 0 .5 0 1.1.1 1.7.5 2.8 1.9 4.8 4.2 5.8 1.4.6 3 .9 5 .9 1.3 0 2.8-.1 4.4-.4L66.9 85c0 .5.1 1 .1 1.4 0 1.7-.3 3.4-.9 5-.8 2.3-2.8 5.5-6.1 9.6-.9 1.1-2.3 2.9-4.2 5.2-7.4 8.9-12.6 16.5-15.8 22.8-2.3 4.4-3.8 8.6-4.7 12.9-.5 2.5-.8 4.8-.8 7.1 0 1.6.1 3.2.4 4.7.4 2.2.9 4 1.6 5.4s1.7 2.5 2.8 3.1 2.6.8 4.8.8q4.05 0 11.1-1.2l29.6-5.1c5.2-.9 8.9-2.2 11-3.9 1.7-1.4 2.6-3.3 2.6-5.5 0-.6-.1-1.2-.2-1.8-.2-1.3-.7-2.5-1.6-3.5" />
                                 </svg>
+
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 163.4 43">
-                                    <path fill="#a100ff" d="m95.1 12 9.4-3.5-9.4-3.6V0l16.1 6.5v4L95.1 17z" />
-                                    <path
-                                        d="M6.2 43C2.8 43 0 41.3 0 37.5v-.2c0-4.6 4-6.2 8.9-6.2h2.3v-.9c0-1.9-.8-3-2.8-3-1.8 0-2.7 1-2.8 2.4h-5c.4-4.2 3.7-6.2 8.1-6.2 4.5 0 7.8 1.9 7.8 6.6v12.6h-5.1v-2.2c-1 1.4-2.7 2.6-5.2 2.6m5-6.6v-1.8H9.1c-2.6 0-3.9.7-3.9 2.4v.2c0 1.3.8 2.2 2.6 2.2 1.8-.1 3.4-1.1 3.4-3M28.4 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8c-.3 4.4-3.2 7.4-8.3 7.4M48 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8C56 40 53.1 43 48 43m19.7 0c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3H63.9c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.6 3.5-3.6 6.2-8.5 6.2M64 31h7c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.5 4m15.4-7.2h5.3v2.8c.9-1.8 2.8-3.2 5.7-3.2 3.4 0 5.7 2.1 5.7 6.6v12.6h-5.3V30.8c0-2.2-.9-3.2-2.8-3.2-1.8 0-3.3 1.1-3.3 3.5v11.5h-5.3zm26.4-5.7v5.7h3.6v3.9h-3.6v8.9c0 1.4.6 2.1 1.9 2.1.8 0 1.3-.1 1.8-.3v4.1c-.6.2-1.7.4-3 .4-4.1 0-6-1.9-6-5.7v-9.5h-2.2v-3.9h2.2v-3.5zm23.4 24.5H124v-2.8c-.9 1.8-2.7 3.2-5.5 3.2-3.4 0-5.9-2.1-5.9-6.5V23.8h5.3v12c0 2.2.9 3.2 2.7 3.2s3.3-1.2 3.3-3.5V23.8h5.3zm3.9-18.8h5.3v3.5c1.1-2.5 2.9-3.7 5.7-3.7v5.2c-3.6 0-5.7 1.1-5.7 4.2v9.7h-5.3zM154.8 43c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3h-12.2c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.8 3.5-3.7 6.2-8.6 6.2M151 31h7.1c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.6 4" />
-                                </svg>
+                                <!-- Hexaware -->
+                                <img src="assets/hexaware.webp"
+                                    onerror="this.src='https://placehold.co/120x120?text=Google'"
+                                    class="max-w-full max-h-full object-contain transition duration-300" alt="cts">
                             </div>
                         </div>
                     </div>
@@ -1010,6 +1065,29 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0 brightness-1">
+                                <!-- accenture -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 163.4 43">
+                                    <path fill="#a100ff" d="m95.1 12 9.4-3.5-9.4-3.6V0l16.1 6.5v4L95.1 17z" />
+                                    <path
+                                        d="M6.2 43C2.8 43 0 41.3 0 37.5v-.2c0-4.6 4-6.2 8.9-6.2h2.3v-.9c0-1.9-.8-3-2.8-3-1.8 0-2.7 1-2.8 2.4h-5c.4-4.2 3.7-6.2 8.1-6.2 4.5 0 7.8 1.9 7.8 6.6v12.6h-5.1v-2.2c-1 1.4-2.7 2.6-5.2 2.6m5-6.6v-1.8H9.1c-2.6 0-3.9.7-3.9 2.4v.2c0 1.3.8 2.2 2.6 2.2 1.8-.1 3.4-1.1 3.4-3M28.4 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8c-.3 4.4-3.2 7.4-8.3 7.4M48 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8C56 40 53.1 43 48 43m19.7 0c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3H63.9c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.6 3.5-3.6 6.2-8.5 6.2M64 31h7c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.5 4m15.4-7.2h5.3v2.8c.9-1.8 2.8-3.2 5.7-3.2 3.4 0 5.7 2.1 5.7 6.6v12.6h-5.3V30.8c0-2.2-.9-3.2-2.8-3.2-1.8 0-3.3 1.1-3.3 3.5v11.5h-5.3zm26.4-5.7v5.7h3.6v3.9h-3.6v8.9c0 1.4.6 2.1 1.9 2.1.8 0 1.3-.1 1.8-.3v4.1c-.6.2-1.7.4-3 .4-4.1 0-6-1.9-6-5.7v-9.5h-2.2v-3.9h2.2v-3.5zm23.4 24.5H124v-2.8c-.9 1.8-2.7 3.2-5.5 3.2-3.4 0-5.9-2.1-5.9-6.5V23.8h5.3v12c0 2.2.9 3.2 2.7 3.2s3.3-1.2 3.3-3.5V23.8h5.3zm3.9-18.8h5.3v3.5c1.1-2.5 2.9-3.7 5.7-3.7v5.2c-3.6 0-5.7 1.1-5.7 4.2v9.7h-5.3zM154.8 43c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3h-12.2c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.8 3.5-3.7 6.2-8.6 6.2M151 31h7.1c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.6 4" />
+                                </svg>
+
+                            </div>
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <!-- hcl -->
+                                <img src="assets/hcl.svg" onerror="this.src='https://placehold.co/120x120?text=Google'"
+                                    class="max-w-full max-h-full object-contain transition duration-300" alt="cts">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="relative overflow-hidden h-24 sm:h-32 rounded-3xl transition-all duration-300">
+                        <div
+                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
+                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+
+                                <!-- Capgemini -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
                                     viewBox="0 -19.939 159.448 69.59">
                                     <g fill-rule="evenodd">
@@ -1021,40 +1099,7 @@
                                 </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1897"
-                                    viewBox="0 0 1000 758.994">
-                                    <path fill="#e669a2" d="M1000 325.903H636.264v-93.1H1000z" />
-                                    <path fill="#f3be26" d="M952.755 325.903H636.264V93.051h316.491z" />
-                                    <path fill="#ee9c34" d="M821.998 325.903H636.264V0h185.734z" />
-                                    <path fill="#f3bc87" d="M858.538 325.903H636.264V36.365h222.274z" />
-                                    <path fill="#e3721c" d="M636.213 36.42v289.453h185.765V36.42z" />
-                                    <path fill="#ad1b02" d="M450.016 325.903h186.248v46.555H450.016z" />
-                                    <path fill="#e88d14" d="M636.213 93v232.873h222.432V93z" />
-                                    <path fill="#d85604" d="M636.213 93v232.873h185.765V93z" />
-                                    <path fill="#c14303" d="M752.413 325.903H636.264V186.142h116.149z" />
-                                    <path fill="#db4e18" d="M636.213 232.869v93.004h316.649v-93.004z" />
-                                    <path fill="#d1390d" d="M636.213 232.869v93.004h222.432v-93.004z" />
-                                    <path fill="#c22303" d="M636.213 232.869v93.004h185.765v-93.004z" />
-                                    <path fill="#ad1b02" d="M636.213 232.869v93.004h116.315v-93.004z" />
-                                    <path
-                                        d="M676.76 501.249c-31.689 5.634-48.59 29.577-48.59 71.126 0 42.254 22.534 70.423 55.633 70.423 16.197 0 30.281-5.634 59.858-20.423v34.508c-35.915 16.9-57.042 21.126-85.21 21.126-31.69 0-54.227-7.746-71.832-26.76-18.31-18.311-28.169-42.254-28.169-69.72 0-59.858 45.07-101.407 110.563-101.407 42.958 0 73.24 20.423 73.24 49.296 0 19.014-14.086 32.395-34.508 32.395-10.563 0-19.015-3.521-30.986-9.86M518.31 581.53c28.873-35.915 39.437-50.704 39.437-68.31s-14.085-33.1-33.803-33.1c-11.268 0-21.83 6.339-26.76 11.973v73.943L450 629.416v-143.66h-45.07l-74.649 123.24v-123.24h-25.353l-68.31 15.494v17.605l37.324 3.52v152.818h47.183l71.831-118.31v118.31h52.817M93.662 651.249h10.563c38.027 0 59.154-23.24 59.154-69.72 0-38.731-16.9-59.858-48.592-59.858-4.225 0-10.563.704-21.126 2.817zm0 83.098 30.985 7.042v17.605H2.817v-17.605l28.168-7.042V521.67H0v-17.605l73.943-22.535h19.72v25.353c34.506-21.127 46.478-24.648 64.787-24.648 40.846 0 71.831 38.028 71.831 90.846 0 60.563-41.549 102.112-104.93 102.112-7.042 0-19.014-.704-31.689-1.408" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column 4 -->
-                    <div class="relative overflow-hidden h-24 sm:h-32 rounded-3xl transition-all duration-300">
-                        <div
-                            class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
-                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 163.4 43">
-                                    <path fill="#a100ff" d="m95.1 12 9.4-3.5-9.4-3.6V0l16.1 6.5v4L95.1 17z" />
-                                    <path
-                                        d="M6.2 43C2.8 43 0 41.3 0 37.5v-.2c0-4.6 4-6.2 8.9-6.2h2.3v-.9c0-1.9-.8-3-2.8-3-1.8 0-2.7 1-2.8 2.4h-5c.4-4.2 3.7-6.2 8.1-6.2 4.5 0 7.8 1.9 7.8 6.6v12.6h-5.1v-2.2c-1 1.4-2.7 2.6-5.2 2.6m5-6.6v-1.8H9.1c-2.6 0-3.9.7-3.9 2.4v.2c0 1.3.8 2.2 2.6 2.2 1.8-.1 3.4-1.1 3.4-3M28.4 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8c-.3 4.4-3.2 7.4-8.3 7.4M48 43c-5.2 0-9-3.2-9-9.6v-.3c0-6.4 4-9.8 9-9.8 4.3 0 7.8 2.2 8.2 7.1h-5c-.3-1.8-1.3-3-3.1-3-2.2 0-3.8 1.8-3.8 5.5v.6c0 3.8 1.4 5.5 3.8 5.5 1.8 0 3.1-1.3 3.4-3.4h4.8C56 40 53.1 43 48 43m19.7 0c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3H63.9c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.6 3.5-3.6 6.2-8.5 6.2M64 31h7c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.5 4m15.4-7.2h5.3v2.8c.9-1.8 2.8-3.2 5.7-3.2 3.4 0 5.7 2.1 5.7 6.6v12.6h-5.3V30.8c0-2.2-.9-3.2-2.8-3.2-1.8 0-3.3 1.1-3.3 3.5v11.5h-5.3zm26.4-5.7v5.7h3.6v3.9h-3.6v8.9c0 1.4.6 2.1 1.9 2.1.8 0 1.3-.1 1.8-.3v4.1c-.6.2-1.7.4-3 .4-4.1 0-6-1.9-6-5.7v-9.5h-2.2v-3.9h2.2v-3.5zm23.4 24.5H124v-2.8c-.9 1.8-2.7 3.2-5.5 3.2-3.4 0-5.9-2.1-5.9-6.5V23.8h5.3v12c0 2.2.9 3.2 2.7 3.2s3.3-1.2 3.3-3.5V23.8h5.3zm3.9-18.8h5.3v3.5c1.1-2.5 2.9-3.7 5.7-3.7v5.2c-3.6 0-5.7 1.1-5.7 4.2v9.7h-5.3zM154.8 43c-5.4 0-9.1-3.2-9.1-9.5v-.4c0-6.3 3.9-9.8 9-9.8 4.7 0 8.6 2.6 8.6 8.9v2.3h-12.2c.2 3.4 1.7 4.7 3.9 4.7 2 0 3.1-1.1 3.5-2.4h4.9c-.8 3.5-3.7 6.2-8.6 6.2M151 31h7.1c-.1-2.8-1.4-4-3.5-4-1.6.1-3.1 1-3.6 4" />
-                                </svg>
-                            </div>
-                            <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <!-- wipro -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
                                     viewBox="48 101.6 504 396.8">
                                     <path fill="#2b4c87"
@@ -1115,55 +1160,17 @@
                         <div
                             class="logo-slide w-full h-full flex flex-col transition-transform duration-[800ms] ease-in-out">
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <!-- delitte -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135"
-                                    preserveAspectRatio="xMidYMid" viewBox="0 0 512 177">
-                                    <defs>
-                                        <linearGradient id="a" x1="49.996%" x2="49.996%" y1="1.431%" y2="96.981%">
-                                            <stop offset=".562%" stop-color="#ffe513" />
-                                            <stop offset="100%" stop-color="#fdb924" />
-                                        </linearGradient>
-                                        <linearGradient id="b" x1="4.512%" x2="95.672%" y1="13.494%" y2="87.064%">
-                                            <stop offset=".562%" stop-color="#008cd2" />
-                                            <stop offset="100%" stop-color="#00649d" />
-                                        </linearGradient>
-                                        <linearGradient id="c" x1="50.002%" x2="50.002%" y1="27.779%" y2="97.529%">
-                                            <stop offset="0%" stop-color="#26a146" />
-                                            <stop offset="100%" stop-color="#008a52" />
-                                        </linearGradient>
-                                        <linearGradient id="d" x1="43.734%" x2="57.544%" y1="8.208%" y2="93.198%">
-                                            <stop offset="0%" stop-color="#d92231" />
-                                            <stop offset="100%" stop-color="#ba2234" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill="#e79225" d="M512 37.7v121.4l-16.8 16.4V56.7z" />
-                                    <path fill="#fff16d" d="m401.9 37.8-17.4 18.9.9 1.2 109.1-.4 1-.8 16.5-19z" />
-                                    <path fill="url(#a)" d="M.5 19.7h111v118.9H.5z" transform="translate(384 37)" />
-                                    <path fill="#fff"
-                                        d="M478.6 99.5c-2.2-5.5-5.5-10.5-9.8-14.8-4.1-4.2-8.7-7.4-13.9-9.5-5.1-2.1-10.6-3.2-16.6-3.2s-11.6 1.1-16.7 3.2c-5.2 2.1-9.8 5.3-13.9 9.5-4.3 4.3-7.5 9.3-9.7 14.8s-3.2 11.5-3.2 18.1q0 9.6 3.3 18c2.2 5.6 5.4 10.6 9.7 15 4 4.1 8.6 7.2 13.7 9.3s10.8 3.2 16.9 3.2c5.9 0 11.4-1.1 16.5-3.2s9.8-5.2 13.9-9.3c4.3-4.4 7.6-9.4 9.8-14.9s3.3-11.6 3.3-18c0-6.7-1.1-12.7-3.3-18.2m-22.9 39.2c-4.3 5.1-10 7.7-17.4 7.7s-13.2-2.6-17.5-7.7-6.4-12.2-6.4-21.2c0-9.2 2.2-16.3 6.4-21.5 4.3-5.2 10-7.7 17.5-7.7 7.4 0 13.1 2.6 17.4 7.7 4.2 5.2 6.4 12.3 6.4 21.5 0 9-2.1 16.1-6.4 21.2" />
-                                    <path fill="#009ada"
-                                        d="M373.6 27.8v.6l14.2 109.1-8.3 23-1.1-.8-14.6-104.6.3-1.4 9.1-25.3z" />
-                                    <path fill="#91c9ed" d="m264.3 43 109.3-15.2-9.2 26.2-1.3 1.4-102.2 15 .5-18.7z" />
-                                    <path fill="url(#b)" d="m107.4 27 15.1 106.5-107.7 15.1L.3 45.7l6.3-4.9z"
-                                        transform="translate(257 27)" />
-                                    <path fill="#fff"
-                                        d="M346.1 74.4c-.5-3.3-1.6-5.8-3.4-7.5-1.5-1.3-3.3-2-5.4-2-.5 0-1.1 0-1.7.1-2.8.4-4.9 1.7-6.2 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.6l3.9 27.7-31 4.6-3.9-27.7c-.5-3.2-1.6-5.7-3.4-7.4-1.5-1.4-3.3-2.1-5.3-2.1-.5 0-1 0-1.5.1-2.9.4-5.1 1.7-6.5 3.8-1 1.5-1.4 3.4-1.4 5.6 0 .8.1 1.7.2 2.7l10.6 72.1c.5 3.3 1.6 5.8 3.6 7.5 1.5 1.3 3.3 1.9 5.5 1.9.6 0 1.2 0 1.8-.1 2.7-.4 4.7-1.7 6-3.8.9-1.5 1.3-3.3 1.3-5.4 0-.8-.1-1.7-.2-2.6l-4.3-28.5 31-4.6 4.3 28.5c.5 3.3 1.6 5.8 3.5 7.4 1.5 1.3 3.3 2 5.4 2 .5 0 1.1 0 1.7-.1 2.8-.4 4.9-1.7 6.2-3.8.9-1.5 1.4-3.3 1.4-5.5 0-.8-.1-1.7-.2-2.6z" />
-                                    <path fill="#66bf6b"
-                                        d="m162 0-38.9 92.4 5.3 40.6.3-.1 43.7-98.3-.2-2.1-9.4-31.2z" />
-                                    <path fill="#98d0a0" d="m162 0 10.1 33.9.2.7 96.2 43.1.3-.2-8.2-32.4z" />
-                                    <path fill="url(#c)" d="m49.1 33.9 96.7 43.6-43.7 99.1L5.4 133z"
-                                        transform="translate(123)" />
-                                    <path fill="#fff"
-                                        d="M239.5 85.5c-2.1-5.6-5-10.4-8.8-14.4s-8.4-7.2-13.8-9.5-10.8-3.4-16.3-3.4h-.3c-5.6 0-11.1 1.3-16.5 3.7-5.7 2.5-10.6 5.9-14.8 10.4-4.2 4.4-7.6 9.8-10.2 16-2.6 6.1-4 12.3-4.3 18.4v2.1c0 5.4.9 10.7 2.8 15.9 2 5.5 4.9 10.2 8.7 14.2s8.5 7.2 14.1 9.5c5.3 2.3 10.7 3.4 16.2 3.4h.1c5.5 0 11-1.2 16.4-3.5 5.7-2.5 10.7-6 14.9-10.5 4.2-4.4 7.7-9.7 10.3-15.9s4-12.3 4.3-18.4v-1.8c.1-5.5-.8-10.9-2.8-16.2m-19.3 28.8c-3.6 8.6-8.5 14.5-14.4 17.7-3.2 1.7-6.5 2.6-9.8 2.6-2.9 0-6-.7-9.1-2-6.8-2.9-11-7.5-12.8-14.1q-.9-3.3-.9-6.9c0-4.8 1.2-10.1 3.6-15.8 3.7-8.8 8.6-14.8 14.5-18.1 3.2-1.8 6.5-2.6 9.8-2.6 3 0 6 .7 9.2 2 6.7 2.9 10.9 7.5 12.7 14.1.6 2.1.9 4.4.9 6.8 0 5-1.2 10.4-3.7 16.3" />
-                                    <path fill="#760d16"
-                                        d="m115.4 15.7 15.8 105.8-7.2 37.2-1-1.3-15.4-102.2v-2l6.8-35.7z" />
-                                    <path fill="#ef463e" d="M0 70.4 7.5 33l107.9-17.3-7.3 38.1v2.5L1.3 71.4z" />
-                                    <path fill="url(#d)" d="M108.1 38.8 124 143.7 17.2 160.4 0 55.4z"
-                                        transform="translate(0 15)" />
-                                    <path fill="#fff"
-                                        d="M96.6 142c-.8-1-2-1.7-3.4-2.2s-3.1-.7-5.2-.7c-1.9 0-4.1.2-6.5.6l-28.2 4.8c.3-2.2 1.4-5 3.3-8.5 2.1-3.9 5.3-8.6 9.4-14 1.4-1.9 2.5-3.3 3.3-4.3.5-.7 1.3-1.6 2.3-2.9 6.5-8.5 10.4-15.4 12-20.8.9-3.1 1.4-6.2 1.6-9.3.1-.9.1-1.7.1-2.5q0-3.3-.6-6.6c-.3-2-.8-3.6-1.5-4.9s-1.5-2.3-2.5-2.9c-1.1-.7-2.8-1-4.9-1q-2.55 0-6.3.6L36.9 73c-3.9.7-6.9 1.8-8.7 3.6-1.5 1.4-2.2 3.2-2.2 5.2 0 .5 0 1.1.1 1.7.5 2.8 1.9 4.8 4.2 5.8 1.4.6 3 .9 5 .9 1.3 0 2.8-.1 4.4-.4L66.9 85c0 .5.1 1 .1 1.4 0 1.7-.3 3.4-.9 5-.8 2.3-2.8 5.5-6.1 9.6-.9 1.1-2.3 2.9-4.2 5.2-7.4 8.9-12.6 16.5-15.8 22.8-2.3 4.4-3.8 8.6-4.7 12.9-.5 2.5-.8 4.8-.8 7.1 0 1.6.1 3.2.4 4.7.4 2.2.9 4 1.6 5.4s1.7 2.5 2.8 3.1 2.6.8 4.8.8q4.05 0 11.1-1.2l29.6-5.1c5.2-.9 8.9-2.2 11-3.9 1.7-1.4 2.6-3.3 2.6-5.5 0-.6-.1-1.2-.2-1.8-.2-1.3-.7-2.5-1.6-3.5" />
+                                    viewBox="17.086 17.192 885.828 165.617">
+                                    <path fill="#86bc24"
+                                        d="M855.963 159.337c0-12.962 10.524-23.478 23.479-23.478 12.962 0 23.472 10.516 23.472 23.478s-10.51 23.472-23.472 23.472c-12.955 0-23.479-10.51-23.479-23.472" />
+                                    <path fill="#0f0b0b"
+                                        d="M107.195 97.16q0-22.308-8.62-33.092c-5.755-7.18-14.47-10.767-26.19-10.767H59.92v90.938h9.538c13.016 0 22.554-3.86 28.628-11.604 6.066-7.73 9.11-19.558 9.11-35.475m44.456-1.55q0 40.641-21.848 62.623c-14.565 14.66-35.04 21.99-61.434 21.99H17.086V17.88h54.865c25.448 0 45.095 6.665 58.94 19.987 13.839 13.329 20.761 32.568 20.761 57.745m142.058 84.61h40.808V17.198H293.71zm98.137-60.809c0 10.394 1.358 18.322 4.07 23.77 2.717 5.456 7.268 8.18 13.667 8.18 6.332 0 10.809-2.724 13.418-8.18 2.608-5.448 3.906-13.376 3.906-23.77q.002-15.508-3.96-23.403c-2.65-5.28-7.168-7.922-13.574-7.922-6.264 0-10.74 2.63-13.458 7.86-2.71 5.238-4.07 13.057-4.07 23.465m76.597 0c0 19.803-5.19 35.252-15.598 46.325q-15.6 16.622-43.675 16.624c-17.948 0-32.235-5.666-42.84-16.998-10.618-11.331-15.924-26.644-15.924-45.95 0-19.743 5.198-35.083 15.605-46.02s25-16.406 43.79-16.406c11.611 0 21.883 2.534 30.782 7.595 8.906 5.06 15.782 12.31 20.612 21.753 4.837 9.429 7.248 20.462 7.248 33.077m16.207 60.809h40.815V59.128H484.65zm-.002-135.742h40.816V17.192h-40.816zm123.507 104.856c5.51 0 12.072-1.4 19.728-4.178v30.469c-5.503 2.418-10.734 4.15-15.707 5.176-4.972 1.04-10.808 1.556-17.486 1.556-13.703 0-23.58-3.444-29.647-10.32-6.04-6.874-9.069-17.431-9.069-31.677v-49.92H541.68V59.139h14.294V28.214l41.128-7.153v38.077h26.04v31.305h-26.04v47.133c0 7.84 3.689 11.76 11.053 11.76m94.461 0c5.51 0 12.073-1.4 19.729-4.178v30.469c-5.496 2.418-10.734 4.15-15.707 5.176-4.98 1.04-10.794 1.556-17.486 1.556-13.702 0-23.58-3.444-29.634-10.32q-9.08-10.31-9.082-31.677v-49.92h-14.3V59.139h14.3V27.746l41.12-6.685v38.077h26.054v31.305h-26.053v47.133q.002 11.76 11.06 11.76m71.227-44.675c.557-6.63 2.453-11.488 5.686-14.592 3.248-3.098 7.256-4.647 12.052-4.647 5.231 0 9.389 1.739 12.473 5.244 3.104 3.485 4.721 8.153 4.85 13.995zm57.555-33.397c-9.702-9.51-23.465-14.273-41.27-14.273q-28.074 0-43.215 16.406-15.133 16.406-15.135 47.08c0 19.802 5.455 35.074 16.338 45.794 10.89 10.72 26.182 16.087 45.876 16.087q14.186-.002 24.416-1.929c6.78-1.27 13.343-3.567 19.709-6.882l-6.271-27.29c-4.626 1.89-9.028 3.343-13.186 4.3q-9.008 2.092-19.77 2.093-11.799 0-18.627-5.767c-4.552-3.852-6.977-9.165-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.558-41.094m-625.583 33.397c.557-6.63 2.453-11.488 5.686-14.592 3.24-3.098 7.255-4.647 12.059-4.647 5.217 0 9.375 1.739 12.466 5.244 3.104 3.485 4.714 8.153 4.857 13.995zm57.561-33.397c-9.708-9.51-23.465-14.273-41.277-14.273-18.723 0-33.118 5.469-43.207 16.406-10.088 10.938-15.142 26.63-15.142 47.08 0 19.802 5.448 35.074 16.345 45.794 10.883 10.72 26.175 16.087 45.87 16.087q14.184-.002 24.415-1.929c6.78-1.27 13.343-3.567 19.715-6.882l-6.277-27.29c-4.627 1.89-9.029 3.343-13.18 4.3-6.018 1.394-12.601 2.093-19.776 2.093-7.86 0-14.075-1.922-18.627-5.767q-6.838-5.78-7.255-15.931h72.948v-18.594c0-17.887-4.85-31.59-14.552-41.094" />
                                 </svg>
                             </div>
                             <div class="h-full w-full flex items-center justify-center p-4 flex-shrink-0">
+                                <!-- IBM -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="135" viewBox="0 0 1000 400">
                                     <path fill="#1f70c1"
                                         d="M0 0v27.367h194.648V0zm222.226 0v27.367h277.383S471.276 0 433.75 0zm331.797 0v27.367h167.812L711.875 0zm288.125 0-9.961 27.367h166.289V0zM0 53.222v27.367h194.648V53.222zm222.226.039V80.59h309.57s-3.615-21.063-9.922-27.329zm331.797 0V80.59h186.211l-9.219-27.329zm268.203 0-9.219 27.329h185.469V53.261zM55.937 106.444v27.406h84.297v-27.406zm222.227 0v27.406h84.297v-27.406zm166.289 0v27.406h84.297s5.352-14.473 5.352-27.406zm165.508 0v27.406h149.453l-9.961-27.406zm193.906 0-10 27.406h150.195v-27.406zm-747.93 53.262v27.367h84.297v-27.367zm222.227 0v27.367h215.312s18.012-14.042 23.75-27.367zm331.797 0v27.367h84.297v-15.234l5.352 15.234h154.414l5.742-15.234v15.234h84.297v-27.367H785.82l-8.398 23.18-8.438-23.18zM55.937 212.928v27.367h84.297v-27.367zm222.227 0v27.367h239.062c-5.739-13.281-23.75-27.367-23.75-27.367zm331.797 0v27.367h84.297v-27.367zm99.609 0 10.195 27.367h115.781l9.688-27.367zm150.195 0v27.367h84.297v-27.367zM55.937 266.15v27.366h84.297V266.15zm222.227 0v27.366h84.297V266.15zm166.289 0v27.366h89.648c0-12.915-5.352-27.366-5.352-27.366zm165.508 0v27.366h84.297V266.15zm118.75 0 9.883 27.366h77.617l9.961-27.366zm131.054 0v27.366h84.297V266.15zM1.523 319.372v27.406h194.648v-27.406zm220.703 0v27.406h299.648c6.307-6.275 9.922-27.406 9.922-27.406zm333.321 0v27.406h138.711v-27.406zm192.343 0 10.156 27.406h39.492l9.531-27.406zm111.875 0v27.406H1000v-27.406zM1.523 372.633V400h194.648v-27.367zm220.703 0v27.328H433.75c37.526 0 65.859-27.328 65.859-27.328zm333.321 0V400h138.711v-27.367zm211.601 0 9.766 27.29 1.68.038 9.922-27.328zm92.617 0V400H1000v-27.367z" />
@@ -1202,10 +1209,10 @@
         </section>
 
         <!-- Relume Style Testimonials Section -->
-        <section id="testimonials" class="bg-white relative overflow-hidden mt-[20px]">
+        <section id="testimonials" class="bg-white relative overflow-hidden mt-[25px]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
-                <div class="text-center mb-16" data-aos="fade-up">
+                <div class="text-center mb-8" data-aos="fade-up">
                     <h2 class="text-3xl sm:text-4xl font-bold text-black">Testimonials</h2>
                 </div>
 
@@ -1362,7 +1369,7 @@
 
                     <!-- Navigation Tabs -->
                     <div class="gallery-tabs-new">
-                        <div class="gallery-tab-new active" onclick="goToGallerySlideNew(0)">Recent</div>
+                        <div class="gallery-tab-new active" onclick="goToGallerySlideNew(0)">Spotlight</div>
                         <div class="gallery-tab-new" onclick="goToGallerySlideNew(1)">Internship</div>
                         <div class="gallery-tab-new" onclick="goToGallerySlideNew(2)">Workshops</div>
                         <div class="gallery-tab-new" onclick="goToGallerySlideNew(3)">Certificate</div>
@@ -1616,15 +1623,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Bottom spacer for FAQ -->
-                <!-- <div class="h-10 lg:h-16"></div> -->
             </div>
         </section>
 
         <!-- FAQ Section Redesigned -->
         <section id="faq" data-nav-color="rgba(213, 242, 255, 0.9)"
-            class="py-4 lg:py-4 bg-white relative overflow-hidden scroll-mt-20 mt-7 lg:mt-7">
+            class="py-4 lg:py-4 bg-white relative overflow-hidden scroll-mt-20 mt-4 lg:mt-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
                 <div class="bg-[#D5F2FF] rounded-[40px] p-8 sm:p-16 flex flex-col lg:flex-row gap-12 items-start">
                     <!-- Left Column: Title -->
@@ -1650,8 +1654,9 @@
                             </button>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-6 text-gray-700 leading-relaxed text-lg">
-                                    T4TEQ offers a wide range of courses including Full Stack Development, Data
-                                    Analytics, Python Programming, Java, and Business Intelligence.
+                                    T4TEQ offers a wide range of courses including Programming, Full Stack Development,
+                                    Data
+                                    Analytics and UI/UX Designing.
                                 </div>
                             </div>
                         </div>
@@ -1704,7 +1709,7 @@
         <footer class="bg-black text-white pt-12 sm:pt-20 pb-8 sm:pb-12">
             <div class="w-full px-4 sm:px-12">
                 <!-- Large Title Header -->
-                <h2 class="text-[1.8rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-5xl xl:text-[4.75rem]
+                <h2 class="text-[0.8rem] sm:text-[1.3rem] md:text-[2rem] lg:text-5xl xl:text-[4.75rem]
            font-black font-display
            tracking-tight
            mb-10 sm:mb-16
@@ -1792,18 +1797,18 @@
                         </div>
 
                         <div class="flex flex-wrap gap-4">
-                            <!-- Social Media Icons (Vibrant Circles) -->
-                            <a href="#"
-                                class="w-10 h-10 rounded-full bg-[#E1306C] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                            <!-- Social Media Icons (Indigo Circles) -->
+                            <a href="https://www.instagram.com/t4teqsoftware/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors shadow-sm">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#"
-                                class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                            <a href="https://www.linkedin.com/company/learnatt4teq/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors shadow-sm">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
 
-                            <a href="#"
-                                class="w-10 h-10 rounded-full bg-[#FF0000] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                            <a href="https://www.youtube.com/c/LearnatT4TEQ" target="_blank"
+                                class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 hover:bg-indigo-100 transition-colors shadow-sm">
                                 <i class="fab fa-youtube"></i>
                             </a>
                             <!-- <a href="#"
